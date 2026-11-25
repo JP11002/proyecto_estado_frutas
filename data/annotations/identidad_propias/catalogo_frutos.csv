@@ -1,0 +1,19 @@
+﻿id_fruto,fruta,descripcion,foto_referencia,grupo_evaluacion_seguro,estado,revisor_identidad,fotografias_con_asociacion_propuesta,fotografias_individuales
+EQ_MANZANA_01,manzana,Campo verde claro amplio alrededor del pedúnculo corto; rayas rojizas hacia un costado.,eq_manzana_001,propia_EQ_MANZANA_01,perfil_visual_propuesto,Asistente - revision visual,7,2
+EQ_MANZANA_02,manzana,Cavidad oscura profunda; rayado fino rojo/amarillo y zona clara alrededor de la cavidad.,eq_manzana_005,propia_EQ_MANZANA_02,perfil_visual_propuesto,Asistente - revision visual,7,2
+EQ_MANZANA_03,manzana,Pedúnculo largo curvado con extremo claro/azulado; área clara amplia en la inserción.,eq_manzana_007,propia_EQ_MANZANA_03,perfil_visual_propuesto,Asistente - revision visual,5,2
+EQ_MANZANA_04,manzana,Pedúnculo largo y fino; cuerpo rojo redondeado con marca clara en un costado.,eq_manzana_009,propia_EQ_MANZANA_04,perfil_visual_propuesto,Asistente - revision visual,4,1
+EQ_MANZANA_05,manzana,Pedúnculo grueso de extremo irregular; hombro amarillo y pequeñas marcas claras sobre rojo.,eq_manzana_010,propia_EQ_MANZANA_05,perfil_visual_propuesto,Asistente - revision visual,6,3
+EQ_MANZANA_06,manzana,Pedúnculo corto curvado; hendidura profunda y rayos amarillos sobre piel roja moteada.,eq_manzana_013,propia_EQ_MANZANA_06,perfil_visual_propuesto,Asistente - revision visual,6,3
+EQ_MANZANA_07,manzana,"Fruto muy arrugado alrededor del pedúnculo, con marca parda por encima de la cavidad.",eq_manzana_019,propia_EQ_MANZANA_07,perfil_visual_propuesto,Asistente - revision visual,6,2
+EQ_MANZANA_08,manzana,Fruto pequeño amarillento; cáliz oscuro con mancha violácea/parda cercana.,eq_manzana_021,propia_EQ_MANZANA_08,perfil_visual_propuesto,Asistente - revision visual,5,1
+EQ_MANZANA_09,manzana,Fruto rayado grande de las fotos de tres manzanas; distinto del 07 visible simultáneamente. Sin foto individual confirmada en la base.,eq_manzana_022,propia_EQ_MANZANA_09,perfil_visual_propuesto,Asistente - revision visual,4,0
+EQ_LIMON_01,limon,Limón oval con dos puntas; vistas individuales 001–003. Asociación con el superior izquierdo de 008 probable.,eq_limon_001,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,8,3
+EQ_LIMON_02,limon,Verde con pequeña marca oscura en el extremo; referencia superior derecha de la foto 008.,eq_limon_008,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,5,0
+EQ_LIMON_03,limon,Verde con pequeña raya clara; referencia inferior derecha de la foto 008.,eq_limon_008,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,3,0
+EQ_LIMON_04,limon,Verde con punta lateral pronunciada; referencia inferior izquierda de la foto 008.,eq_limon_008,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,3,0
+EQ_LIMON_05,limon,Oval amarillento con banda parda y pequeña mancha en estrella; vistas 010 y 012.,eq_limon_010,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,2,2
+EQ_LIMON_06,limon,"Alargado con placas oscuras extensas; coincidencia clara 011–014, vista 013 probable.",eq_limon_011,propia_limon_bloque_correspondencias_inciertas,perfil_visual_propuesto,Asistente - revision visual,3,3
+EQ_BANANO_01,banano,"Mayormente oscuro, corto, con parche claro en un extremo y pequeña lesión circular. Vistas 006–007.",eq_banano_006,propia_EQ_BANANO_01,perfil_visual_propuesto,Asistente - revision visual,11,2
+EQ_BANANO_02,banano,"Amarillo con motas oscuras; curvatura pronunciada, centro de las primeras fotos de tres.",eq_banano_001,propia_EQ_BANANO_02,perfil_visual_propuesto,Asistente - revision visual,9,0
+EQ_BANANO_03,banano,"Alargado oscuro con franja amarilla longitudinal, derecha de la primera foto de tres.",eq_banano_001,propia_EQ_BANANO_03,perfil_visual_propuesto,Asistente - revision visual,7,0

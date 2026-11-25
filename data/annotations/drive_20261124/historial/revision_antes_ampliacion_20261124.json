@@ -1,0 +1,1762 @@
+{
+  "version": "revision_drive_v2",
+  "alcance": [
+    "manzana",
+    "banano",
+    "limon"
+  ],
+  "procedencia_confirmada_por_usuario": {
+    "carpeta_1": "publica",
+    "carpeta_2": "propia"
+  },
+  "cribado": "318 originales inspeccionados en galerías. El cribado no aprueba etiquetas ni máscaras.",
+  "criterio_seleccion": "Muestra explícita con fruta individual aislable y diversidad de vistas. No es muestreo estadístico.",
+  "agrupacion": "Grupos conservadores por fuente y fruta hasta identificar frutos físicos con el equipo.",
+  "lote_detallado": [
+    {
+      "codigo_revision": "pub_manzana_001",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "42aa49ce9484b69de53d98c78fd834adb8df0f60121ed78db40b57df342f7571",
+      "sha_mascara": "4f8fdbf968bd32b72167982e172e34ec47eeff21bd3288f544b6f4c269fd8d24",
+      "sha_cnn": "b8e3efd7c8260ff8e0850b45870e45da5fe54c04c94f58a9146517f13a9ad3d5",
+      "firma_preparacion": "76854b086a3f3602eed912fa3f5b7215c4c012edbf59442572fc18876863cdce"
+    },
+    {
+      "codigo_revision": "pub_manzana_011",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "9711bc2e7138194509d145331519da2d757211745b37dfaa18641294d1b390ce",
+      "sha_mascara": "6dffddcde109e6f838e0e268650c4820518728d9598644c28532981f152e1a3f",
+      "sha_cnn": "a4315b92aba7686026044eefe3a2184b20dfc1afc0e7851d9f481e93b8751d72",
+      "firma_preparacion": "d161a6fb9732c2478a87195fef079af6cca73e5bbce3d1870eed996f070f739f"
+    },
+    {
+      "codigo_revision": "pub_manzana_023",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "e3b316139f3d64be8ee6252fe62772afa370b07d8d00783b4b35c868da0d99d4",
+      "sha_mascara": "f071b6e290ee033e079271e9b8b9234808bf26149e250477e143772b8fe07a67",
+      "sha_cnn": "1eb553fafb7f9dfd580368c778bc907304e6b6983ff1f4f85ec35996ad4b1550",
+      "firma_preparacion": "531ce113e9b0436798640e8cef7e9b618592813dca59f304648b35564213f086"
+    },
+    {
+      "codigo_revision": "pub_manzana_033",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "d58e8a752a20a91fcd53b48709351644137b892a65a78fc64b428b0daa65ec15",
+      "sha_mascara": "9e5535f1f07174c64e4e0c8b8ca5fe2b41f7d75263cb7ab47de6f001714f9729",
+      "sha_cnn": "7f028535c1555248cb76c2a237d95099fc3b8a5084774d51e85a7a5754c37142",
+      "firma_preparacion": "4d4f5490b3ab313b57b9578f561ae8994c2274f46ab82d53be4ae0cb4b019966"
+    },
+    {
+      "codigo_revision": "pub_manzana_049",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "6185ad7eb877b6baa2968736d57b601b938bc9386011adb15e2b9d8e36f67442",
+      "sha_mascara": "cd929c43538703ecd7d4b78ae21fcb3ef684198698193782d8d0907975aa2b2b",
+      "sha_cnn": "703b7cfd3f3d9fed870ee836dd761f4ca6667e4ab991c1384eee534afcf41c89",
+      "firma_preparacion": "78e5b542926017638591ba3be0c0454a42d380fcdcb4404b8fee5a3801109562"
+    },
+    {
+      "codigo_revision": "pub_manzana_059",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "5547746ea31d011ed827abb3d516038baba26ce0606cb835cd8ddd6b02ac5c79",
+      "sha_mascara": "88b42da971964e74bac0997cc795cd5fbdab6c1bdb37633f86c00c76c9b361ab",
+      "sha_cnn": "affc127cc5341de6e6d65874b86c960f96e82dbe805b94bd66f3c37ce21c7797",
+      "firma_preparacion": "a2a0ef747df8c96c5ccfe75a9cd32031f3e8c418606330fb0b9772972c776113"
+    },
+    {
+      "codigo_revision": "pub_manzana_069",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "e07197516b8ac293adc6a21e1a321b2688a864f1b6a813fea69cd24b023b6504",
+      "sha_mascara": "fb54f0f4c8c804f3c2d3e41d0bd26ceb56b51f849eff56b1dbb36af364d1679e",
+      "sha_cnn": "60db86ffabc6093d8b5b29cb27f2c1bc1c865c52c0dd96cc609eadd02b859a46",
+      "firma_preparacion": "1c3c56bb04a3e7c476ec5b6b2c2c7995003c4a6907b814fb38894e763246764c"
+    },
+    {
+      "codigo_revision": "pub_manzana_081",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "544150f951a56ad92f0d959d986514384604de063e94a9a73acb1620e37498b9",
+      "sha_mascara": "f02bc36bda288ea79390ac6dada81e87ea8d14d83f651b7c8ab95ceab26838bf",
+      "sha_cnn": "527949e974bf7fb7e77a6cc1383777d3f7651128f5bba94db39d066641b7a474",
+      "firma_preparacion": "2e9a965809ad9a6575840ef94c38294f5d73a94f8e6322f62e65dce971269c5d"
+    },
+    {
+      "codigo_revision": "pub_manzana_089",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "70e657539d1efe7347361993cc5e66a4c469197562eb253b618bcc8eb0518f14",
+      "sha_mascara": "f04bc66e9ec9e5643c985a0cc818e84b49eb0f3efb393635a16ffb72489e7e1c",
+      "sha_cnn": "24be35002eba221538b5e47253395fa960f91e822312abaa9d0c1a3ce481e5f0",
+      "firma_preparacion": "ed121e0066f20d33ac0c1acff7a2d85a0d3768fec2137ed69dc1e6d424aa8f30"
+    },
+    {
+      "codigo_revision": "pub_manzana_100",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "94c49b7690e6a3bd36f138255f30ccde625061e4322717474e7e4e39a40b3992",
+      "sha_mascara": "698b3fb0c6bcec3b6e3b1ff5d74a1f557a6c1967cc24feaa1f4abde3e0836b21",
+      "sha_cnn": "070b14e15e95881c16bc187f5b4925a070ba3f94058551fba8f541acae61860a",
+      "firma_preparacion": "f8a6736221efbb6f8be801b9b37275313548cbdee67f12bb8e599ac9b5486ce9"
+    },
+    {
+      "codigo_revision": "pub_manzana_104",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "cc5f6e0429630c898e5f0b4032089f1ba041cfa94737ea77a3cd208e0f3ca6f9",
+      "sha_mascara": "6341846cd2675697255303a010a47ce9642236d3f2c0635d2a848573bbb40a2b",
+      "sha_cnn": "07595df4fa191a778929a60e88b3b3360b5f47e09cf4ba931f6954daf4309523",
+      "firma_preparacion": "14543e0df2f5bc7471c07fc348525129143c5314ad5d9f80f08a707f6a3f5068"
+    },
+    {
+      "codigo_revision": "pub_manzana_116",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "2d5b98573c28e375c5bd3cad954c30fe25ce8592c2ade583132e5e0e709e5fa0",
+      "sha_mascara": "b256458a1d1cda00b73e1ae8bca39f9a651ef2d4019509945a3918cecdfa07cf",
+      "sha_cnn": "158e1ad0e722d165b7e6db1ebd3bd494b1bb52a912c33288aca6c7e3c4cb3cf6",
+      "firma_preparacion": "ce4addf6d623bf2e9db1fba7179a7369cfa7bd5f1678354a4c39ba051ded3421"
+    },
+    {
+      "codigo_revision": "pub_limon_001",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "6012cf9e5c8046b61458a75fa5a7fc0f0dc5d4af56e5cbd6e4ad7a0d4f5d30e0",
+      "sha_mascara": "f90facfc32d91adfa287e58c9ccb5bece9f6f0a3d08680f9950ebc014bdaf310",
+      "sha_cnn": "378d960077f8f8887c168f0af4d1d907f8c5aa48ba6abab285ac44afb4e08d62",
+      "firma_preparacion": "69aa65d61aeff9668c0df10433f518b8fe97caec253f9fb1725745e293a4b3a8"
+    },
+    {
+      "codigo_revision": "pub_limon_011",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "1c661ad51324fee57b1dbc5732d46c1f8dbfd6b62fed66d1a098626c60c4face",
+      "sha_mascara": "fba3ce26b54142ad56ef0cabba5bfda92efb1177cae2d527c1d5b056a9fadbbe",
+      "sha_cnn": "984d7c125766cebb70ecde895ffacb26b621387116a36e603b6d1f0081a4891c",
+      "firma_preparacion": "2f4e20dc46f318396eaac4c924d0a7da5ba90c9cd7efa265bfdc64481899afc8"
+    },
+    {
+      "codigo_revision": "pub_limon_023",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "8d64589e0cf6e7825b238a31242484331d24b7428088df07726514ad02bba973",
+      "sha_mascara": "ecedca8ddb844823b88119a57fcea1437cb35f5e027b9c88359735f142b66963",
+      "sha_cnn": "740d2135f24bb4a39d82a89636c95a337a620b78521ac83f89325a7b58e7f324",
+      "firma_preparacion": "f0a08d43ff6ed1f3be005341f5d01c0392712fa479e0b8c8cc4185d7220be7b3"
+    },
+    {
+      "codigo_revision": "pub_limon_034",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "de7dabad3e2f5e5f7c7d49ca17121676900835626132d6ceb6ed897bb3a4f9a9",
+      "sha_mascara": "5dcc57154fdbbc88172ee8fc03634a1466bea51531c33530f6a5f1e1486e081a",
+      "sha_cnn": "5c203de32735eef81897eedac50b39ecffeb032f24756f01585f5529d4a8bb9d",
+      "firma_preparacion": "7343caa3e623354c6697bb079703a8e87f871dbde277b8a7bb2e24ffdc0de412"
+    },
+    {
+      "codigo_revision": "pub_limon_041",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "b1c6739b69187e0d10e7cc111dcc38b8aba65d467cc53555eb7f4e3bd207bcff",
+      "sha_mascara": "822640ac194c26fafe852e3988c43134be9ddc5194eb6d9eb951ed72533b5f38",
+      "sha_cnn": "bf7b0f66fbecb9ffd50222872414ab26511150aa3937eebfa72d996379c10ec5",
+      "firma_preparacion": "4c54cf9f4e7bb191b804228a7868d30e403063948436a83359d79e16822a38dd"
+    },
+    {
+      "codigo_revision": "pub_limon_048",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "5ed7d2dd2d3210f2922667d88a167ad575ca607c6637df911d3836193dfddcb6",
+      "sha_mascara": "a53a5f63c0abd878522c6174c1f39800f9e501d84c3f71470e019113d5e46d50",
+      "sha_cnn": "c3101bdf9bc87d69def4b718f22935331ae2d16cd271ae07e71404155fea411f",
+      "firma_preparacion": "a766600f0b507e93c0b6b67e02e37a69548a99552f9d6baabe6f74dc191749c2"
+    },
+    {
+      "codigo_revision": "pub_limon_057",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "226ca7747776f24e0b20b3df0199bd95f3b6e19f857c81211e4dfc84f749b241",
+      "sha_mascara": "215c65039e805b2536e1f2a30bb8605b60101027c9654a9e75bf7db281567730",
+      "sha_cnn": "74a444465db8c46ee82d23c97cfe7f3c8880b10ff1b72920a386466c9dd471e6",
+      "firma_preparacion": "0d1ddac09c52fe9d74fc82b60fcb410dbb43af7cc1452a660fe4fe6d85681f85"
+    },
+    {
+      "codigo_revision": "pub_limon_067",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "f055ea3c0b7c40910fdaaeb6dc4d081f9a0df59a0d06829b785bd163e4f293f2",
+      "sha_mascara": "137eabbefbb109ed88969bac0c5a690fd9140bd3ba3fc3ea88a92688c1d73528",
+      "sha_cnn": "5cab34f7c6e843ed31ac1b93890a87534ced6fff3130533d9946ec75452937be",
+      "firma_preparacion": "037a0d9370359b6eb483be81e7eee59f9876c2ee2fe3f263df425e8e0c7f69df"
+    },
+    {
+      "codigo_revision": "pub_banano_003",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "9a8fe20e2894f2ee854b9e730012c1f91e8277163884ab34f2dd9a55e5a8e235",
+      "sha_mascara": "11d8460d72881939153dc5f48cee7645a1b03795a437254ae34b419aa3bdd06b",
+      "sha_cnn": "3e259389c6a40ac2bc888f111404a4059bc2585f0888dd4711fb2dd7252e3561",
+      "firma_preparacion": "49f20a4103c0e3849469b3647e62f77cea63b210c051f058932bed10e4ba3c6c"
+    },
+    {
+      "codigo_revision": "pub_banano_006",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "d9d9850ef82e5b56624e2aa73a978f652f800675b3a37cbc2f990215634d5be3",
+      "sha_mascara": "785be2a3b9ab03e237b4b87ddb7019eb82470bdf492f0ca364363081c926b021",
+      "sha_cnn": "6284d6655cfa9b41954a99c6c8c78cb65259cf18af3033254f5a7de550dc23ec",
+      "firma_preparacion": "969814a47bed71c68589b0323fa30771fc3920e524283958bfac502ebaab318c"
+    },
+    {
+      "codigo_revision": "pub_banano_009",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "8cc6d708606811c805da89494e80ed659ef243ad48a544ed23e26240f65738ec",
+      "sha_mascara": "55ecba6fd05946d5a97cdd958e465360df1338b0cd3c4a26f38bc4bfb11f8b1e",
+      "sha_cnn": "d2c1b9308937aa18db5f1682a4f59b8f5ec9407bbe9a11528cddbb1b96a2536e",
+      "firma_preparacion": "acdc2e8c01416cd267ea5bcad2353654a54e67c4cd9bba8edb41ee716b7e87e7"
+    },
+    {
+      "codigo_revision": "pub_banano_010",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "644e0410d1e07a0e118f4b4b76ee9cd370baab8c23638f17bef47d81bbbf7461",
+      "sha_mascara": "77a0680994dae16396726fd3f701d41065df814d293a2d0af48aa705bc0c46dc",
+      "sha_cnn": "23b4f3b43004fa21101989a550ef5ccf06c0c48a9bc062c8e563fcc4ee215a20",
+      "firma_preparacion": "ed924ea607c7ca7616ddb013d119fab79ae2ef86153e5ac02382474499538281"
+    },
+    {
+      "codigo_revision": "pub_banano_012",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "471ce81288ef6f0eeec351dfc8e5cde9ad64380926d4c911676826085a75c520",
+      "sha_mascara": "0ba9f2b09d769860b619f9da36ac71033c87e3dbaed2e4b55c2738bb038b439c",
+      "sha_cnn": "b1fd47e9e614ae24c0bfdd2404f1c2cf659fa1bb3a5db9f6961596ec86083bb7",
+      "firma_preparacion": "91afb4d862f8a76042afbdeb92917a2a81ae6b9d2245f728936bff649f90651b"
+    },
+    {
+      "codigo_revision": "pub_banano_073",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "c460046584f023802c050ca64c44db2c8735436ce088b844c0b385dda359d911",
+      "sha_mascara": "64d0b8a3cb8281bceecc1d89e1e5b3e6c245f53887e91a0481c8f1db836d0bed",
+      "sha_cnn": "6472914cf5b6a08218da7baf690e80d3d16bfa54825799e448bf045e1b931ecd",
+      "firma_preparacion": "03efd01cc9bcd01b6e262694dff17e80614b869ac6583fbdf0739f66691f9d20"
+    },
+    {
+      "codigo_revision": "pub_banano_075",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "225eb2dca9c36f8970813704fa542f5e780d2cb8b67b1fb45d374ca59c0f12ba",
+      "sha_mascara": "3ce5c8556012730b45429c6fca23bc9e163c7c8341757051b321d4f5b259a674",
+      "sha_cnn": "20df6d18173fd07ca26c91a7acd573586839a52b31e26bf6a701dec32864c08f",
+      "firma_preparacion": "ab83337d811bd4938592c2ef4c3b5eb67978177103e23898e3e975d0306dee4f"
+    },
+    {
+      "codigo_revision": "pub_banano_007",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "52e57378dc305c64330bcc9936419fbf6350505734d1e50e42536fd6a7371ae3",
+      "sha_mascara": "81f16709d605e55cf88fdb5f53dfa8b005509020261639094b7e8a10f6339db1",
+      "sha_cnn": "9acb5487580c6f2b91e25cbf29a6c1ea52bead91e715413230b3fe4e03d787a2",
+      "firma_preparacion": "e25632ac58ab33d8bf9b559e495a0ca08c3115328a6bd0e40ef0e9573ccb5a3f"
+    },
+    {
+      "codigo_revision": "pub_banano_008",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "74a287b1aa14f6ea962370a2403d9c9a5965add602411b3fb91d67e9833381b3",
+      "sha_mascara": "76596a92059e77a0a80559abdad968467a40d6c527c9d5815f63b4c393394373",
+      "sha_cnn": "f63d4388eb84dc9b3082b015209df49b9856c0efe557955cc139722cb9390a91",
+      "firma_preparacion": "e54ba5634abccbfaeac37314beefe316d97365d30069d3ad9312073920f3755b"
+    },
+    {
+      "codigo_revision": "pub_banano_074",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "c54be8e76d464006b8f1668743808109fa9c1a5f629587ddd9723b1731d7b486",
+      "sha_mascara": "3c53ac59c386a79daaab8ae9d794ad72362ed316ef0348022b8bb2189b0625f7",
+      "sha_cnn": "8ed0d0ea45034023d34595b5c94b207e2338732fba6de33f4d95c275a0b2efce",
+      "firma_preparacion": "465f5bf7e28c56fc18088a43b57009cfd50320ba586319a5224f20fbdfc4a0a4"
+    },
+    {
+      "codigo_revision": "pub_banano_076",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "e5027a8590213056542e6014459737b9b3209ffe8dbb0255803695a84590a96d",
+      "sha_mascara": "b8fc3abd8a448c9061e69c548d88242a847a95a48ab99adcdaf820a5167856e1",
+      "sha_cnn": "5748d78abfe7ec9d939430b54e7f19306bbc39312d9776de79e977c5cb08766b",
+      "firma_preparacion": "5db1e92ca215978562a6d6c03e3b6fe4315c2f40365364665c6d3a4e807af2b3"
+    },
+    {
+      "codigo_revision": "pub_banano_077",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "d5f19b48207896952ae6b067f9bde8dbd96cb9fc7c1921934ef8c217ef80e818",
+      "sha_mascara": "f51cea5f176f64033a41ae0af744799ab17850509234b680c4ebaa13887fe784",
+      "sha_cnn": "ef6701679926b7eb3e44d8b6b28551ab8c704564da7f293c79c7c6679537b2ca",
+      "firma_preparacion": "c1e57466f8a1e683858f71809372ad1fc98c9c6d2a278b1bd21c86ccc0cc5424"
+    },
+    {
+      "codigo_revision": "pub_banano_013",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "03cc5e41c856a066d6318c93bae05e5616878cf731d83e288091450c11060790",
+      "sha_mascara": "48aec69f2e658f3ff860faf015eca5d08d6ec74d5cfba6bc293c8c392f24aa8d",
+      "sha_cnn": "fc9ed76fc92f311311c27e6e59212fa69971bf4f6a5ba1f35c6acc0509be0dfc",
+      "firma_preparacion": "bd117d9c03eb7ad5018abc91d34e47b24e06f1749d34ec80646539de67f5c30e"
+    },
+    {
+      "codigo_revision": "pub_banano_023",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "c7fa094e0730b2dea814a6cb7340e1763d7e58588933b3836d9d5a30765bdd58",
+      "sha_mascara": "6d3c68eb06c443ee342cf649604b5cc5511d92299b235691a00f70c3a6a4fbf0",
+      "sha_cnn": "066d7a033a1efd309f0adf605899b9bbddb50095f06a610dbc3a0e726caffc0c",
+      "firma_preparacion": "246142713c17375dcbc18b3ecaca2d97bd020bd473dadc06a168823c8bac5e44"
+    },
+    {
+      "codigo_revision": "pub_banano_027",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "b1aa8f8367fabe8e4d6ac9b45fbf26dd92aa48af87cabeb351c12195c4817422",
+      "sha_mascara": "4295892361770aba240c11ab02b8ea7656bb9f17727b831738dc362ace18bee0",
+      "sha_cnn": "dd35f7fd44d5c6c722b4faa9ec8a1496518c702f53d99189409be478468cee36",
+      "firma_preparacion": "fc253a1829e9a77402ed2c0c92348c22d0635475611c5334f3cc024f80a393a5"
+    },
+    {
+      "codigo_revision": "pub_banano_034",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "3b6e61b754bc472625cd54b0ac726a2845b149474d6dd57ca166e19886e4431c",
+      "sha_mascara": "91555f167bc299d01294c040d08f8597aad76c6897484ecae31d78be9fb8d849",
+      "sha_cnn": "00348e10d886dd796a2c87fa0737c4e6076e1747eaf4aae09db9398cbe53dcba",
+      "firma_preparacion": "ec40a3a3aa1cdd7c9b5f0c25cd3633263c75bd29f583bb27212fa55ed1e55345"
+    },
+    {
+      "codigo_revision": "pub_banano_039",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "2d8f9505ffbd44914ca281325732429a24cd465792622922f841f1daad9ce83d",
+      "sha_mascara": "a73cd75d2215f6ce4e1eb8ae4d5001dcbfb798eb7a9fc0ece5659d7a9fe51133",
+      "sha_cnn": "77e83c5bb927cbdc600055be3686ea7646a8e5ecc2b8ea87227be18f65cbb147",
+      "firma_preparacion": "fa600c463d57639ba50bdcfcf3d2f0fa35a1065e8c1712d9e1f63e4f4babce45"
+    },
+    {
+      "codigo_revision": "pub_banano_046",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "ee19b08959738bd75adc5ccd96d0f68512709ac2d0089f234b15b5c78f7d2e86",
+      "sha_mascara": "aba6a5a5b701c1a13135e257cb70c57a86d8bf340d9254c75ec9f2a4711959c9",
+      "sha_cnn": "adcc2393b5b6d0c7e16c7b67402135bcaeea46a9400d0d32d6c1b666b879a260",
+      "firma_preparacion": "a293730b98ca715874613c9f30385a59f0aee7ddac00548a36624ccaac325577"
+    },
+    {
+      "codigo_revision": "pub_banano_052",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Fruto incompleto junto al borde de la fotografía; excluir del lote preparado.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "dc64b450b57c474e36fa98cb1a8726cb9ae183cc46eabe1856580c6a74cea701",
+      "sha_mascara": "9e7d2c7b72b87317b7a7b839c8f71e2759dbfedddddd88ea30a41ff3152194e2",
+      "sha_cnn": "b589f6f622bd7277749ba80ba3db03941609b2b2771275e9b82bfbc11a025de4",
+      "firma_preparacion": "b837a2a63962be0e19bf3894c76e00fb3abda46d496f9938ac58723ad558ec8c"
+    },
+    {
+      "codigo_revision": "pub_banano_055",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "4b2263f9032dd8629ec33d8cb9627234a93f48304b73845306ac93f33dfb3411",
+      "sha_mascara": "aef86f46aa793c8adda94de662e78c832206515f9dc2afeb62306535417b45b7",
+      "sha_cnn": "838ee48a6e1925073fa3f79cc962e49217413515c24dab13109de73838a04963",
+      "firma_preparacion": "00bef405c08dbeebb2ccc2e5b10b27f1b8f67967a33e0a32b1edf96f57c6fe32"
+    },
+    {
+      "codigo_revision": "pub_banano_063",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "17d73a12c354726bc5d7a0e4eaebe730afab7305f43fa833a12b1923a7fb439e",
+      "sha_mascara": "0553bba9aedcd93d4c462153ca030ef88d79bfd6b6864db28cf65ab772dd9689",
+      "sha_cnn": "153211d80e2e4c6cc03af3947575d29599ad67b0f0bf30fd1502d39766b31856",
+      "firma_preparacion": "c9c965e64c8104c4c56b61fd1909eeb9b9ebd946bdae02ad70fe55a25723f428"
+    },
+    {
+      "codigo_revision": "pub_banano_066",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "201beedca66ac0507a91c677df3b136352377b4c81282c9c2bac185671564ce1",
+      "sha_mascara": "cf70944173fefd08e9061b35a19d14c77907441c80e5ac4e6d430b6d48d69383",
+      "sha_cnn": "0ff6b313e5a1408392b3aec349f7e37d3562f56ecad2bf04dcbb4631f6d51141",
+      "firma_preparacion": "8c59a03920d7eb214e1d186dadf38d1afeb66dff15fbc5914a52411f31430838"
+    },
+    {
+      "codigo_revision": "pub_banano_070",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_publica_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "semilla_color_v2": true,
+        "metodo": "drive_semilla_color_v2"
+      },
+      "sha_original": "5f4d492421d044b5bb030c57ab2f67b665f6735c25b3679ab1d1dda0dd7f0789",
+      "sha_mascara": "ed738112f8ae92e3090305025f99e739fbd019f32bf84cf22a3c8c5ebea753b0",
+      "sha_cnn": "4a1fc004157a5193cb9d093f9009668691a39d94441b0f483e3ce42869c896c8",
+      "firma_preparacion": "ad9ae64df16dab7f550cddf9161f3b57be48c32be6cae186664b2b6f23904a55"
+    },
+    {
+      "codigo_revision": "eq_limon_001",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "98706a321a315c302f9c29212824a9ae89b4fc13b0bbfab8315408907bdf0e90",
+      "sha_mascara": "bb43c693c9ea89c99e50daabb1105db6e398f2022b45d08f429c16f315cefe3b",
+      "sha_cnn": "50566c8e36c637dad558d7a1a03acf4cea2a21cf44c8f7146637c72fcb6759c0",
+      "firma_preparacion": "dc2dfce383e2effafd8951046fa031bcdabfd016ee3c38f5926c83501864c1cb"
+    },
+    {
+      "codigo_revision": "eq_limon_003",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "e222ccd2c2c32c16930300971023abb2a229d469f9b3da679d80f28d1ff9d7df",
+      "sha_mascara": "d445224a25863fe6a17c81eb43a8812aee6a98d605e7b6a2a709d6b67e50743e",
+      "sha_cnn": "826f49d54edb85c1ce40971dd3e2d2d2ee6ad1d510053d1b5711f72dbf97fd9d",
+      "firma_preparacion": "717242a4f7dbf9bf95f92d58064d2d8c62947eb52a0d6b2cf669ea7fbd87d02d"
+    },
+    {
+      "codigo_revision": "eq_limon_010",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "870c356b24ee3837b6fbdd6fa48b09a3dfad1276fcba800898873a40a5439922",
+      "sha_mascara": "0dbb920497037d5378557e1de75ca3969e356a21d54592ae172f4159f8126258",
+      "sha_cnn": "1589ac4c9ac38832f2b8a4c9f2dc8fd30c41ae8fdd7d6eaa22f46ea9f06c7769",
+      "firma_preparacion": "38da813d012f084b29a5d3e44d4b04812a204979f099d17fb5db3d8cd5a1c37f"
+    },
+    {
+      "codigo_revision": "eq_limon_012",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "intermedia",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Defectos externos localizados visibles, con superficie conservada; interpretación provisional de apariencia. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {},
+      "sha_original": "dd4028d5e25464f3153286ff80b647f5deb44e5200e8a8e6f30c12859c48dbbf",
+      "sha_mascara": "87d69631718d409621bfe065aaa02a5251f0c9ee3b1f198d880f5d7b39264b18",
+      "sha_cnn": "c0f1e649dcb5defbadaef1411c0b61d3fbb64090e6c5d88d1761a9c465a60375",
+      "firma_preparacion": "dc3338f1c3dfeaafe4cab31b5c8717bf8f4f7d4e66bbc3f7cde49e00afeba4e3"
+    },
+    {
+      "codigo_revision": "eq_limon_011",
+      "calidad_propuesta": "mala",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Contorno aceptado como aproximación visual. La carpeta declara calidad intermedia, pero hay lesiones extensas o deshidratación marcada; requiere segunda revisión antes de asignar calidad. No se infiere estado interno ni inocuidad.",
+      "parametros": {},
+      "sha_original": "49e18b2e8f388709af65de95c536a4dbc3dfde726d931555941cf5a2e7271595",
+      "sha_mascara": "2fdd4bafdff43022f7063b5e9d1bf871e357fa84cddc569d4097b61d5af4a8e4",
+      "sha_cnn": "9d3e0ed43bd3ca4226748f3baf8ccf6c026d15c212c9baaca406312a48c1feb1",
+      "firma_preparacion": "14935f596c378025a3ddf288aa897d0dfd7b1894b30c8faf86b223da43b7ca10"
+    },
+    {
+      "codigo_revision": "eq_limon_013",
+      "calidad_propuesta": "mala",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Contorno aceptado como aproximación visual. La carpeta declara calidad intermedia, pero hay lesiones extensas o deshidratación marcada; requiere segunda revisión antes de asignar calidad. No se infiere estado interno ni inocuidad.",
+      "parametros": {},
+      "sha_original": "4bb3b0c7c4e70f9731fcdbe232893fc1009958b1a2831e9445e344506eb46148",
+      "sha_mascara": "4ca9e1bea44008184cdb7e2478534fcaf39f77fe2c85ddf50ffb1e2dd53882be",
+      "sha_cnn": "606f26814d6132de919493e26d47920d95a2b38a1ca7d41b986fa088049b78eb",
+      "firma_preparacion": "c3a543ae0eb4fee4e746e2eeb9751537c52b4fe797b9cf40dc9691befbbef62b"
+    },
+    {
+      "codigo_revision": "eq_limon_014",
+      "calidad_propuesta": "mala",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_limon_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Contorno aceptado como aproximación visual. La carpeta declara calidad intermedia, pero hay lesiones extensas o deshidratación marcada; requiere segunda revisión antes de asignar calidad. No se infiere estado interno ni inocuidad.",
+      "parametros": {},
+      "sha_original": "ce34975e65796a515cb86e4938e9e1b9e81be9f2119114618e1f3d70f23d1dfe",
+      "sha_mascara": "9a36321857e48a0f1b8a94b8a677c27fb17afce3273254198388b5a635c112c9",
+      "sha_cnn": "c01f62a45a86cf35325407a1955262a65f9635c8de290a34212ba12068df4734",
+      "firma_preparacion": "5555a02b4a8fbc4c7342bde6878336db43cb76ae12e99bec47d9f993c8e886ff"
+    },
+    {
+      "codigo_revision": "eq_manzana_005",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "rectangulo": [
+          0.25,
+          0.2,
+          0.82,
+          0.7
+        ]
+      },
+      "sha_original": "1c85385d9520559f4b5132bffc6fb92ab274610dab8647fd8f9f698591d89b11",
+      "sha_mascara": "2480ff9b2afc10ea70071116dd72b0eac221b8992c7abc36e7e3d7fb6cbae5f0",
+      "sha_cnn": "e429057b1fc06802dd8c21b7e2caae417e3600105221414069e4fae80ba0e996",
+      "firma_preparacion": "6d54ff89333871d74c7cea669834aaced08bffa93e9f24e07002e879c132e2c9"
+    },
+    {
+      "codigo_revision": "eq_manzana_006",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.13,
+          0.11,
+          0.88,
+          0.87
+        ]
+      },
+      "sha_original": "20310454a279f86d30f184369ec18460d6f90eaaac3b84b8202a29551e619ca0",
+      "sha_mascara": "93d152b8197d75af1c74c153f80e048a3269d5cb505269ad251ab494b6bc8e58",
+      "sha_cnn": "8754c9f8ceaa62b600078216f1e4e32aab373a1280a343ba3b246df01d4a2525",
+      "firma_preparacion": "bc7395216ec28e1d0e09679803571ca9eea80254eabc17dc5aee6648be9c54fd"
+    },
+    {
+      "codigo_revision": "eq_manzana_007",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.16,
+          0.1,
+          0.88,
+          0.77
+        ]
+      },
+      "sha_original": "61d15b004476032faae1f5e2bddf3773029a43b4f74d080dd4bc1ca079597a87",
+      "sha_mascara": "760454ec5d7ab15d8181b711ce02cbba27550c8d02be5d70c8ce0903722570ae",
+      "sha_cnn": "ebffacd09895c5ca0ec4df657ddbcf719182f8960d92af21d0ae1759ec58b710",
+      "firma_preparacion": "b189663170ffdee44bfd3c750bd78b1c67c3bef00075d939bc5537a7c795c708"
+    },
+    {
+      "codigo_revision": "eq_manzana_008",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.21,
+          0.2,
+          0.85,
+          0.73
+        ]
+      },
+      "sha_original": "b8fe406499ba5b377ebfa2d95951a4e262c0febde018b10996c60c31858b91f7",
+      "sha_mascara": "a522fc9b20d8908967e528a0086e881e08971e9bcf9ca69d4edd652bec068487",
+      "sha_cnn": "f7f63b95bd94ad4b35c7825366510cdcbd0750a696aea2a6f120eabb2ebdba8a",
+      "firma_preparacion": "5808a4f49a78f35afbe214ae9323b1d0848bc51b92ddccec38d57470cb2b9770"
+    },
+    {
+      "codigo_revision": "eq_manzana_009",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.33,
+            0.23
+          ],
+          [
+            0.39,
+            0.18
+          ],
+          [
+            0.5,
+            0.155
+          ],
+          [
+            0.6,
+            0.16
+          ],
+          [
+            0.7,
+            0.19
+          ],
+          [
+            0.76,
+            0.24
+          ],
+          [
+            0.78,
+            0.31
+          ],
+          [
+            0.77,
+            0.36
+          ],
+          [
+            0.73,
+            0.42
+          ],
+          [
+            0.65,
+            0.465
+          ],
+          [
+            0.55,
+            0.483
+          ],
+          [
+            0.45,
+            0.475
+          ],
+          [
+            0.38,
+            0.43
+          ],
+          [
+            0.34,
+            0.37
+          ],
+          [
+            0.325,
+            0.3
+          ]
+        ]
+      },
+      "sha_original": "d9e8efa6c9d277654e955cd2e33391dda18191813a44a112f5eef266eed7a7b3",
+      "sha_mascara": "e0c1b9e8b54763093bac8cf0490ca78cc3630f64add0fd905d7eee3e92a4ee32",
+      "sha_cnn": "b1e03c908634ca4e74804a8912ba2736ee0b7c6c254eaaddd73a180e99a79c0b",
+      "firma_preparacion": "19447d246251761735039f6a6f1e3f2a4e11d311c88f5e74184032a5eeeb420a"
+    },
+    {
+      "codigo_revision": "eq_manzana_010",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.21,
+          0.16,
+          0.86,
+          0.77
+        ]
+      },
+      "sha_original": "b69db7d1abb87870a387db2b8b81033b80ccb42601f537adc171b7e58efd2a01",
+      "sha_mascara": "4f52f7877d7fa950d764b72ca8dede1e3663747d69f9975be1e0334d441af79e",
+      "sha_cnn": "db48bf1147e56730a9fd40a9a69429d2edd329a9509b9e1473834dda31126d38",
+      "firma_preparacion": "b378c1afec9b865d3c21a489e2f2d1e1c2849b1bcd33c7f4cf49a62833f2f09e"
+    },
+    {
+      "codigo_revision": "eq_manzana_011",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.2,
+          0.17,
+          0.84,
+          0.77
+        ]
+      },
+      "sha_original": "233c3cf2b85940eff1e799a12850d2fbb0af57a153fee59ae1bb636c664f5f8c",
+      "sha_mascara": "44cfccc9ef8eabf4b9f4eaa830d46bb0daba77a628e648e90d51730ca38cb86b",
+      "sha_cnn": "46dc4b4ca33b2465f39106f440b3603d8b8a5788e85c2d6ab7d12aecd958620a",
+      "firma_preparacion": "5c92f9b8727cfd8a52209f43a6a809080a7db8ff110c089f4e632ac913e81689"
+    },
+    {
+      "codigo_revision": "eq_manzana_012",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.17,
+          0.11,
+          0.87,
+          0.78
+        ]
+      },
+      "sha_original": "392abb8490bbb82b2af253598f1adc8998c2b78d30ed2483e87d21981c68eaad",
+      "sha_mascara": "02dc5c4c806b89b51898a6dfe76e1d4f9542b14e3da99cca6b353227eed7eff1",
+      "sha_cnn": "a099164a14c6de1a5686537d0a9189e907794a6d0535131dce5506a2b63d9b95",
+      "firma_preparacion": "eae6f64211fa8d39c981fc8170a9956d6b0aa28f02df124d388e052355eeff0d"
+    },
+    {
+      "codigo_revision": "eq_manzana_013",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.2,
+          0.2,
+          0.84,
+          0.82
+        ]
+      },
+      "sha_original": "6aa7fdaa24bb3a7dbc56f6038cec21abe2073244a546ef2589f7bdfef2fde412",
+      "sha_mascara": "53fb903b7b81a0af9049ee86946129115e2c13aa56381b88861a4d1a18d479d9",
+      "sha_cnn": "1853cad0f102d56b680147fdc1111f57332b80e6ef2a132a6b5b9f02fb149ad2",
+      "firma_preparacion": "7ee7b3528c93c4d89a9bbacc71e751ae3a5c3cb6dfa59606fef410c730be498d"
+    },
+    {
+      "codigo_revision": "eq_manzana_014",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "buena",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Superficie visible conservada, sin deterioro externo relevante. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.21,
+            0.22
+          ],
+          [
+            0.25,
+            0.15
+          ],
+          [
+            0.33,
+            0.105
+          ],
+          [
+            0.43,
+            0.08
+          ],
+          [
+            0.55,
+            0.085
+          ],
+          [
+            0.66,
+            0.12
+          ],
+          [
+            0.75,
+            0.17
+          ],
+          [
+            0.81,
+            0.25
+          ],
+          [
+            0.825,
+            0.34
+          ],
+          [
+            0.8,
+            0.42
+          ],
+          [
+            0.73,
+            0.48
+          ],
+          [
+            0.63,
+            0.53
+          ],
+          [
+            0.5,
+            0.545
+          ],
+          [
+            0.39,
+            0.52
+          ],
+          [
+            0.3,
+            0.47
+          ],
+          [
+            0.23,
+            0.4
+          ],
+          [
+            0.2,
+            0.32
+          ]
+        ]
+      },
+      "sha_original": "05cc4e892bb13dc445eee64cd0ee60e0bc266145c3d539ed31045c07f6525ded",
+      "sha_mascara": "6eb6741dde280a5cfd47b10dcc1833899f112a7e2df3395f9ad30157e2a0a744",
+      "sha_cnn": "51096d4b3471d0b7d7d78112ef0ece8d5a0806c9032bcc3fd29db2d56249ae7c",
+      "firma_preparacion": "15fd93241abefd60712445d8f19aadba81d1a06c5bd8fe252f0bf1f1530fb14a"
+    },
+    {
+      "codigo_revision": "eq_manzana_015",
+      "calidad_propuesta": "buena",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.22,
+          0.25,
+          0.83,
+          0.74
+        ]
+      },
+      "sha_original": "4cbb89f3062e6986c02cb02a35447d93f4fbde38ca32a888b7030b4cecb495b6",
+      "sha_mascara": "5c7f37525dfaa57189eb00fb873752515296c9fcdfd89b173d9727efe05b3fc8",
+      "sha_cnn": "84563f762f4578b829394a6b72b2f47bf9fc45207cc956810c8705a779704889",
+      "firma_preparacion": "0a15dae4599bd3f122c799c0cc4b9bdf19b8d4546518711158032a4d101001e8"
+    },
+    {
+      "codigo_revision": "eq_manzana_019",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Contorno aceptado como aproximación visual. La carpeta declara calidad intermedia, pero hay lesiones extensas o deshidratación marcada; requiere segunda revisión antes de asignar calidad. No se infiere estado interno ni inocuidad.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.34,
+            0.47
+          ],
+          [
+            0.36,
+            0.43
+          ],
+          [
+            0.42,
+            0.4
+          ],
+          [
+            0.49,
+            0.385
+          ],
+          [
+            0.56,
+            0.39
+          ],
+          [
+            0.62,
+            0.43
+          ],
+          [
+            0.645,
+            0.49
+          ],
+          [
+            0.64,
+            0.55
+          ],
+          [
+            0.6,
+            0.6
+          ],
+          [
+            0.53,
+            0.63
+          ],
+          [
+            0.45,
+            0.625
+          ],
+          [
+            0.39,
+            0.59
+          ],
+          [
+            0.35,
+            0.53
+          ]
+        ]
+      },
+      "sha_original": "bf7470181e2f9ca72f418e9385bc881f9cc9935eb5444d7e84907f663dbc5b48",
+      "sha_mascara": "50c9ff030d8ebf568ad29ee46132335ba5a9fdd3d8277c6f2e2e2a2340f2d96d",
+      "sha_cnn": "d738761c91bc3032e18f63186c8f4c2da2d2503cc6b86376968dcae15c233e43",
+      "firma_preparacion": "0130748f2785c05ddf58d00350e2080515a86b0a84740d222205f4f013115f42"
+    },
+    {
+      "codigo_revision": "eq_manzana_020",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Contorno aceptado como aproximación visual. La carpeta declara calidad intermedia, pero hay lesiones extensas o deshidratación marcada; requiere segunda revisión antes de asignar calidad. No se infiere estado interno ni inocuidad.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.35,
+            0.39
+          ],
+          [
+            0.38,
+            0.35
+          ],
+          [
+            0.44,
+            0.335
+          ],
+          [
+            0.49,
+            0.33
+          ],
+          [
+            0.53,
+            0.34
+          ],
+          [
+            0.58,
+            0.325
+          ],
+          [
+            0.64,
+            0.34
+          ],
+          [
+            0.68,
+            0.38
+          ],
+          [
+            0.69,
+            0.43
+          ],
+          [
+            0.67,
+            0.49
+          ],
+          [
+            0.63,
+            0.54
+          ],
+          [
+            0.56,
+            0.57
+          ],
+          [
+            0.48,
+            0.56
+          ],
+          [
+            0.41,
+            0.52
+          ],
+          [
+            0.37,
+            0.47
+          ]
+        ]
+      },
+      "sha_original": "3f17c8a2fb0fdb16d80ac3cbf4c9db90d7bd8301b43017d967e12e9210ea48b1",
+      "sha_mascara": "180259fa99723fb549370f1016a5018bab3c799934226041d9a3b09c2082b985",
+      "sha_cnn": "2000123acbed9d6169cab84e0abbab0aa1998a73e9b929344abdcbb63326afb9",
+      "firma_preparacion": "d5429fcb6f5629f726c3966ff1d2d49bea28671933f28d005ecd20466c95aee5"
+    },
+    {
+      "codigo_revision": "eq_manzana_021",
+      "calidad_propuesta": "intermedia",
+      "decision_calidad": "pendiente",
+      "calidad_revisada": "",
+      "decision_mascara": "rechazada",
+      "grupo_ejemplar": "drive_propia_manzana_campana_sin_id_fisico",
+      "manzana_roja": "si",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Máscara rechazada: contiene fondo/reflejos/sombra o pierde parte del fruto; no usar sus características.",
+      "parametros": {
+        "rectangulo": [
+          0.2,
+          0.17,
+          0.83,
+          0.72
+        ]
+      },
+      "sha_original": "131b107b19cfbc7479e5a5d65476c465322257599d00edc79825bbd683d405c1",
+      "sha_mascara": "d19bef7116ac95190464561ad63d9c40f134b532588d22359c83b4668a18a8b8",
+      "sha_cnn": "88529c4fec2c95fd64c1deb9cf580eacc98923502e9a1ac1f0a231537ab94b6e",
+      "firma_preparacion": "d5c667b626dd773e6de7a4c633386cd3184226ec0253f2ea5a07e6f0ce05668e"
+    },
+    {
+      "codigo_revision": "eq_banano_006",
+      "calidad_propuesta": "mala",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "mala",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Deterioro externo marcado y extendido visible en la fotografía. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.32,
+            0.39
+          ],
+          [
+            0.34,
+            0.38
+          ],
+          [
+            0.39,
+            0.375
+          ],
+          [
+            0.47,
+            0.38
+          ],
+          [
+            0.59,
+            0.36
+          ],
+          [
+            0.69,
+            0.34
+          ],
+          [
+            0.76,
+            0.325
+          ],
+          [
+            0.82,
+            0.327
+          ],
+          [
+            0.845,
+            0.345
+          ],
+          [
+            0.85,
+            0.4
+          ],
+          [
+            0.83,
+            0.445
+          ],
+          [
+            0.8,
+            0.48
+          ],
+          [
+            0.7,
+            0.5
+          ],
+          [
+            0.56,
+            0.505
+          ],
+          [
+            0.46,
+            0.5
+          ],
+          [
+            0.4,
+            0.475
+          ],
+          [
+            0.38,
+            0.45
+          ],
+          [
+            0.34,
+            0.435
+          ],
+          [
+            0.32,
+            0.42
+          ]
+        ]
+      },
+      "sha_original": "059128e5217e5db8debc6af4fbc60e1b5d7fd5845d4c72fc6ee72314867f836f",
+      "sha_mascara": "1cefa39a8d853fe0e684e908d5830e93daef6919a1d8b53ee3645c0d64dfa813",
+      "sha_cnn": "239df8c799eaa63935a7bc75a5ba86615522c8ebb220467ec8a5ccbeda8de811",
+      "firma_preparacion": "2eb3cf650bd4be80725e1c6436853f15c9bd1283fd5c39cb0f92cff1d9bf4acf"
+    },
+    {
+      "codigo_revision": "eq_banano_007",
+      "calidad_propuesta": "mala",
+      "decision_calidad": "confirmada",
+      "calidad_revisada": "mala",
+      "decision_mascara": "aceptada",
+      "grupo_ejemplar": "drive_propia_banano_campana_sin_id_fisico",
+      "manzana_roja": "no_aplica",
+      "revisor": "Asistente - revision visual",
+      "protocolo": "calidad_visual_v1",
+      "observaciones": "Deterioro externo marcado y extendido visible en la fotografía. Original, contorno y recorte inspeccionados. Máscara aproximada para prototipo, no referencia píxel a píxel.",
+      "parametros": {
+        "metodo": "drive_poligono_revisado_v1",
+        "puntos": [
+          [
+            0.18,
+            0.52
+          ],
+          [
+            0.2,
+            0.46
+          ],
+          [
+            0.25,
+            0.4
+          ],
+          [
+            0.32,
+            0.35
+          ],
+          [
+            0.42,
+            0.3
+          ],
+          [
+            0.53,
+            0.27
+          ],
+          [
+            0.66,
+            0.235
+          ],
+          [
+            0.74,
+            0.235
+          ],
+          [
+            0.78,
+            0.25
+          ],
+          [
+            0.77,
+            0.29
+          ],
+          [
+            0.74,
+            0.33
+          ],
+          [
+            0.65,
+            0.35
+          ],
+          [
+            0.55,
+            0.365
+          ],
+          [
+            0.49,
+            0.4
+          ],
+          [
+            0.45,
+            0.45
+          ],
+          [
+            0.41,
+            0.52
+          ],
+          [
+            0.36,
+            0.58
+          ],
+          [
+            0.3,
+            0.61
+          ],
+          [
+            0.24,
+            0.61
+          ],
+          [
+            0.2,
+            0.575
+          ]
+        ]
+      },
+      "sha_original": "c7cc66f7bf26c7fa7afde31d7b15858f6012e3896d0e68873cfd246325a20772",
+      "sha_mascara": "aebe2d3e2894c66a372655604014c717692c07f6dc6f627982d14a37e1a98eac",
+      "sha_cnn": "9b2cd0b2a3c1af182ea9352060ebe58cc0bb19d8f5b0155dafbeb9dbf1cd036b",
+      "firma_preparacion": "7c15b43c92ac07d123b669b3bc7e030990d158d3f6184b3999c03a5bd88839d9"
+    }
+  ],
+  "codigos_varios_frutos": [
+    "eq_banano_001",
+    "eq_banano_002",
+    "eq_banano_003",
+    "eq_banano_004",
+    "eq_banano_005",
+    "eq_banano_008",
+    "eq_banano_009",
+    "eq_banano_010",
+    "eq_banano_011",
+    "eq_banano_012",
+    "eq_limon_004",
+    "eq_limon_005",
+    "eq_limon_006",
+    "eq_limon_007",
+    "eq_limon_008",
+    "eq_limon_009",
+    "eq_manzana_003",
+    "eq_manzana_004",
+    "eq_manzana_016",
+    "eq_manzana_017",
+    "eq_manzana_018",
+    "eq_manzana_022",
+    "eq_manzana_023",
+    "eq_manzana_024",
+    "eq_manzana_025",
+    "pub_banano_011"
+  ]
+}

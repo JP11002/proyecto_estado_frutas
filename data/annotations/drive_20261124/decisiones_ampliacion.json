@@ -1,0 +1,1731 @@
+{
+  "pub_banano_001": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_002": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_004": {
+    "calidad": "intermedia",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_005": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_014": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_015": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_016": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_017": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_018": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_019": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_020": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_021": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_022": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_024": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_025": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_026": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_01.jpg",
+    "sha_evidencia": "00467f89b0fb5c24b2fbb74f62377eb5c1264934f7718b2f041f9b0d2227f6b6"
+  },
+  "pub_banano_028": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_029": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_030": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_031": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_032": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_033": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_035": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_036": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_037": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_038": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_040": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_041": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_042": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_043": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_044": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_045": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_02.jpg",
+    "sha_evidencia": "cc63d70b8fadf0de6725f818bfb4e8e04559ff065ee265cbb53e6dd82d8edef3"
+  },
+  "pub_banano_047": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_048": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_049": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_050": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_051": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_053": {
+    "calidad": "intermedia",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_054": {
+    "calidad": "intermedia",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_056": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_057": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_058": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_059": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_060": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_061": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_062": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_064": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_065": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_03.jpg",
+    "sha_evidencia": "eb285378b33d51eade14cea35c860a4c628af375c364f214d85aebdfa1f1770f"
+  },
+  "pub_banano_067": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_04.jpg",
+    "sha_evidencia": "a244d689573b7af618ddc9552e7a0f50fa3a51effb039cc284e3b09ddae1c248"
+  },
+  "pub_banano_068": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_04.jpg",
+    "sha_evidencia": "a244d689573b7af618ddc9552e7a0f50fa3a51effb039cc284e3b09ddae1c248"
+  },
+  "pub_banano_069": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_04.jpg",
+    "sha_evidencia": "a244d689573b7af618ddc9552e7a0f50fa3a51effb039cc284e3b09ddae1c248"
+  },
+  "pub_banano_071": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_04.jpg",
+    "sha_evidencia": "a244d689573b7af618ddc9552e7a0f50fa3a51effb039cc284e3b09ddae1c248"
+  },
+  "pub_banano_072": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_banano_04.jpg",
+    "sha_evidencia": "a244d689573b7af618ddc9552e7a0f50fa3a51effb039cc284e3b09ddae1c248"
+  },
+  "eq_limon_001": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_002": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Fruto cortado por el borde superior y máscara con reflexión/fondo; no usar para la base de ejemplares completos.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_003": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_010": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_011": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_012": {
+    "calidad": "intermedia",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_013": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_limon_014": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_limon_01.jpg",
+    "sha_evidencia": "3007592e28cb45e5a77387690df585aaa93b78965b09d10ac0ccc8b6a5c6f675"
+  },
+  "eq_manzana_001": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_002": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_005": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_006": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_007": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_008": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_009": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_010": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_011": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_012": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_013": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_014": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_015": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_019": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_020": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "eq_manzana_021": {
+    "calidad": "mala",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo. Lesiones extensas/grietas o arrugas generalizadas y deterioro visible. Aplicar el mismo criterio del reexamen ampliado.",
+    "pagina_evidencia": "propia_manzana_01.jpg",
+    "sha_evidencia": "d42aaac51ad12b7e2bd4b15910a1a07280da2344a6342e0cdfa56fd6f290619f"
+  },
+  "pub_limon_002": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_003": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_004": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_005": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_006": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_007": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_008": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_009": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_010": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_012": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_013": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_014": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_015": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_016": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_017": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_018": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_01.jpg",
+    "sha_evidencia": "3f7972a461d3eef316efe84b1abb4ceddd3ac5c4c197b1257c1f86ddf481af48"
+  },
+  "pub_limon_019": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_020": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_021": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_022": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_024": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_025": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_026": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_027": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_028": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_029": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_030": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_031": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_032": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_033": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_035": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_036": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_02.jpg",
+    "sha_evidencia": "ab088c196354262a3370ec6c98c2cfc0100acdb2d5eb55eee411b8d91a66c5d7"
+  },
+  "pub_limon_037": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_038": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_039": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_040": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_042": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_043": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_044": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_045": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_046": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_047": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_049": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_050": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_051": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_052": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_053": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_054": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_03.jpg",
+    "sha_evidencia": "7a6dd91786cefb2468e2ccd4dce388aae8af1f59071aa70071620605d9256a0e"
+  },
+  "pub_limon_055": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_056": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_058": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_059": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_060": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_061": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_062": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_063": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_064": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_065": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_066": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_068": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_069": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_limon_070": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_limon_04.jpg",
+    "sha_evidencia": "55ff61b34255f18d86f6eac62634400465fb60167492a9ddf145100cef8959d5"
+  },
+  "pub_manzana_002": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_003": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_004": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_005": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_006": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_007": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_008": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_009": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_010": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_012": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_013": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_014": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_015": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_016": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_017": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_018": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_01.jpg",
+    "sha_evidencia": "7c8e1bf78d6c818a8c71d147882d070b8902c44480ebbc85ad58221c4af56a11"
+  },
+  "pub_manzana_019": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_020": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_021": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_022": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_024": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_025": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_026": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_027": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_028": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_029": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_030": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_031": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_032": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_034": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_035": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_036": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_02.jpg",
+    "sha_evidencia": "dc8288903d2e87b93f20adf140d2a9ed86997b385928c21ac947142c1d4b8265"
+  },
+  "pub_manzana_037": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_038": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_039": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_040": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_041": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_042": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_043": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_044": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_045": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_046": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_047": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_048": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_050": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_051": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_052": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_053": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_03.jpg",
+    "sha_evidencia": "8f8f20c001804a87d1b4a63979587694d8287a68d9f538bc226d0087de145537"
+  },
+  "pub_manzana_054": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_055": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_056": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_057": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_058": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_060": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_061": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_062": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_063": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_064": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_065": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_066": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_067": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_068": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_070": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_071": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_04.jpg",
+    "sha_evidencia": "aa67944c841f22f0ade7c40205a18c54fc88321043f8dce52c7cb11a2b3be137"
+  },
+  "pub_manzana_072": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_073": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_074": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_075": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_076": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_077": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_078": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_079": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_080": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_082": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_083": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_084": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_085": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_086": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_087": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_088": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_05.jpg",
+    "sha_evidencia": "e1f7385062b3b8b49e923795477cbe51c8a4f89440884a1623567c0e40ec8b5c"
+  },
+  "pub_manzana_090": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_091": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_092": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_093": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_094": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_095": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_096": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_097": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_098": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_099": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_101": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_102": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_103": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_105": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_106": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_107": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_06.jpg",
+    "sha_evidencia": "ff84d126bbef21e57a6617942193669f4026a4003218c2232ea09c1271eebea7"
+  },
+  "pub_manzana_108": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_109": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_110": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_111": {
+    "calidad": "buena",
+    "decision_mascara": "rechazada",
+    "motivo": "Contorno con fondo/otro objeto o fruto incompleto: excluir del ajuste.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_112": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_113": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_114": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_115": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_117": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_118": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_119": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  },
+  "pub_manzana_120": {
+    "calidad": "buena",
+    "decision_mascara": "aceptada",
+    "motivo": "Contorno y recorte comprobados visualmente; una fruta aislada. Contorno aproximado para desarrollo.",
+    "pagina_evidencia": "publica_manzana_07.jpg",
+    "sha_evidencia": "766a404fc7d09b7e47c437dda7a6730d254645744194c060a3dc390b3bd9d1bf"
+  }
+}

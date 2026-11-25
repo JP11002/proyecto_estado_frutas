@@ -1,0 +1,29 @@
+{
+  "protocolo": "calidad_visual_v1",
+  "aclaracion_fecha": "2026-11-24",
+  "unidad_objetivo": "Apariencia externa visible de un fruto aislado en una fotografía.",
+  "buena": "Superficie conservada; pequeñas marcas naturales, pedúnculo o cáliz no implican deterioro relevante.",
+  "intermedia": "Defectos localizados o abrasiones visibles, con la mayor parte de la superficie y estructura aparente conservadas.",
+  "mala": "Deterioro externo marcado: varias lesiones extensas/coalescentes, grietas o arrugas generalizadas con pérdida aparente de volumen.",
+  "prohibiciones": [
+    "No asignar mala calidad únicamente por color verde, amarillo, marrón u oscuridad.",
+    "No inferir inocuidad, firmeza real, estado interno ni patógeno a partir de una fotografía.",
+    "No completar una clase porque falten ejemplos: registrar evidencia visible.",
+    "No contar fotografías repetidas o varias vistas como frutos físicos independientes."
+  ],
+  "mascara_aceptable": "Un fruto aislado, sin fragmentos grandes de mesa, reflejos, sombras, manos u otros frutos; contorno aproximado visualmente revisado, sin garantía píxel a píxel.",
+  "exclusiones": [
+    "Fotografía de varios frutos sin región individual revisada.",
+    "Fruto incompleto en el borde, o máscara con fondo/objetos importantes.",
+    "No confirmar automáticamente la etiqueta de la carpeta de origen."
+  ],
+  "cinco_casos_reexaminados": {
+    "eq_limon_011": "mala: placas extensas de superficie alterada, textura dañada y grietas visibles.",
+    "eq_limon_013": "mala: lesiones en distintas zonas y grietas con daño visible del extremo.",
+    "eq_limon_014": "mala: placas extensas y grietas; vista parecida a eq_limon_011, mantenida en el mismo grupo conservador.",
+    "eq_manzana_019": "mala: arrugas generalizadas, deformación y pérdida aparente de volumen.",
+    "eq_manzana_020": "mala: arrugas generalizadas visibles desde otra perspectiva y superficie notablemente deteriorada."
+  },
+  "revisor": "Asistente - revision visual",
+  "limitacion": "Resolución operativa de un anotador. No constituye acuerdo entre revisores independientes. Las etiquetas originales intermedias y el historial anterior se conservan."
+}

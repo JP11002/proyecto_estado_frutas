@@ -1,0 +1,133 @@
+{
+  "id_ejemplar": "2d1b73a74c463d28",
+  "metodo": "revision_asistente_v5",
+  "ruta_mascara": "C:\\Users\\felipe\\APOIII\\proyecto_estado_frutas\\data\\processed\\preparacion_v1\\2d1b73a74c463d28\\revision_asistente_v5\\mascara.png",
+  "ruta_cnn": "C:\\Users\\felipe\\APOIII\\proyecto_estado_frutas\\data\\processed\\preparacion_v1\\2d1b73a74c463d28\\revision_asistente_v5\\entrada_cnn.png",
+  "sha_mascara": "b4c1d8d90d40284c2acd440dc17b9c4a4a840dd3a6a7f2eaefe09a7b79c79639",
+  "firma_preparacion": "8e2dffac980c4244c3bace3c8fce815fa842dda4ed275dcaa00c6cd5606c9417",
+  "caja_recorte": [
+    52,
+    47,
+    123,
+    227
+  ],
+  "version": "preparacion_v1",
+  "opencv": "5.0.0",
+  "lado_cnn": 224,
+  "parametros": {
+    "forma": "poligono",
+    "puntos": [
+      [
+        0.47,
+        0.23
+      ],
+      [
+        0.52,
+        0.21
+      ],
+      [
+        0.58,
+        0.22
+      ],
+      [
+        0.6,
+        0.27
+      ],
+      [
+        0.6,
+        0.4
+      ],
+      [
+        0.58,
+        0.56
+      ],
+      [
+        0.54,
+        0.7
+      ],
+      [
+        0.48,
+        0.81
+      ],
+      [
+        0.4,
+        0.86
+      ],
+      [
+        0.34,
+        0.85
+      ],
+      [
+        0.31,
+        0.8
+      ],
+      [
+        0.33,
+        0.65
+      ],
+      [
+        0.38,
+        0.49
+      ],
+      [
+        0.41,
+        0.35
+      ],
+      [
+        0.43,
+        0.27
+      ]
+    ],
+    "usar_contorno_directo": true
+  },
+  "sha_original": "f986495fd99c3588b8093269e895e430d39a49312d508e520136671af06533ef",
+  "sha_cnn": "a1fa18fe54b9ccfa6c8c695e90c9648f5341d9b0fee23866ca85b5fb35b235b2",
+  "ocupacion": 0.12546793619791666,
+  "toca_borde": false,
+  "alertas_mascara": "",
+  "color_r_media": 0.5592149231996999,
+  "color_r_desv": 0.2512746806515969,
+  "color_g_media": 0.42514776625746775,
+  "color_g_desv": 0.2632998094636336,
+  "color_b_media": 0.2648289281660451,
+  "color_b_desv": 0.2358838167183255,
+  "color_h_seno": 0.5291585416374903,
+  "color_h_coseno": 0.8274834720225679,
+  "color_hist_h_0": 0.9283281984757581,
+  "color_hist_h_1": 0.0659964326252635,
+  "color_hist_h_2": 0.0019458407653640344,
+  "color_hist_h_3": 0.0019458407653640344,
+  "color_hist_h_4": 0.0009729203826820172,
+  "color_hist_h_5": 0.0,
+  "color_hist_h_6": 0.0,
+  "color_hist_h_7": 0.0008107669855683476,
+  "color_hist_s_0": 0.03178206583427923,
+  "color_hist_s_1": 0.032592832819847574,
+  "color_hist_s_2": 0.06875304037619588,
+  "color_hist_s_3": 0.1149667585535917,
+  "color_hist_s_4": 0.18339549213556025,
+  "color_hist_s_5": 0.35057564455975354,
+  "color_hist_s_6": 0.1782065834279228,
+  "color_hist_s_7": 0.039727582292849034,
+  "color_hist_v_0": 0.0,
+  "color_hist_v_1": 0.09307604994324631,
+  "color_hist_v_2": 0.13766823414950544,
+  "color_hist_v_3": 0.3502513377655262,
+  "color_hist_v_4": 0.08075239176260743,
+  "color_hist_v_5": 0.06940165396465056,
+  "color_hist_v_6": 0.07750932382033404,
+  "color_hist_v_7": 0.19134100859413006,
+  "color_s_media": 0.6042948393886499,
+  "color_s_desv": 0.19657729997335915,
+  "color_v_media": 0.5593160306120178,
+  "color_v_desv": 0.25144931704861395,
+  "textura_contraste": 0.002369563023513977,
+  "textura_homogeneidad": 0.8169752089450759,
+  "textura_energia": 0.058901998912285244,
+  "textura_entropia": 4.985116320668913,
+  "forma_circularidad": 0.4891275915155495,
+  "forma_solidez": 0.9679114128677659,
+  "forma_aspecto": 2.912280701754386,
+  "tam_ocupacion_imagen": 0.12546793619791666,
+  "tam_diametro_equivalente_normalizado": 0.461520296359031
+}

@@ -1,0 +1,144 @@
+{
+  "id_ejemplar": "drive_1X2yauvX3rZ3hQAmASxLbXWN-1mDECHuJ",
+  "metodo": "drive_poligono_ampliacion_v1",
+  "ruta_mascara": "C:\\Users\\felipe\\APOIII\\proyecto_estado_frutas\\data\\processed\\drive_20261124\\preparacion\\drive_1X2yauvX3rZ3hQAmASxLbXWN-1mDECHuJ\\drive_poligono_ampliacion_v1\\mascara.png",
+  "ruta_cnn": "C:\\Users\\felipe\\APOIII\\proyecto_estado_frutas\\data\\processed\\drive_20261124\\preparacion\\drive_1X2yauvX3rZ3hQAmASxLbXWN-1mDECHuJ\\drive_poligono_ampliacion_v1\\entrada_cnn.png",
+  "sha_mascara": "5b40ed178c8a247a9ceecf04b7c42a0d9a4c47233e439cb026d7192139c3de4e",
+  "firma_preparacion": "07f10f25fff6a0b43570336e967c836bce7c6a6a94ee6c7efe8cc087f4e7e537",
+  "caja_recorte": [
+    415,
+    133,
+    2216,
+    2005
+  ],
+  "version": "preparacion_v1",
+  "opencv": "5.0.0",
+  "lado_cnn": 224,
+  "parametros": {
+    "metodo": "drive_poligono_ampliacion_v1",
+    "puntos": [
+      [
+        0.16,
+        0.22
+      ],
+      [
+        0.18,
+        0.15
+      ],
+      [
+        0.24,
+        0.1
+      ],
+      [
+        0.33,
+        0.065
+      ],
+      [
+        0.42,
+        0.05
+      ],
+      [
+        0.49,
+        0.06
+      ],
+      [
+        0.56,
+        0.065
+      ],
+      [
+        0.64,
+        0.11
+      ],
+      [
+        0.69,
+        0.17
+      ],
+      [
+        0.71,
+        0.24
+      ],
+      [
+        0.7,
+        0.31
+      ],
+      [
+        0.65,
+        0.38
+      ],
+      [
+        0.58,
+        0.44
+      ],
+      [
+        0.49,
+        0.48
+      ],
+      [
+        0.4,
+        0.48
+      ],
+      [
+        0.31,
+        0.45
+      ],
+      [
+        0.23,
+        0.39
+      ],
+      [
+        0.18,
+        0.31
+      ]
+    ]
+  },
+  "sha_original": "392abb8490bbb82b2af253598f1adc8998c2b78d30ed2483e87d21981c68eaad",
+  "sha_cnn": "38a103daba8024c92835288533addba88e7b29e48ca028bd6b45837f3ee3642d",
+  "ocupacion": 0.181523342361636,
+  "toca_borde": false,
+  "alertas_mascara": "",
+  "color_r_media": 0.7370948957550844,
+  "color_r_desv": 0.14073641569702122,
+  "color_g_media": 0.41191392688486267,
+  "color_g_desv": 0.22815318088979789,
+  "color_b_media": 0.3557455242026905,
+  "color_b_desv": 0.17890980869794604,
+  "color_h_seno": 0.16761245036855538,
+  "color_h_coseno": 0.9406659887461956,
+  "color_hist_h_0": 0.6703401118344243,
+  "color_hist_h_1": 0.04368509609302426,
+  "color_hist_h_2": 0.0007441471269685787,
+  "color_hist_h_3": 0.00016039601097379806,
+  "color_hist_h_4": 0.0005814920172486708,
+  "color_hist_h_5": 0.00020241524765144095,
+  "color_hist_h_6": 0.0012944635815209337,
+  "color_hist_h_7": 0.282991878088188,
+  "color_hist_s_0": 0.009973469144325686,
+  "color_hist_s_1": 0.023796442552022526,
+  "color_hist_s_2": 0.12343805912693966,
+  "color_hist_s_3": 0.2137703815888874,
+  "color_hist_s_4": 0.25307869977119846,
+  "color_hist_s_5": 0.2554932245110407,
+  "color_hist_s_6": 0.11864696250618993,
+  "color_hist_s_7": 0.0018027607993956459,
+  "color_hist_v_0": 2.259098746109832e-06,
+  "color_hist_v_1": 0.001305307255502261,
+  "color_hist_v_2": 0.0042087009640026166,
+  "color_hist_v_3": 0.02918755579973903,
+  "color_hist_v_4": 0.22752738931319783,
+  "color_hist_v_5": 0.23264153705464127,
+  "color_hist_v_6": 0.3209867562595108,
+  "color_hist_v_7": 0.18414049425466006,
+  "color_s_media": 0.5524918567906453,
+  "color_s_desv": 0.16578052166245869,
+  "color_v_media": 0.73719852194345,
+  "color_v_desv": 0.14085289618976113,
+  "textura_contraste": 0.0009990815237306027,
+  "textura_homogeneidad": 0.9065580627681047,
+  "textura_energia": 0.06541611111655823,
+  "textura_entropia": 4.419866783345643,
+  "forma_circularidad": 0.884366740769837,
+  "forma_solidez": 0.9981852511188958,
+  "forma_aspecto": 1.0426939266386048,
+  "tam_ocupacion_imagen": 0.181523342361636,
+  "tam_diametro_equivalente_normalizado": 0.5551248481646083
+}

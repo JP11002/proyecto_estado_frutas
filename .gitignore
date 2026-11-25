@@ -1,0 +1,101 @@
+# Datos y salidas reproducibles.
+# Las etiquetas, identidades, recetas y máscaras revisadas de data/annotations/
+# SÍ se versionan: no ignorar toda la carpeta data/ ni todos los CSV o PNG.
+/data/raw/
+/data/external/
+/data/processed/
+/experiments/results/
+/experiments/checkpoints/
+
+# Pesos y modelos entrenados, incluso si se guardan fuera de checkpoints/.
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.keras
+*.onnx
+*.safetensors
+*.tflite
+*.weights.h5
+events.out.tfevents.*
+/mlruns/
+/wandb/
+/lightning_logs/
+
+# Entornos virtuales y archivos compilados de Python.
+.venv/
+.venv-*/
+venv/
+venv-*/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Cachés de herramientas, pruebas y empaquetado.
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter: conservar los cuadernos .ipynb; excluir sus copias automáticas.
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Credenciales locales. Las plantillas sin secretos sí se pueden compartir.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.*.example
+.secrets/
+kaggle.json
+credentials.json
+client_secret*.json
+service-account*.json
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Archivos temporales, registros y respaldos automáticos.
+/tmp/
+/temp/
+/output/
+/outputs/
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.RECOVERED
+
+# Configuración local del editor y archivos del sistema operativo.
+.idea/
+.vscode/
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+~$*

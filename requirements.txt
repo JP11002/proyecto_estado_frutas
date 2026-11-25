@@ -4,7 +4,13 @@ matplotlib
 seaborn
 opencv-python
 pillow
+pillow-heif
 scikit-learn
+joblib
+scipy
 torch
 torchvision
 streamlit
+kagglehub
+ipywidgets
+ipykernel
