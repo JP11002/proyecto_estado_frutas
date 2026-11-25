@@ -14,20 +14,20 @@ import platform
 from pathlib import Path
 
 import joblib
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sklearn
 from sklearn.base import clone
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, recall_score
-from sklearn.model_selection import StratifiedGroupKFold
-from sklearn.pipeline import make_pipeline
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, make_scorer, recall_score
+from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
+from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-from src.data.preparacion_imagenes import guardar_bytes_si_cambio, guardar_tabla, leer_rgb
+from src.models.evaluacion import crear_cv_interno
+from src.utils.archivos import guardar_bytes_si_cambio, guardar_tabla
 
 CALIDADES = ['buena', 'intermedia', 'mala']
 FRUTAS = ['manzana', 'banano', 'limon']
@@ -67,6 +67,8 @@ def guardar_grafica(figura, ruta):
 
 
 def hacer_eda(base, columnas, salida):
+    import matplotlib.pyplot as plt
+
     salida = Path(salida)
     salida.mkdir(parents=True, exist_ok=True)
     conteos = pd.crosstab(base.fruta, base.calidad_revisada).reindex(index=FRUTAS, columns=CALIDADES, fill_value=0)
@@ -134,6 +136,8 @@ def hacer_eda(base, columnas, salida):
     fig.colorbar(im, ax=ax, shrink=.8, label='Correlación de Pearson')
     guardar_grafica(fig, salida / '03_correlaciones.png')
     plt.close(fig)
+
+    from src.data.preparacion_imagenes import leer_rgb
 
     fig, axes = plt.subplots(3, 3, figsize=(10, 10), layout='constrained')
     ejemplos = []
@@ -256,6 +260,8 @@ def entrenar_y_comparar(base, columnas, estado, salida, checkpoints):
     for nombre, tabla in tablas.items():
         guardar_tabla(tabla, salida / f'{nombre}.csv')
 
+    import matplotlib.pyplot as plt
+
     fig, axes = plt.subplots(1, 3, figsize=(13, 4), layout='constrained')
     for ax, (nombre, matriz) in zip(axes, matrices.items()):
         ax.imshow(matriz / matriz.sum(axis=1, keepdims=True), vmin=0, vmax=1, cmap='Blues')
@@ -288,3 +294,136 @@ def entrenar_y_comparar(base, columnas, estado, salida, checkpoints):
     guardar_json(metadata, salida / 'configuracion_entrenamiento.json')
     guardar_json(metadata, checkpoints / 'metadata.json')
     return tablas
+
+
+def espacios_hiperparametros(semilla: int = SEMILLA) -> dict[str, tuple[object, list[dict] | dict]]:
+    """Definir estimadores y rejillas para búsqueda interna agrupada."""
+    return {
+        'SVM_ajustado': (
+            Pipeline([
+                ('escalar', StandardScaler()),
+                ('svc', SVC(probability=True, class_weight='balanced', random_state=semilla)),
+            ]),
+            [
+                {
+                    'svc__kernel': ['rbf'],
+                    'svc__C': [0.1, 1.0, 5.0, 10.0],
+                    'svc__gamma': ['scale', 0.01, 0.1],
+                },
+                {
+                    'svc__kernel': ['linear'],
+                    'svc__C': [0.1, 1.0, 5.0, 10.0],
+                },
+            ],
+        ),
+        'Random_Forest_ajustado': (
+            RandomForestClassifier(class_weight='balanced', random_state=semilla, n_jobs=1),
+            {
+                'n_estimators': [200, 400],
+                'max_depth': [None, 8],
+                'min_samples_leaf': [1, 2, 4],
+                'max_features': ['sqrt', 0.3],
+            },
+        ),
+    }
+
+
+def evaluar_tradicionales_anidados(
+    base: pd.DataFrame,
+    columnas: list[str],
+    particiones: list[tuple[np.ndarray, np.ndarray]],
+    estado: dict,
+    salida: str | Path,
+    checkpoints: str | Path,
+    semilla: int = SEMILLA,
+    espacios: dict[str, tuple[object, list[dict] | dict]] | None = None,
+) -> tuple[dict[str, np.ndarray], dict[str, dict]]:
+    """Ejecutar validación cruzada anidada por grupos y guardar modelos ajustados."""
+    salida = Path(salida)
+    checkpoints = Path(checkpoints)
+    salida.mkdir(parents=True, exist_ok=True)
+    checkpoints.mkdir(parents=True, exist_ok=True)
+
+    X = base[columnas]
+    y = base.calidad_revisada
+    grupos = base.grupo_particion
+    scorer = make_scorer(f1_score, labels=CALIDADES, average='macro', zero_division=0, pos_label=None)
+
+    predicciones_oof: dict[str, np.ndarray] = {}
+    resumen_ajuste: dict[str, dict] = {}
+
+    # Referencia mayoritaria sin fuga
+    oof_ref = np.full(len(base), '', dtype=object)
+    for train, val in particiones:
+        oof_ref[val] = DummyClassifier(strategy='most_frequent').fit(X.iloc[train], y.iloc[train]).predict(X.iloc[val])
+    predicciones_oof['Referencia_mayoritaria'] = oof_ref
+
+    registros_busqueda = []
+    catalogo_espacios = espacios or espacios_hiperparametros(semilla)
+    for nombre, (estimador, rejilla) in catalogo_espacios.items():
+        oof = np.full(len(base), '', dtype=object)
+        mejores_por_pliegue = []
+
+        for pliegue, (train, val) in enumerate(particiones, 1):
+            cv_interno = crear_cv_interno(y.iloc[train], grupos.iloc[train], max_splits=3, semilla=semilla + pliegue)
+            busqueda = GridSearchCV(
+                estimator=clone(estimador),
+                param_grid=rejilla,
+                scoring=scorer,
+                cv=cv_interno,
+                refit=True,
+                n_jobs=1,
+            )
+            busqueda.fit(X.iloc[train], y.iloc[train], groups=grupos.iloc[train])
+            oof[val] = busqueda.predict(X.iloc[val])
+            mejores_por_pliegue.append({
+                'pliegue_externo': pliegue,
+                'f1_macro_interno': float(busqueda.best_score_),
+                'parametros': busqueda.best_params_,
+            })
+
+        predicciones_oof[nombre] = oof
+
+        # Ajuste final sobre toda la base de desarrollo con CV interno por grupos.
+        cv_global = crear_cv_interno(y, grupos, max_splits=3, semilla=semilla)
+        busqueda_final = GridSearchCV(
+            estimator=clone(estimador),
+            param_grid=rejilla,
+            scoring=scorer,
+            cv=cv_global,
+            refit=True,
+            n_jobs=1,
+        )
+        busqueda_final.fit(X, y, groups=grupos)
+
+        cv_df = pd.DataFrame(busqueda_final.cv_results_).sort_values('rank_test_score')
+        cv_df.insert(0, 'modelo', nombre)
+        registros_busqueda.append(cv_df)
+
+        paquete = {
+            'modelo': busqueda_final.best_estimator_,
+            'mejores_parametros': busqueda_final.best_params_,
+            'f1_macro_cv_interno': float(busqueda_final.best_score_),
+            'caracteristicas': columnas,
+            'calidades': CALIDADES,
+            'frutas': FRUTAS,
+            'sha_base': estado['sha_base'],
+            'alcance': 'Prototipo ajustado mediante GridSearchCV agrupado sobre la base de desarrollo.',
+        }
+        contenido = io.BytesIO()
+        joblib.dump(paquete, contenido, compress=3)
+        ruta_ckpt = checkpoints / f'{nombre.lower()}.joblib'
+        guardar_bytes_si_cambio(ruta_ckpt, contenido.getvalue())
+        cargado = joblib.load(ruta_ckpt)
+        assert np.array_equal(cargado['modelo'].predict(X), busqueda_final.best_estimator_.predict(X))
+
+        resumen_ajuste[nombre] = {
+            'mejores_por_pliegue': mejores_por_pliegue,
+            'mejores_parametros_global': busqueda_final.best_params_,
+            'f1_macro_cv_interno_global': float(busqueda_final.best_score_),
+            'checkpoint': str(ruta_ckpt),
+        }
+
+    guardar_tabla(pd.concat(registros_busqueda, ignore_index=True), salida / 'busqueda_hiperparametros_ml.csv')
+    guardar_json(resumen_ajuste, salida / 'resumen_ajuste_ml.json')
+    return predicciones_oof, resumen_ajuste

@@ -14,26 +14,9 @@ import cv2
 import numpy as np
 from PIL import Image, ImageOps
 
+from src.utils.archivos import guardar_bytes_si_cambio, guardar_tabla
+
 VERSION = 'preparacion_v1'
-
-
-def guardar_bytes_si_cambio(ruta, contenido):
-    """Reutilizar archivos idénticos en una segunda ejecución del cuaderno."""
-    ruta = Path(ruta)
-    if ruta.is_file():
-        anterior = ruta.read_bytes()
-        if anterior == contenido:
-            return
-        if ruta.suffix in {'.json', '.csv'} and anterior.replace(b'\r\n', b'\n') == contenido.replace(b'\r\n', b'\n'):
-            return
-    ruta.parent.mkdir(parents=True, exist_ok=True)
-    temporal = ruta.with_name(ruta.name + '.tmp')
-    temporal.write_bytes(contenido)
-    temporal.replace(ruta)
-
-
-def guardar_tabla(tabla, ruta):
-    guardar_bytes_si_cambio(ruta, tabla.to_csv(index=False).encode('utf-8-sig'))
 
 
 def guardar_figura(figura, ruta, **opciones):

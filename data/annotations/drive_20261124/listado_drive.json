@@ -48,7 +48,7 @@
       "fuente": "propia",
       "id": "1xm1q-wtQKx2GuYpdDgaog4PeRLCbiUce",
       "ruta": "Bananos/Buenos",
-      "elementos": 0
+      "elementos": 1
     },
     {
       "fuente": "propia",
@@ -60,7 +60,7 @@
       "fuente": "propia",
       "id": "1cj9cYYW4HG8xD1e1IVGXdqhysLXCumtu",
       "ruta": "Bananos/Malos",
-      "elementos": 12
+      "elementos": 13
     },
     {
       "fuente": "propia",
@@ -72,7 +72,7 @@
       "fuente": "propia",
       "id": "1rq_Lu3ua26VzWhOBh7gyXVDQuTLeg8Ku",
       "ruta": "Limones/Buenos",
-      "elementos": 9
+      "elementos": 12
     },
     {
       "fuente": "propia",
@@ -3317,6 +3317,30 @@
       "ruta_local": "data/raw/drive_20261124/publica/limon/1dh4gIKG8-C0HrfpisnlJWVXrkNNfS9Iu__IMG_3332.HEIC"
     },
     {
+      "id_imagen": "drive_1tskqRIg903wu_l9wAEE6-MapAu3iNbx0",
+      "drive_id": "1tskqRIg903wu_l9wAEE6-MapAu3iNbx0",
+      "fuente": "propia",
+      "carpeta_raiz_id": "1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx",
+      "url_fuente": "https://drive.google.com/file/d/1tskqRIg903wu_l9wAEE6-MapAu3iNbx0/view",
+      "ruta_drive": "Bananos/Buenos/6e404937-f1df-4ce4-905b-a10e5d4b1b28.jpg",
+      "nombre_original": "6e404937-f1df-4ce4-905b-a10e5d4b1b28.jpg",
+      "fruta": "banano",
+      "calidad_declarada": "buena",
+      "ruta_local": "data/raw/drive_20261124/propia/banano/1tskqRIg903wu_l9wAEE6-MapAu3iNbx0__6e404937-f1df-4ce4-905b-a10e5d4b1b28.jpg"
+    },
+    {
+      "id_imagen": "drive_1Z-wIPJ96Q9G9w5Giv8XH--az0hGvRLsw",
+      "drive_id": "1Z-wIPJ96Q9G9w5Giv8XH--az0hGvRLsw",
+      "fuente": "propia",
+      "carpeta_raiz_id": "1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx",
+      "url_fuente": "https://drive.google.com/file/d/1Z-wIPJ96Q9G9w5Giv8XH--az0hGvRLsw/view",
+      "ruta_drive": "Bananos/Malos/0d0503b3-518c-407d-bffd-1853cd9589dd.jpg",
+      "nombre_original": "0d0503b3-518c-407d-bffd-1853cd9589dd.jpg",
+      "fruta": "banano",
+      "calidad_declarada": "mala",
+      "ruta_local": "data/raw/drive_20261124/propia/banano/1Z-wIPJ96Q9G9w5Giv8XH--az0hGvRLsw__0d0503b3-518c-407d-bffd-1853cd9589dd.jpg"
+    },
+    {
       "id_imagen": "drive_1cDRXmNSaNeWYSurjl9IkKnVq_BX0ZVOu",
       "drive_id": "1cDRXmNSaNeWYSurjl9IkKnVq_BX0ZVOu",
       "fuente": "propia",
@@ -3459,6 +3483,42 @@
       "fruta": "banano",
       "calidad_declarada": "mala",
       "ruta_local": "data/raw/drive_20261124/propia/banano/1-MYGH0venhQR1Sjwn0JgY9pKPzCiDEVG__IMG_6138.HEIC"
+    },
+    {
+      "id_imagen": "drive_1EOAoX_UWoJcMCIRmUa8ExnHVH672PLnn",
+      "drive_id": "1EOAoX_UWoJcMCIRmUa8ExnHVH672PLnn",
+      "fuente": "propia",
+      "carpeta_raiz_id": "1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx",
+      "url_fuente": "https://drive.google.com/file/d/1EOAoX_UWoJcMCIRmUa8ExnHVH672PLnn/view",
+      "ruta_drive": "Limones/Buenos/22fb3069-a5d2-4a32-95d8-aedfff65b293.jpg",
+      "nombre_original": "22fb3069-a5d2-4a32-95d8-aedfff65b293.jpg",
+      "fruta": "limon",
+      "calidad_declarada": "buena",
+      "ruta_local": "data/raw/drive_20261124/propia/limon/1EOAoX_UWoJcMCIRmUa8ExnHVH672PLnn__22fb3069-a5d2-4a32-95d8-aedfff65b293.jpg"
+    },
+    {
+      "id_imagen": "drive_1P4nmfQMXjPoyW0PTwcB3_2726O-Dq86L",
+      "drive_id": "1P4nmfQMXjPoyW0PTwcB3_2726O-Dq86L",
+      "fuente": "propia",
+      "carpeta_raiz_id": "1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx",
+      "url_fuente": "https://drive.google.com/file/d/1P4nmfQMXjPoyW0PTwcB3_2726O-Dq86L/view",
+      "ruta_drive": "Limones/Buenos/911cef59-5c8d-4420-b0ad-f4f89bace409.jpg",
+      "nombre_original": "911cef59-5c8d-4420-b0ad-f4f89bace409.jpg",
+      "fruta": "limon",
+      "calidad_declarada": "buena",
+      "ruta_local": "data/raw/drive_20261124/propia/limon/1P4nmfQMXjPoyW0PTwcB3_2726O-Dq86L__911cef59-5c8d-4420-b0ad-f4f89bace409.jpg"
+    },
+    {
+      "id_imagen": "drive_1CxQjsGut1x08HCfjaLUanFxrTjiBGlHZ",
+      "drive_id": "1CxQjsGut1x08HCfjaLUanFxrTjiBGlHZ",
+      "fuente": "propia",
+      "carpeta_raiz_id": "1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx",
+      "url_fuente": "https://drive.google.com/file/d/1CxQjsGut1x08HCfjaLUanFxrTjiBGlHZ/view",
+      "ruta_drive": "Limones/Buenos/ab3179be-6c3f-4d0c-8415-2c760472098f.jpg",
+      "nombre_original": "ab3179be-6c3f-4d0c-8415-2c760472098f.jpg",
+      "fruta": "limon",
+      "calidad_declarada": "buena",
+      "ruta_local": "data/raw/drive_20261124/propia/limon/1CxQjsGut1x08HCfjaLUanFxrTjiBGlHZ__ab3179be-6c3f-4d0c-8415-2c760472098f.jpg"
     },
     {
       "id_imagen": "drive_12QQtuhg84VihaK0eyt6LvUnfbccbfw_9",
