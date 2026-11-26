@@ -1,4 +1,4 @@
-# Clasificación del estado de frutas
+# Clasificación de calidad de frutas y verduras mediante visión por computadora
 
 **Proyecto final de Algoritmos y Programación III**  
 Universidad Icesi · Cali, Colombia · Semestre 2026-2
@@ -8,6 +8,18 @@ Universidad Icesi · Cali, Colombia · Semestre 2026-2
 Proyecto de clasificación de calidad externa de **manzana roja, banano y limón**,
 con las categorías **buena, intermedia y mala**. Se comparan SVM y Random Forest;
 también está implementado el flujo de comparación con una CNN.
+
+## Descripción y objetivos
+
+El sistema analiza imágenes para apoyar la inspección de calidad externa y
+estimar tamaño relativo mediante características visuales. El alcance vigente
+comprende manzana roja, banano y limón. Las categorías son buena, intermedia y
+mala, según conservación de superficie y extensión de defectos visibles.
+
+Se comparan aprendizaje automático tradicional y redes convolucionales, se
+analizan errores y se documentan impactos y decisiones éticas. El prototipo está
+implementado y evaluado; el cierre documental requiere añadir el video del equipo.
+
 
 ## Entrega y demostración
 
