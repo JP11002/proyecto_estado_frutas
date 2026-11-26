@@ -20,7 +20,7 @@ if str(RAIZ) not in sys.path:
 from src.models.evaluacion import (
     CALIDADES,
     FRUTAS,
-    cargar_base_v2,
+    cargar_base,
     consolidar_resultados_oof,
     crear_cv_interno,
     crear_pliegues_externos,
@@ -83,22 +83,60 @@ def _crear_base_sintetica(raiz: Path, n_grupos: int = 9, fotos_por_grupo: int = 
             filas.append(fila)
 
     df = pd.DataFrame(filas)
-    destino = raiz / 'data/processed/base_revisada_v2'
+    destino = raiz / 'data/base'
     destino.mkdir(parents=True, exist_ok=True)
-    ruta_csv = destino / 'base_svm_rf.csv'
+    ruta_csv = destino / 'datos.csv'
     df.to_csv(ruta_csv, index=False, encoding='utf-8-sig')
     sha = hashlib.sha256(ruta_csv.read_bytes()).hexdigest()
     estado = {'caracteristicas': columnas, 'sha_base': sha}
-    (destino / 'estado_base.json').write_text(json.dumps(estado, indent=2), encoding='utf-8')
+    (destino / 'estado.json').write_text(json.dumps(estado, indent=2), encoding='utf-8')
     return df, columnas, estado
 
 
 class TestModelosYValidacion(unittest.TestCase):
+    def test_referencia_rechaza_cambios_de_grupo_y_bloque(self) -> None:
+        from src.training.entrenar_modelos import cargar_resultados_tradicionales
+
+        with tempfile.TemporaryDirectory() as tmp:
+            raiz = Path(tmp)
+            _crear_base_sintetica(raiz)
+            base, _, estado = cargar_base(raiz)
+            _, asignacion, _ = crear_pliegues_externos(base)
+            carpeta = raiz / 'experiments/results/ajuste_modelos'
+            carpeta.mkdir(parents=True)
+            modelos = ['Referencia_mayoritaria', 'SVM_inicial', 'Random_Forest_inicial',
+                       'SVM_ajustado', 'Random_Forest_ajustado']
+            tablas = []
+            for nombre in modelos:
+                tabla = base[['id_ejemplar', 'grupo_particion', 'calidad_revisada', 'fruta', 'fuente']].copy()
+                tabla['modelo'], tabla['prediccion'] = nombre, base.calidad_revisada
+                tabla['pliegue_validacion'] = asignacion
+                tablas.append(tabla)
+            predicciones = pd.concat(tablas, ignore_index=True)
+            ruta = carpeta / 'predicciones_oof.csv'
+            predicciones.to_csv(ruta, index=False)
+            (carpeta / 'configuracion_ajuste.json').write_text(json.dumps({'sha_base': estado['sha_base']}), encoding='utf-8')
+            (carpeta / 'parametros_seleccionados.json').write_text('[]', encoding='utf-8')
+            verificadas, _ = cargar_resultados_tradicionales(raiz, base, estado, asignacion)
+            self.assertEqual(set(verificadas), set(modelos))
+
+            modificadas = predicciones.copy()
+            modificadas.loc[0, 'grupo_particion'] = 'grupo_ajeno'
+            modificadas.to_csv(ruta, index=False)
+            with self.assertRaisesRegex(ValueError, 'grupo_particion'):
+                cargar_resultados_tradicionales(raiz, base, estado, asignacion)
+
+            modificadas = predicciones.copy()
+            modificadas.loc[0, 'pliegue_validacion'] = modificadas.loc[0, 'pliegue_validacion'] % 3 + 1
+            modificadas.to_csv(ruta, index=False)
+            with self.assertRaisesRegex(ValueError, 'bloques'):
+                cargar_resultados_tradicionales(raiz, base, estado, asignacion)
+
     def test_validacion_agrupada_y_ajuste_tradicional(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             raiz = Path(tmp)
             _crear_base_sintetica(raiz)
-            base, columnas, estado = cargar_base_v2(raiz)
+            base, columnas, estado = cargar_base(raiz)
             particiones, asignacion, cobertura = crear_pliegues_externos(base, n_splits=3, semilla=42)
 
             self.assertEqual(len(particiones), 3)
@@ -152,6 +190,10 @@ class TestModelosYValidacion(unittest.TestCase):
         import torch
         from src.models.cnn_calidad import CNNCalidadFruta, ConfigCNN, evaluar_cnn_anidada
 
+        hilos_anteriores = torch.get_num_threads()
+        self.addCleanup(torch.set_num_threads, hilos_anteriores)
+        torch.set_num_threads(min(2, hilos_anteriores))
+
         modelo = CNNCalidadFruta(num_clases=3, dropout=0.2)
         salida_logits = modelo(torch.zeros((2, 3, 224, 224)))
         self.assertEqual(tuple(salida_logits.shape), (2, 3))
@@ -159,7 +201,7 @@ class TestModelosYValidacion(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             raiz = Path(tmp)
             _crear_base_sintetica(raiz)
-            base, _, estado = cargar_base_v2(raiz)
+            base, _, estado = cargar_base(raiz)
             particiones, _, _ = crear_pliegues_externos(base, n_splits=3, semilla=42)
             salida = raiz / 'experiments/results'
             ckpts = raiz / 'experiments/checkpoints'

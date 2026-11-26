@@ -1,0 +1,17 @@
+﻿fuente,fruta,calidad_revisada,ejemplares,grupos_conservadores
+propia,banano,mala,2,1
+propia,limon,buena,2,1
+propia,limon,intermedia,2,1
+propia,limon,mala,3,1
+propia,manzana,buena,13,6
+propia,manzana,mala,3,2
+publica,banano,buena,5,1
+publica,banano,intermedia,67,1
+publica,limon,buena,70,1
+publica,manzana,buena,103,1
+publica_kaggle,banano,buena,3,2
+publica_kaggle,banano,intermedia,3,1
+publica_kaggle,banano,mala,3,2
+publica_kaggle,manzana,buena,5,3
+publica_kaggle,manzana,intermedia,3,2
+publica_kaggle,manzana,mala,4,2

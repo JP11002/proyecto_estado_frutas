@@ -76,11 +76,12 @@ esta es una evaluación de desarrollo, no una prueba final independiente.
 ## Archivos y reproducción
 
 Abrir el cuaderno 06 con las dependencias de `requirements.txt` y ejecutarlo de
-arriba abajo. La base debe estar exportada por el cuaderno 04 y las imágenes
-preparadas deben estar disponibles; no se descarga contenido durante el entrenamiento.
+arriba abajo. Todos los equipos cargan únicamente `data/base/`,
+incluida en el repositorio con sus imágenes y máscaras. No es obligatorio
+volver a ejecutar el cuaderno 04 ni descargar originales para entrenar.
 El módulo `src/models/modelos_tradicionales.py` concentra las operaciones reutilizables.
 
-Salidas en `experiments/results/eda_modelos_v1/`:
+Salidas en `experiments/results/eda_modelos/`:
 
 - `diagnostico_eda.json`, conteos, cobertura y estadísticos de características.
 - Cinco figuras PNG del EDA y las matrices de confusión.
@@ -89,7 +90,7 @@ Salidas en `experiments/results/eda_modelos_v1/`:
   `metricas_por_fruta.csv` y `metricas_por_fuente.csv`.
 - `configuracion_entrenamiento.json`, con configuración, versiones y huella de la base.
 
-Prototipos en `experiments/checkpoints/modelos_tradicionales_v1/`:
+Prototipos en `experiments/checkpoints/modelos_tradicionales/`:
 `svm.joblib`, `random_forest.joblib` y `metadata.json`. Cada archivo contiene el
 modelo ajustado con toda la base de desarrollo, la lista ordenada de características,
 las clases y la huella de la base. La carga se comprobó con predicciones coincidentes.
@@ -103,12 +104,13 @@ from pathlib import Path
 import joblib
 
 proyecto = Path.cwd()  # Ejecutar desde la raíz del proyecto.
-paquete = joblib.load(proyecto / 'experiments/checkpoints/modelos_tradicionales_v1/random_forest.joblib')
+paquete = joblib.load(proyecto / 'experiments/checkpoints/modelos_tradicionales/random_forest.joblib')
 prediccion = paquete['modelo'].predict(nuevas_caracteristicas[paquete['caracteristicas']])
 ```
 
-El siguiente experimento puede ajustar hiperparámetros mediante validación interna
-por grupos, conservando esta referencia. La ampliación debe priorizar manzanas y
+El ajuste de hiperparámetros mediante validación interna por grupos ya se realizó
+en el cuaderno 07, conservando esta referencia. Ver [resultados del ajuste](ajuste_modelos_tradicionales.md).
+La ampliación debe priorizar manzanas y
 limones intermedios, frutos malos y bananos buenos de diferentes capturas. La
 necesidad de una prueba independiente se reserva para la evaluación final y no
 bloquea el entrenamiento actual.

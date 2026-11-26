@@ -1,114 +1,100 @@
-# Estado de frutas: alcance vigente
+# Clasificación del estado de frutas
 
-Manzana roja, banano y limón. Integración de fuentes públicas y fotografías propias del equipo: [registro de la versión 2](docs/integracion_fuentes_v2.md). La base anterior con naranjas se conserva como antecedente. Configuración: [alcance actual](config/alcance_actual.json).
+**Proyecto final de Algoritmos y Programación III**  
+Universidad Icesi · Cali, Colombia · Semestre 2026-2
 
-Continuar en [06 — EDA y entrenamiento de SVM y Random Forest](notebooks/06_eda_y_modelos_tradicionales.ipynb).
-El cuaderno está ejecutado: incluye EDA, comparación inicial mediante tres pliegues
-agrupados, análisis de errores y guardado de ambos modelos. Resultados y reproducción:
-[primer experimento](docs/eda_y_modelos_tradicionales.md).
-La integración y revisión se conserva en [04 — Base vigente](notebooks/04_integracion_fuentes_y_base_v2.ipynb).
-La salida actual contiene 291 ejemplares revisados: 270 de Drive y 21 compatibles
-de la versión anterior. Las nueve combinaciones de fruta y calidad están presentes.
-Los cinco casos dudosos quedaron resueltos con evidencia de apariencia externa.
-Las 318 fotos nuevas tienen una disposición explícita: 270 incluidas, 22 descartadas
-por máscara/encuadre y 26 con varios frutos apartadas. Los grupos actuales permiten
-la comparación exploratoria; una prueba final requiere capturas independientes.
+**Integrantes:** Juan Pablo Serrano, Juan Castaño y Felipe Calderon.
 
-Las fotografías propias ya tienen una [propuesta de identidades y grupos seguros](docs/agrupacion_frutos_propios.md).
-Revisar o corregir las correspondencias en [05 — Agrupación de frutos propios](notebooks/05_agrupacion_frutos_propios.ipynb).
-Las 25 fotos propias de la base se vinculan con 12 identidades propuestas y 10 grupos
-conservadores; la base completa utiliza 22 grupos, manteniendo unidas las dudas de identidad.
+Proyecto de clasificación de calidad externa de **manzana roja, banano y limón**,
+con las categorías **buena, intermedia y mala**. Se comparan SVM y Random Forest;
+también está implementado el flujo de comparación con una CNN.
 
-El primer entrenamiento obtiene F1 macro OOF de **0,429 para Random Forest** y
-**0,299 para SVM**, frente a **0,272** de la referencia mayoritaria. Son métricas
-de desarrollo con fuerte desbalance; no una prueba independiente ni una selección definitiva.
+## Entrega y demostración
 
-Los datos descargados, resultados generados, modelos y entornos locales se excluyen
-mediante `.gitignore`. El código, los cuadernos y las anotaciones revisadas se
-conservan; ver [qué archivos se guardan en Git](docs/control_versiones.md).
+El [informe IEEE](docs/informe_final.pdf) resume el proyecto en cuatro páginas.
+El enlace del video debe completarse antes de entregar; los integrantes y enlaces
+se configuran en `config/entrega.json`. Ver la [lista de requisitos](docs/entrega.md)
+y el [guion para grabar el video](docs/guion_video.md).
 
----
+Para abrir la aplicación, desde el entorno con las dependencias instaladas:
 
-____________________________________________________________________________________
+```text
+python -m src.main
+```
+
+Permite cargar una foto, usar cámara o mostrar ejemplos de la base, elegir CNN,
+Random Forest o SVM y consultar calidad y tamaño relativo. Los ejemplos se marcan
+como entrenamiento. La cámara requiere dispositivo y permisos del sistema.
+La aplicación no guarda automáticamente fotogramas. El tamaño se mide sobre la
+máscara del encuadre original y no representa centímetros.
 
 
-# Project Template
-This is the template for the Project I course at the IA Master, Universidad Icesi, Cali Colombia
+## Una sola base
 
-This template is based on the template proposed by the [Data Science Working Group] (https://github.com/sfbrigade/data-science-wg) Code for the [San Francisco’s Code initiative](https://github.com/sfbrigade/data-science-wg) 
+Todos los cuadernos y entrenamientos usan **`data/base/datos.csv`** a través de
+`src/data/base.py`. La misma carpeta contiene `estado.json`, las imágenes y las
+máscaras revisadas. Se incluye completa en Git y utiliza rutas relativas.
+La misma carpeta se utiliza directamente en todos los equipos.
 
-*Instructions: Edit this template filling in the titles, information, and links! Feel free to stray a bit to suit your project but try to provide the main information for reviews and feedback purposes.*
-## Remove this table after updating your project's information
-____________________________________________________________________________________
+La base contiene **291 imágenes**, **43 características** y **22 grupos** de
+evaluación. Hay 201 ejemplos buenos, 75 intermedios y 15 malos. Las fuentes y
+decisiones se conservan en [integración de datos](docs/integracion_fuentes.md).
 
-# Project Name
-This project is a part of the  **Proyecto 1 de Innovación Tecnológica** course in the Applied Artificial Intelligence Master, Universidad Icesi, Cali Colombia. 
+## Ejecución
 
-#### -- Project Status: [Active, On-Hold, Completed]
+Seguir la [guía de instalación](docs/instalacion.md). Desde el entorno instalado:
 
-## Contributing Members
+```text
+python scripts/comprobar_proyecto.py
+python scripts/ejecutar_cuaderno.py notebooks/06_eda_y_modelos_tradicionales.ipynb
+python scripts/ejecutar_cuaderno.py notebooks/07_ajuste_modelos_tradicionales.ipynb
+```
 
-**Team Leader: [Full Name](https://github.com/[github handle])(@slackHandle)**
-**Instructor: [Full Name](https://github.com/[github handle])(@slackHandle)**
+`requirements.txt` instala EDA, modelos tradicionales y Jupyter. La CNN utiliza
+las dependencias opcionales de `requirements-dl.txt` y puede trabajar en CPU.
 
-#### Other Members:
+## Flujo de trabajo
 
-|Name     |  Email   | 
-|---------|-----------------|
-|[Full Name](https://github.com/[github handle])| @johnDoe        |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
+- Los cuadernos 01–02 documentan la adquisición y preparación de imágenes.
+- [03 — Comprobación inicial](notebooks/03_base_revisada_y_modelos_iniciales.ipynb)
+  comprueba el ajuste sobre la base común.
+- [04 — Integración y revisión](notebooks/04_integracion_fuentes_y_base.ipynb) y
+  [05 — Identidades de frutos](notebooks/05_agrupacion_frutos_propios.ipynb)
+  permiten revisar y actualizar esa misma base. Necesitan los originales para
+  trabajar con fotografías de alta resolución.
+- [06 — EDA y entrenamiento](notebooks/06_eda_y_modelos_tradicionales.ipynb)
+  realiza el análisis y la comparación inicial.
+- [07 — Ajuste tradicional](notebooks/07_ajuste_modelos_tradicionales.ipynb)
+  ajusta parámetros con validación interna por grupos.
+- [08 — Comparación con CNN](notebooks/08_comparacion_cnn.ipynb)
+  ejecuta la comparación unificada con aprendizaje profundo.
 
-## Contact
-* Feel free to contact the team leader or the instructor with any questions or if you are interested in contributing!
+Para incorporar revisiones aprobadas: `python scripts/actualizar_base.py`.
+El proceso valida los archivos y actualiza `data/base/` directamente.
 
+## Resultados de desarrollo
 
-## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+El experimento inicial obtuvo F1 macro de **0,429 en Random Forest** y **0,299 en
+SVM**. El ajuste obtuvo **0,388 en Random Forest** y **0,373 en SVM**.
+La CNN mejorada con MobileNetV3 Small congelada obtiene **0,472 de
+F1 macro** y **70,4 % de exactitud**, frente a **0,237**
+de la CNN simple anterior. Conserva la misma base y los mismos bloques por grupos.
+La calidad intermedia sigue siendo débil (6/75 aciertos); son resultados
+exploratorios de desarrollo y requieren una prueba final independiente.
 
-### Partner
-This section should be added when there's a partner institution 
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
+El diagnóstico de intermedia se integra en el mismo cuaderno 08. Un cribado con
+HistGradientBoosting obtuvo **0,487 de F1 macro** y **19/75 intermedias correctas**,
+frente a 6/75 de CNN, con menor exactitud global. Las etiquetas y los modelos CNN
+actuales se conservan; la comparación detallada incluye los costes por clase.
 
-### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
+Ver [EDA](docs/eda_y_modelos_tradicionales.md),
+[ajuste tradicional](docs/ajuste_modelos_tradicionales.md) y
+[comparación con CNN](docs/entrenamiento_cnn.md).
 
-### Technologies
-* R 
-* Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
+## Archivos compartidos
 
-## Project Description
-(Provide a more detailed overview of the project.  Talk a bit about your data sources and what questions and hypotheses you are exploring. What specific data analysis/visualization and modeling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
-
-## Getting Started
-Instructions for contributors
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
-
-    *If using offline data mention that and how contributors may obtain the data )*
-    
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
-
-5. Follow setup [instructions](Link to file)
-
-## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
-
-
+Git conserva el código, cuadernos, documentación, anotaciones y `data/base/`.
+Los originales descargados, preparaciones intermedias, entornos virtuales,
+resultados y modelos generados se excluyen mediante `.gitignore`. Ver
+[control de versiones](docs/control_versiones.md) y
+[verificación del proyecto](docs/verificacion_proyecto.md).

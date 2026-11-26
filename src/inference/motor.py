@@ -1,0 +1,101 @@
+"""Inferencia de calidad y medida de tamaño relativo con los modelos del proyecto."""
+from pathlib import Path
+import json
+import numpy as np
+import pandas as pd
+from PIL import Image
+from src.data.base import cargar_base
+from src.data.preparacion_imagenes import leer_rgb, mascara_grabcut, validar_mascara, preparar_cnn, extraer_caracteristicas, diagnosticar_mascara
+
+
+def medir_tamano(mascara):
+    """Medir sobre el encuadre original, antes del recorte CNN. No expresa centímetros."""
+    m = np.asarray(mascara) > 0
+    if m.ndim != 2 or m.sum() < 25:
+        raise ValueError('Se necesita una máscara bidimensional con al menos 25 píxeles de fruta.')
+    h,w = m.shape; ys,xs = np.where(m)
+    diametro = float(2 * np.sqrt(m.sum() / np.pi))
+    return {'area_px': int(m.sum()), 'diametro_equivalente_px': diametro,
+            'diametro_normalizado': diametro / min(h,w), 'ocupacion': float(m.mean()),
+            'ancho_relativo': float((xs.max()-xs.min()+1)/w), 'alto_relativo': float((ys.max()-ys.min()+1)/h),
+            'encuadre_px': [int(w),int(h)], 'unidad': 'relativo al encuadre; sin escala física'}
+
+
+class MotorInferencia:
+    def __init__(self, proyecto=None):
+        self.proyecto = Path(proyecto or Path(__file__).resolve().parents[2]).resolve()
+        self.base,self.columnas,self.estado = cargar_base(self.proyecto)
+        self.cache = {}
+        self.rutas = {
+            'CNN': self.proyecto/'experiments/checkpoints/comparacion_modelos/cnn_calidad.pt',
+            'Random Forest': self.proyecto/'experiments/checkpoints/modelos_tradicionales/random_forest.joblib',
+            'SVM': self.proyecto/'experiments/checkpoints/ajuste_modelos/svm_ajustado.joblib'}
+
+    def disponibles(self):
+        return [n for n,p in self.rutas.items() if p.is_file()]
+
+    def _cargar(self,nombre):
+        if nombre not in self.rutas:
+            raise ValueError('Modelo no reconocido.')
+        if nombre in self.cache:
+            return self.cache[nombre]
+        ruta = self.rutas[nombre]
+        if not ruta.is_file():
+            raise FileNotFoundError('Faltan los pesos de '+nombre+'. Ejecutar los cuadernos 06, 07 y 08 o usar el paquete de entrega.')
+        if nombre == 'CNN':
+            import torch
+            from src.models.cnn_calidad import CNNTransferencia,ConfigTransferencia
+            torch.set_num_threads(min(4,torch.get_num_threads()))
+            paquete = torch.load(ruta,map_location='cpu',weights_only=True)
+            if paquete.get('arquitectura') != 'mobilenet_v3_small_congelada':
+                raise ValueError('Los pesos CNN no corresponden a la arquitectura actual.')
+            modelo = CNNTransferencia(ConfigTransferencia(**paquete['config']))
+            modelo.load_state_dict(paquete['state_dict']);modelo.eval()
+        else:
+            import joblib
+            paquete = joblib.load(ruta);modelo=paquete['modelo']
+        if paquete['sha_base'] != self.estado['sha_base']:
+            raise ValueError('El modelo y la base tienen huellas distintas. Reentrenar antes de inferir.')
+        self.cache[nombre] = (modelo,paquete)
+        return self.cache[nombre]
+
+    def _predecir(self,entrada,rasgos,nombre):
+        modelo,paquete = self._cargar(nombre)
+        if nombre == 'CNN':
+            import torch
+            from src.models.cnn_calidad import transformacion_transferencia
+            x=transformacion_transferencia()(Image.fromarray(entrada)).unsqueeze(0)
+            with torch.inference_mode():
+                valores=modelo(x).softmax(1)[0].numpy()
+            scores={c:float(v) for c,v in zip(paquete['calidades'],valores)}
+            calidad=max(scores,key=scores.get)
+        else:
+            tabla=pd.DataFrame([rasgos],columns=paquete['caracteristicas'])
+            calidad=str(modelo.predict(tabla)[0]);scores={}
+            if hasattr(modelo,'predict_proba'):
+                scores={str(c):float(v) for c,v in zip(modelo.classes_,modelo.predict_proba(tabla)[0])}
+        return {'modelo':nombre,'calidad':calidad,'puntuaciones_no_calibradas':scores,'sha_base':self.estado['sha_base']}
+
+    def analizar(self,rgb,nombre='CNN',mascara=None,rectangulo=None):
+        rgb=np.asarray(rgb,dtype=np.uint8)
+        if rgb.ndim != 3 or rgb.shape[2] != 3 or min(rgb.shape[:2])<16:
+            raise ValueError('Cargar una imagen RGB con al menos 16 píxeles por lado.')
+        mascara=validar_mascara(rgb,mascara if mascara is not None else mascara_grabcut(rgb,rectangulo))
+        entrada,_=preparar_cnn(rgb,mascara)
+        rasgos=extraer_caracteristicas(rgb,mascara)
+        resultado=self._predecir(entrada,rasgos,nombre)
+        resultado.update(tamano=medir_tamano(mascara),alertas=[a for a in diagnosticar_mascara(rgb,mascara)['alertas_mascara'].split(';') if a],origen='imagen_nueva')
+        return resultado,entrada,mascara
+
+    def ejemplo(self,id_ejemplar,nombre='CNN'):
+        filas=self.base.loc[self.base.id_ejemplar.eq(id_ejemplar)]
+        if len(filas)!=1:
+            raise ValueError('El ejemplar no existe en la base.')
+        fila=filas.iloc[0]
+        entrada=leer_rgb(fila.ruta_cnn)
+        with Image.open(fila.ruta_mascara) as im:
+            mascara=np.asarray(im)>0
+        resultado=self._predecir(entrada,fila[self.columnas].to_dict(),nombre)
+        resultado.update(tamano=medir_tamano(mascara),alertas=[],origen='ejemplo_de_entrenamiento',
+                         etiqueta_revisada=fila.calidad_revisada,id_ejemplar=id_ejemplar)
+        return resultado,entrada,None

@@ -108,11 +108,17 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--proyecto',default='.')
     parser.add_argument('--solo-listar',action='store_true')
+    parser.add_argument('--usar-listado', action='store_true',
+                        help='Descargar exactamente los archivos del listado versionado sin cambiar sus identidades.')
     args=parser.parse_args();project=Path(args.proyecto).resolve()
-    files,folders=inventariar(project)
     destination=project/'data/annotations/drive_20261124';destination.mkdir(parents=True,exist_ok=True)
-    (destination/'listado_drive.json').write_text(json.dumps({'fuentes':FUENTES,'carpetas':folders,
-        'archivos':files},ensure_ascii=False,indent=2),encoding='utf-8')
+    if args.usar_listado:
+        listado=json.loads((destination/'listado_drive.json').read_text(encoding='utf-8'))
+        files,folders=listado['archivos'],listado['carpetas']
+    else:
+        files,folders=inventariar(project)
+        (destination/'listado_drive.json').write_text(json.dumps({'fuentes':FUENTES,'carpetas':folders,
+            'archivos':files},ensure_ascii=False,indent=2),encoding='utf-8')
     for folder in folders:print(folder,flush=True)
     print('Imágenes descubiertas:',len(files),flush=True)
     if args.solo_listar:return
