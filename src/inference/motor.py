@@ -2,14 +2,16 @@
 from pathlib import Path
 import json
 import numpy as np
+import cv2
 import pandas as pd
 from PIL import Image
+from src.data.entrada_cnn import preparar_imagen_completa,ENTRADA_CNN
 from src.data.base import cargar_base
-from src.data.preparacion_imagenes import leer_rgb, mascara_grabcut, validar_mascara, preparar_cnn, extraer_caracteristicas, diagnosticar_mascara
+from src.data.preparacion_imagenes import leer_rgb, mascara_grabcut, validar_mascara, extraer_caracteristicas, diagnosticar_mascara
 
 
 def medir_tamano(mascara):
-    """Medir sobre el encuadre original, antes del recorte CNN. No expresa centímetros."""
+    """Medir sobre el encuadre original, antes del reescalado CNN. No expresa centímetros."""
     m = np.asarray(mascara) > 0
     if m.ndim != 2 or m.sum() < 25:
         raise ValueError('Se necesita una máscara bidimensional con al menos 25 píxeles de fruta.')
@@ -51,6 +53,8 @@ class MotorInferencia:
                 raise ValueError('Los pesos CNN no corresponden a la arquitectura actual.')
             modelo = CNNTransferencia(ConfigTransferencia(**paquete['config']))
             modelo.load_state_dict(paquete['state_dict']);modelo.eval()
+            if paquete.get('preparacion_cnn')!=self.estado.get('entrada_cnn'):
+                raise ValueError('La preparación del modelo CNN no coincide con la base actual.')
         else:
             import joblib
             paquete = joblib.load(ruta);modelo=paquete['modelo']
@@ -80,11 +84,20 @@ class MotorInferencia:
         rgb=np.asarray(rgb,dtype=np.uint8)
         if rgb.ndim != 3 or rgb.shape[2] != 3 or min(rgb.shape[:2])<16:
             raise ValueError('Cargar una imagen RGB con al menos 16 píxeles por lado.')
-        mascara=validar_mascara(rgb,mascara if mascara is not None else mascara_grabcut(rgb,rectangulo))
-        entrada,_=preparar_cnn(rgb,mascara)
-        rasgos=extraer_caracteristicas(rgb,mascara)
+        entrada=preparar_imagen_completa(rgb)
+        alertas=[]
+        try:
+            mascara=validar_mascara(rgb,mascara if mascara is not None else mascara_grabcut(rgb,rectangulo))
+            tamano=medir_tamano(mascara)
+            alertas=[a for a in diagnosticar_mascara(rgb,mascara)['alertas_mascara'].split(';') if a]
+            rasgos=extraer_caracteristicas(rgb,mascara) if nombre!='CNN' else None
+        except (ValueError,cv2.error):
+            if nombre!='CNN':raise
+            mascara=None;tamano=None;rasgos=None
+            alertas=['No se pudo aislar el fruto para medir su tamaño. La calidad CNN usa la fotografía completa.']
         resultado=self._predecir(entrada,rasgos,nombre)
-        resultado.update(tamano=medir_tamano(mascara),alertas=[a for a in diagnosticar_mascara(rgb,mascara)['alertas_mascara'].split(';') if a],origen='imagen_nueva')
+        resultado.update(tamano=tamano,alertas=alertas,origen='imagen_nueva',
+                         preparacion_entrada=ENTRADA_CNN if nombre=='CNN' else 'rasgos_desde_mascara')
         return resultado,entrada,mascara
 
     def ejemplo(self,id_ejemplar,nombre='CNN'):

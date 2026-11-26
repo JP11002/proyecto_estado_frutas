@@ -24,7 +24,7 @@ class TestArchivos(unittest.TestCase):
                 return original(origen, ruta)
 
             with patch.object(Path, 'replace', reemplazar), patch('src.utils.archivos.time.sleep'):
-                guardar_bytes_si_cambio(destino, b'contenido nuevo')
+                guardar_bytes_si_cambio(destino, b'contenido nuevo', atomico=True)
             self.assertEqual(destino.read_bytes(), b'contenido nuevo')
             self.assertEqual(len(intentos), 3)
             self.assertFalse(list(Path(temporal).glob('*.tmp')))
@@ -35,8 +35,22 @@ class TestArchivos(unittest.TestCase):
             destino.write_bytes(b'contenido anterior')
             with patch.object(Path, 'replace', side_effect=PermissionError('Bloqueado')), patch('src.utils.archivos.time.sleep'):
                 with self.assertRaises(PermissionError):
-                    guardar_bytes_si_cambio(destino, b'contenido nuevo')
+                    guardar_bytes_si_cambio(destino, b'contenido nuevo', atomico=True)
             self.assertEqual(destino.read_bytes(), b'contenido anterior')
+
+    def test_escritura_directa_no_renombra_archivos(self):
+        with tempfile.TemporaryDirectory() as carpeta:
+            ruta=Path(carpeta)/'resultado.json';ruta.write_bytes(b'anterior')
+            with patch.object(Path,'replace',side_effect=AssertionError('No debe renombrar')):
+                guardar_bytes_si_cambio(ruta,b'nuevo',atomico=False)
+            self.assertEqual(ruta.read_bytes(),b'nuevo')
+
+    def test_bloqueo_directo_conserva_archivo(self):
+        with tempfile.TemporaryDirectory() as carpeta:
+            ruta=Path(carpeta)/'resultado.json';ruta.write_bytes(b'anterior')
+            with patch.object(Path,'write_bytes',side_effect=PermissionError('Bloqueado')), patch('src.utils.archivos.time.sleep'):
+                with self.assertRaises(PermissionError):guardar_bytes_si_cambio(ruta,b'nuevo',atomico=False)
+            self.assertEqual(ruta.read_bytes(),b'anterior')
 
 
 if __name__ == '__main__':

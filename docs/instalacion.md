@@ -120,7 +120,7 @@ incompatibles: es preferible volver a entrenar.
 
 Los cuadernos 01–05 documentan la adquisición, revisión y preparación. Los primeros
 incluyen la versión histórica con naranja. Para revisar otra vez las fotos de alta
-resolución se necesitan los originales; no se reconstruyen a partir de recortes.
+resolución se necesitan los originales; no se reconstruyen a partir de las imágenes reescaladas de entrenamiento.
 El cuaderno `01_revision_datos_y_etiquetas.ipynb` contiene la descarga de Kaggle.
 Para recuperar exactamente los archivos de Drive del listado versionado:
 

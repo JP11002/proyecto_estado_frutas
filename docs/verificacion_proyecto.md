@@ -111,3 +111,25 @@ las predicciones previas y los grupos no se mezclaron. Boosting obtuvo F1 macro
 También se corrigió el recuento documentado de ajustes internos CNN: son 66,
 con 3, 2 y 3 divisiones en los bloques externos y 3 en la selección global.
 La base mantiene su huella y el cuaderno contiene todas sus salidas sin errores.
+
+
+## Ejecución con fotografías completas — 26 de noviembre de 2026
+
+Se migraron las 291 entradas CNN en la misma base a fotografía completa con
+proporción conservada, relleno gris y resolución 224×224. No se modificaron las
+etiquetas, las máscaras originales, los grupos ni las 43 características.
+Huella vigente: `47bcd15916e6aa787ecaf1341cac98c31f392fd957499b07ca3e1592572528fc`.
+
+Se completaron 132 ajustes internos CNN, tres externos y uno final. El cabezal
+final es lineal, con aumentos, exponente de peso 0,5 y 20 épocas. F1 macro externo
+0,458394; exactitud 0,673540; intermedias correctas 13/75. Los verificadores
+reprodujeron predicciones y probabilidades de los pesos externos. La comparación
+principal incluye 2328 predicciones de ocho modelos; el diagnóstico ampliado,
+3492 de doce modelos. Las referencias CNN simple y recortada son históricas con
+identidades y particiones verificadas, no pesos actuales de inferencia.
+
+Pasaron 18 pruebas. Los cuadernos 06, 07 y 08 se ejecutaron de principio a fin
+reutilizando, con comprobación de huella, los resultados del entrenamiento
+completo realizado por terminal. Sin FRUTAS_USAR_RESULTADOS=1, los cuadernos
+vuelven a ajustar los modelos. No se necesita repetir el entrenamiento para la
+demostración.

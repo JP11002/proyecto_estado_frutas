@@ -34,7 +34,7 @@ class Aplicacion:
             ttk.Button(ejemplos,text='Ejemplo '+calidad,command=lambda c=calidad:self.ejemplo(c)).pack(side='left',padx=4)
         vistas=ttk.Frame(cont);vistas.pack(fill='both',expand=True)
         self.original=ttk.Label(vistas,text='Imagen de entrada',anchor='center');self.original.pack(side='left',fill='both',expand=True)
-        self.procesada=ttk.Label(vistas,text='Recorte utilizado por el modelo',anchor='center');self.procesada.pack(side='left',fill='both',expand=True)
+        self.procesada=ttk.Label(vistas,text='Fotografía completa utilizada en el análisis',anchor='center');self.procesada.pack(side='left',fill='both',expand=True)
         ttk.Label(cont,textvariable=self.salida,font=('Segoe UI',12),wraplength=980,justify='left').pack(anchor='w',pady=8)
         ttk.Label(cont,textvariable=self.estado,wraplength=980).pack(anchor='w')
         ttk.Label(cont,text='El tamaño depende del encuadre y la distancia. Calidad visual de apoyo; requiere revisión humana.',wraplength=980,foreground='#555555').pack(anchor='w',pady=(6,0))
@@ -80,7 +80,8 @@ class Aplicacion:
                     self.mostrar(vista,self.original)
                 t=r['tamano'];scores=r['puntuaciones_no_calibradas']
                 detalle=' | '.join(f'{k}: {v:.1%}' for k,v in scores.items())
-                self.salida.set(f"Calidad estimada: {r['calidad'].upper()} | Modelo: {r['modelo']}\nDiámetro equivalente: {t['diametro_equivalente_px']:.1f} px | Normalizado: {t['diametro_normalizado']:.3f} | Ocupación: {t['ocupacion']:.1%}\nPuntuaciones sin calibrar: {detalle}")
+                linea_tamano=(f"Diámetro equivalente: {t['diametro_equivalente_px']:.1f} px | Normalizado: {t['diametro_normalizado']:.3f} | Ocupación: {t['ocupacion']:.1%}" if t else 'Tamaño no estimable: revisa el encuadre y el fondo.')
+                self.salida.set(f"Calidad estimada: {r['calidad'].upper()} | Modelo: {r['modelo']}\n{linea_tamano}\nPuntuaciones sin calibrar: {detalle}")
                 aviso='Ejemplo de entrenamiento. Etiqueta revisada: '+r['etiqueta_revisada']+'. No es una prueba independiente.' if self.id_base else 'Revisa que el contorno verde incluya solo el fruto y todos sus defectos.'
                 self.estado.set(aviso+(' Alertas de máscara: '+', '.join(r['alertas']) if r['alertas'] else ''))
             except Exception as e:

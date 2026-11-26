@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Se desarrolló un prototipo local para clasificar la apariencia externa de manzana roja, banano y limón en buena, intermedia y mala, y medir su tamaño relativo al encuadre. La base única contiene 291 imágenes y máscaras revisadas, con 43 características de color, textura y forma. Se combinaron 21 ejemplos compatibles de Kaggle, 245 fotografías públicas compartidas y 25 propias; el equipo recolectó 51 fotos propias antes de las exclusiones. Se aplicó CRISP-DM, comparación contra una referencia mayoritaria y evaluación externa en tres bloques separados por grupos. SVM ajustado alcanzó F1 macro de 0,373; Random Forest inicial, 0,429; la CNN con MobileNetV3 congelada, 0,472. Un cribado adicional con Gradient Boosting obtuvo 0,487 y recuperó 19 de 75 intermedias, frente a 6 de CNN. La concentración de 67 intermedias en una campaña limita la generalización. La interfaz acepta fotografía o cámara y muestra la calidad estimada y el diámetro equivalente normalizado. Se documentan impactos, decisiones éticas y límites del prototipo.
+Se desarrolló un prototipo local para clasificar la apariencia externa de manzana roja, banano y limón en buena, intermedia y mala, y medir su tamaño relativo al encuadre. La base única contiene 291 imágenes y máscaras revisadas, con 43 características de color, textura y forma. Se combinaron 21 ejemplos compatibles de Kaggle, 245 fotografías públicas compartidas y 25 propias; el equipo recolectó 51 fotos propias antes de las exclusiones. Se aplicó CRISP-DM, comparación contra una referencia mayoritaria y evaluación externa en tres bloques separados por grupos. SVM ajustado alcanzó F1 macro de 0,373; Random Forest inicial, 0,429; la CNN con MobileNetV3 congelada y fotografía completa, 0,458. Un cribado adicional con Gradient Boosting obtuvo 0,487 y recuperó 19 de 75 intermedias, frente a 13 de CNN. La concentración de 67 intermedias en una campaña limita la generalización. La interfaz acepta fotografía o cámara y muestra la calidad estimada y el diámetro equivalente normalizado. Se documentan impactos, decisiones éticas y límites del prototipo.
 
 **Palabras clave:** visión por computador, calidad visual, CNN, clasificación agrupada, tamaño relativo.
 
@@ -22,13 +22,13 @@ El problema combina variaciones de iluminación, forma, resolución, perspectiva
 
 ## II Fundamentos y formulación matemática
 
-Sea I una imagen RGB de H por W píxeles y M su máscara binaria. Se busca una función f(I,M) que produzca y en {buena, intermedia, mala}, junto con una medida relativa s(M). Para los modelos tradicionales se calcula un vector de 43 características phi(I,M); para CNN se utiliza un recorte RGB de 224 por 224, preservando proporciones y rellenando el fondo con gris neutro.
+Sea I una imagen RGB de H por W píxeles y M su máscara binaria. Se busca una función f(I,M) que produzca y en {buena, intermedia, mala}, junto con una medida relativa s(M). Para los modelos tradicionales se calcula un vector de 43 características phi(I,M); para CNN se utiliza toda la fotografía RGB, reescalada a 224 por 224 preservando proporciones y rellenando con gris neutro. La clasificación CNN no depende de M; los modelos tradicionales y el tamaño sí la utilizan.
 
 La normalización de variables tradicionales se realiza dentro del pipeline de SVM: z_j = (x_j - mu_j) / sigma_j. La media y desviación se estiman únicamente en el entrenamiento de cada división. La SVM separa pares de clases maximizando margen con penalización C; se comparan kernel lineal y RBF, K(x,z) = exp(-gamma ||x-z||²). Random Forest agrega la votación de árboles entrenados con aleatoriedad de muestras y características. Estos métodos permiten contrastar fronteras de margen con ensambles no lineales [3].
 
 La CNN de transferencia mantiene fijo el extractor convolucional MobileNetV3 Small preentrenado en ImageNet y añade un clasificador propio [4]. Su salida softmax es p_k = exp(a_k) / sum_j exp(a_j). El cabezal minimiza entropía cruzada ponderada, L = -(sum_i w_yi log p_yi) / sum_i w_yi. Los pesos se calculan solo en entrenamiento: w_c = (N / (3 N_c)) elevado a p, con p en {0, 0,5, 1}. Las puntuaciones softmax no están calibradas como confianza.
 
-El tamaño se mide antes del recorte de CNN. Si A = sum M es el área de la máscara, el diámetro del círculo equivalente es d_eq = 2 sqrt(A/pi). Se reportan s = d_eq / min(H,W) y ocupación q = A/(H W). s es adimensional y puede superar uno para formas alargadas. Cambiar la resolución sin cambiar el encuadre conserva s; cambiar distancia o encuadre altera la medida. No se expresa en centímetros ni se infiere un tamaño físico comercial.
+El tamaño se mide en la resolución original, antes del reescalado para CNN. Si A = sum M es el área de la máscara, el diámetro del círculo equivalente es d_eq = 2 sqrt(A/pi). Se reportan s = d_eq / min(H,W) y ocupación q = A/(H W). s es adimensional y puede superar uno para formas alargadas. Cambiar la resolución sin cambiar el encuadre conserva s; cambiar distancia o encuadre altera la medida. No se expresa en centímetros ni se infiere un tamaño físico comercial.
 
 Las métricas se definen por clase: precisión P = TP/(TP+FP), recall R = TP/(TP+FN) y F1 = 2PR/(P+R). F1 macro es el promedio de los tres F1 y da el mismo peso a cada calidad. También se calcula recall macro y exactitud. Para estudiar el predominio de campañas grandes, se recalculan métricas con peso de cada imagen igual a 1/n_g, donde n_g es el número de fotos de su grupo.
 
@@ -53,7 +53,7 @@ La clase buena representa 69,1 % de la base. De las 75 intermedias, 70 son banan
 
 Las etiquetas describen apariencia: buena corresponde a superficie mayormente conservada; intermedia, a defectos localizados con superficie conservada; mala, a deterioro externo marcado o extendido. La distinción depende de la fruta y requiere revisión. La anotación actual es operativa, realizada con asistencia de IA y revisión visual, sin medición de acuerdo entre anotadores. Las fotografías se leyeron respetando orientación, se segmentó el fruto y se inspeccionaron máscaras y recortes. Se conservaron los defectos oscuros dentro del contorno para evitar eliminarlos como fondo.
 
-Para EDA y modelos tradicionales se calculan histogramas y estadísticas RGB/HSV, textura de coocurrencia y medidas de circularidad, solidez y aspecto. Las rutas y huellas enlazan imagen, máscara y anotación. Todos los entrenamientos leen data/base/datos.csv; las máscaras y los recortes pertenecen a esa misma base. El tamaño es una medida derivada de la máscara revisada, no una etiqueta ordinal manual de referencia ni un objetivo de regresión con error físico conocido.
+Para EDA y modelos tradicionales se calculan histogramas y estadísticas RGB/HSV, textura de coocurrencia y medidas de circularidad, solidez y aspecto. Las rutas y huellas enlazan imagen, máscara y anotación. Todos los entrenamientos leen data/base/datos.csv; las máscaras y las fotografías completas preparadas pertenecen a esa misma base. Se conservan las etiquetas, las 43 características y los grupos al cambiar el encuadre CNN. Algunas fotografías originales heredadas contienen varios frutos: la etiqueta corresponde al ejemplar revisado, una ambigüedad que permanece al conservar toda la escena. El tamaño es una medida derivada de la máscara revisada, no una etiqueta ordinal manual de referencia ni un objetivo de regresión con error físico conocido.
 
 ## IV Modelado y protocolo de evaluación
 
@@ -61,9 +61,9 @@ Se fijaron tres bloques externos con StratifiedGroupKFold y semilla 42. Los grup
 
 El ajuste tradicional comparó 18 configuraciones de SVM y 12 de Random Forest. SVM exploró C de 0,1, 1 y 10, kernel lineal/RBF, pesos normales/balanceados y gamma scale o 0,01 para RBF. Random Forest usó 300 árboles y exploró profundidad sin límite u 8, mínimo de 1, 2 o 4 imágenes por hoja y fracción de características sqrt o 0,7. Se conservaron las referencias iniciales y ajustadas, aun cuando el ajuste empeoró el resultado externo.
 
-Se entrenó una CNN simple desde cero de tres bloques de 16, 32 y 64 canales, pooling y cabezal denso. Su bajo F1 motivó el experimento de transferencia. La CNN actual usa normalización ImageNet, extractor congelado, LayerNorm sin parámetros y cabezal lineal o MLP de 64 unidades. Se probaron seis combinaciones de cabezal y peso de clase con AdamW, tasa 0,003, regularización 0,01 y dropout 0,2. El máximo fue 120 épocas; selección desde 12 y paciencia 15. Las divisiones internas se adaptaron a los grupos disponibles: 3, 2 y 3 en los bloques externos y 3 en selección global, para 66 ajustes internos.
+Se entrenó una CNN simple desde cero de tres bloques de 16, 32 y 64 canales, pooling y cabezal denso. Su bajo F1 motivó el experimento de transferencia. La CNN actual usa normalización ImageNet, extractor congelado, LayerNorm sin parámetros y cabezal lineal o MLP de 64 unidades. Se probaron doce combinaciones de cabezal, peso de clase y uso o ausencia de aumentos con AdamW, tasa 0,003, regularización 0,01 y dropout 0,2. El máximo fue 120 épocas; selección desde 12 y paciencia 15. Las divisiones internas se adaptaron a los grupos disponibles: 3, 2 y 3 en los bloques externos y 3 en selección global, para 132 ajustes internos.
 
-Los aumentos de entrenamiento son espejo horizontal, giros de diez grados y brillo moderado. La evaluación utiliza la vista original. El cache visual aplica un extractor fijo sin aprender estadísticas de la base. El prototipo CNN final seleccionó cabezal lineal y 23 épocas sobre toda la base; sus predicciones de entrenamiento no se utilizan como métrica externa.
+Los aumentos de entrenamiento son espejo horizontal, giros de diez grados con expansión para conservar las esquinas y brillo moderado. No se aplica recorte central ni se borra el fondo con la máscara. La evaluación utiliza la vista original. El cache visual aplica un extractor fijo sin aprender estadísticas de la base. El prototipo CNN final seleccionó cabezal lineal, peso de clase con exponente 0,5, aumentos activados y 20 épocas sobre toda la base; sus predicciones de entrenamiento no se utilizan como métrica externa.
 
 El diagnóstico adicional comparó regresión logística y SVM sobre 576 rasgos CNN, y Extra Trees e HistGradientBoosting sobre los 43 rasgos manuales. Los 22 candidatos se fijaron antes de consultar resultados, con 176 ajustes internos y doce externos. La parada temprana automática de Boosting se desactivó para no introducir una división aleatoria de fotos relacionadas. Estas alternativas constituyen un cribado exploratorio; no reemplazan automáticamente el prototipo CNN.
 
@@ -73,17 +73,18 @@ El diagnóstico adicional comparó regresión logística y SVM sobre 576 rasgos 
 |---|---:|---:|---:|
 | Mayoritaria | 0,691 | 0,272 | 0,333 |
 | SVM inicial | 0,395 | 0,299 | 0,365 |
-| SVM ajustado | 0,447 | 0,373 | 0,414 |
 | RF inicial | 0,546 | 0,429 | 0,479 |
+| SVM ajustado | 0,447 | 0,373 | 0,414 |
 | RF ajustado | 0,443 | 0,388 | 0,430 |
-| CNN simple | 0,271 | 0,237 | 0,393 |
-| CNN actual | 0,704 | 0,472 | 0,501 |
-| Logística CNN | 0,653 | 0,401 | 0,470 |
-| SVM CNN | 0,670 | 0,420 | 0,463 |
+| CNN simple (histórica) | 0,271 | 0,237 | 0,393 |
+| CNN recortada (histórica) | 0,704 | 0,472 | 0,501 |
+| CNN foto completa | 0,674 | 0,458 | 0,505 |
+| Logística CNN | 0,646 | 0,400 | 0,467 |
+| SVM CNN | 0,674 | 0,430 | 0,462 |
 | Extra Trees | 0,423 | 0,357 | 0,396 |
 | Gradient Boosting | 0,649 | 0,487 | 0,510 |
 
-La CNN actual mejora 0,236 puntos absolutos de F1 macro frente a la CNN simple. La exactitud de la referencia mayoritaria es alta porque siempre predice buena, pero su F1 macro es bajo. Esto confirma la necesidad de interpretar métricas por calidad. El ajuste de hiperparámetros no garantiza una mejora externa: Random Forest ajustado resulta inferior a su referencia inicial.
+La CNN con fotografía completa obtiene 67,4 % de exactitud y F1 macro de 0,458, frente a 70,4 % y 0,472 de la referencia recortada. La recuperación intermedia aumenta de 6 a 13 aciertos, pero el rendimiento global disminuye. Se mantiene la fotografía completa como entrada solicitada y se informa esta compensación. Las referencias CNN simple y recortada son históricas: conservan las mismas identidades, etiquetas, máscaras, grupos y bloques, con otra representación visual. La referencia mayoritaria tiene exactitud alta por el desbalance y F1 macro bajo.
 
 ![resultados_modelos](docs/figuras/resultados_modelos.png)
 
@@ -91,15 +92,15 @@ La CNN actual mejora 0,236 puntos absolutos de F1 macro frente a la CNN simple. 
 
 | Calidad | Soporte | Aciertos CNN | Aciertos RF inicial | Aciertos Boosting |
 |---|---:|---:|---:|---:|
-| Buena | 201 | 192 | 139 | 163 |
-| Intermedia | 75 | 6 | 11 | 19 |
+| Buena | 201 | 176 | 139 | 163 |
+| Intermedia | 75 | 13 | 11 | 19 |
 | Mala | 15 | 7 | 9 | 7 |
 
-La CNN tiene recall intermedio de 8,0 % y precisión de 46,2 %. Boosting alcanza recall de 25,3 % y precisión de 41,3 %. Detecta más intermedias, pero predice 46 como tales y comete 27 falsas alarmas, frente a 13 predicciones y 7 falsas alarmas de CNN. Su menor exactitud refleja esa compensación. Con peso igual por grupo, F1 macro es 0,531 para CNN y 0,484 para Boosting.
+La CNN tiene recall intermedio de 17,3 % y precisión de 61,9 %. Boosting alcanza recall de 25,3 % y precisión de 41,3 %. Boosting predice 46 intermedias con 27 falsas alarmas; CNN predice 21 con ocho falsas alarmas. Con igual peso por grupo, F1 macro es 0,376 para CNN completa, 0,531 para la referencia CNN recortada y 0,484 para Boosting. Este cambio también muestra sensibilidad a las campañas.
 
 ## VI Análisis e interpretación
 
-La CNN confunde 63 intermedias con buenas y seis con malas. En el tercer bloque entrena con solo ocho intermedias, incluidas tres de banano, y evalúa las 67 de una campaña diferente: reconoce tres. Boosting reconoce 17 de esas 67. Los F1 macro externos de CNN son 0,552, 0,547 y 0,266; la diferencia revela inestabilidad ante campañas reservadas. No se demuestra una causa única del error, pero la escasez de variedad independiente y la asociación fruta/calidad son limitaciones comprobadas.
+La CNN confunde 57 intermedias con buenas y cinco con malas. En el tercer bloque entrena con solo ocho intermedias de otras procedencias y evalúa las 67 de una campaña diferente. Los F1 macro externos son 0,495, 0,462 y 0,207. La diferencia revela inestabilidad ante campañas reservadas. La escasez de variedad independiente y la asociación fruta/calidad son limitaciones comprobadas; el recorte no explica por sí solo el error. Al conservar la escena completa el fruto puede ocupar menos píxeles y el fondo puede influir, especialmente en capturas lejanas.
 
 La representación congelada de ImageNet puede capturar identidad o apariencia global del fruto con mayor facilidad que lesiones locales; esta es una hipótesis que requiere comparar representaciones. Las curvas de entrenamiento muestran buen ajuste interno, mientras que el tercer bloque permanece débil. El patrón es compatible con problemas de generalización y cambio de distribución, y no se resuelve mostrando la exactitud sobre las imágenes usadas para entrenar el prototipo final.
 
@@ -113,7 +114,7 @@ Las imágenes ya participaron en la revisión de etiquetas y máscaras, y el dis
 
 ## VII Despliegue y reproducibilidad
 
-La aplicación local se inicia con python -m src.main. Permite cargar una foto o recibir fotogramas de cámara, elegir CNN, Random Forest o SVM y mostrar la calidad, el recorte usado por el modelo, el contorno propuesto y el tamaño relativo. La cámara solicita análisis periódicos; un trabajador ejecuta la inferencia para mantener la interfaz disponible. GrabCut propone una máscara para un fruto sobre fondo simple y se muestran alertas geométricas. La propuesta debe revisarse visualmente.
+La aplicación local se inicia con python -m src.main. Permite cargar una foto o recibir fotogramas de cámara, elegir CNN, Random Forest o SVM y mostrar la calidad, la fotografía completa utilizada por CNN, el contorno propuesto y el tamaño relativo. La cámara solicita análisis periódicos; un trabajador ejecuta la inferencia para mantener la interfaz disponible. GrabCut propone una máscara para un fruto sobre fondo simple y se muestran alertas geométricas. La propuesta debe revisarse visualmente. Si falla la segmentación, CNN puede clasificar la fotografía completa, pero se informa que el tamaño no es estimable; los modelos tradicionales requieren una máscara válida.
 
 La aplicación reutiliza los pesos guardados y verifica su huella contra la base. Los ejemplos incluidos se identifican como imágenes de entrenamiento y no se presentan como prueba independiente. La captura de cámara no se conserva automáticamente. Se puede exportar el resultado numérico en JSON. El repositorio incluye comandos de instalación, cuadernos ejecutados, pruebas y un verificador de predicciones; los modelos generados se pueden distribuir con el paquete local o regenerar mediante los cuadernos.
 
@@ -140,7 +141,7 @@ En la etapa inicial se identificaron beneficios potenciales y riesgos. Tras la e
 
 ## IX Conclusiones y trabajo futuro
 
-Se implementó un flujo completo de adquisición, revisión, preparación, modelado, evaluación e inferencia local con una sola base. La CNN de transferencia mejora la CNN simple y alcanza la mayor exactitud; Boosting ofrece una recuperación intermedia superior con menor exactitud. La elección depende del coste de errores y no de un único promedio. Los resultados conectan el modelo matemático, la separación por grupos y las restricciones reales de los datos.
+Se implementó un flujo completo de adquisición, revisión, preparación, modelado, evaluación e inferencia local con una sola base. La CNN con fotografía completa supera a la CNN simple y recupera más intermedias que la referencia recortada, aunque reduce el F1 global y la exactitud respecto a esta. Boosting obtiene el mayor F1 macro de esta comparación y recupera más intermedias, con menor precisión intermedia que CNN. La elección depende del coste de errores y no de un único promedio. Los resultados conectan el modelo matemático, la separación por grupos y las restricciones reales de los datos.
 
 Con la base actual, las prioridades son revisar criterios fronterizos por fruta, probar fusión de rasgos manuales y CNN, seleccionar costes y umbrales dentro de la validación interna y estudiar ajuste parcial del último bloque convolucional. Aumentos o sobremuestreo no crean campañas independientes. Una siguiente validación debe incluir nuevas capturas reservadas y referencia manual de tamaño si se pretende evaluar medidas físicas.
 

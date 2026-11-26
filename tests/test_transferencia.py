@@ -42,6 +42,18 @@ class TestTransferencia(unittest.TestCase):
         self.assertEqual(ia, ib)
         self.assertTrue(all(torch.equal(v, b.state_dict()[k]) for k, v in a.state_dict().items()))
 
+    def test_sin_aumentos_ignora_vistas_de_entrenamiento(self):
+        import torch
+        import numpy as np
+        from src.models.cnn_calidad import entrenar_cabezal,ConfigTransferencia
+        anterior=torch.get_num_threads();self.addCleanup(torch.set_num_threads,anterior);torch.set_num_threads(2)
+        torch.manual_seed(1);z=torch.randn(12,5,576);y=np.array([0,1,2]*4)
+        otro=z.clone();otro[:,1:]=10000
+        cfg=ConfigTransferencia(usar_aumentos=False,max_epocas=3,min_epocas=1)
+        a,_,_=entrenar_cabezal(z,y,cfg,42)
+        b,_,_=entrenar_cabezal(otro,y,cfg,42)
+        self.assertTrue(all(torch.equal(v,b.state_dict()[k]) for k,v in a.state_dict().items()))
+
 
 if __name__ == '__main__':
     unittest.main()

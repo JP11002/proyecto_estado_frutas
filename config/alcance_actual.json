@@ -19,5 +19,6 @@
   },
   "etiquetas_de_carpetas": "Declaradas por el equipo; requieren revisión visual. No confirmar automáticamente.",
   "tamano": "Solo relativo a los píxeles de la fotografía, sin escala física calibrada.",
-  "base_datos": "data/base/datos.csv"
+  "base_datos": "data/base/datos.csv",
+  "entrada_cnn": "fotografia_completa_proporcion_conservada"
 }

@@ -40,7 +40,7 @@ def main():
         base, columnas, _ = cargar_base(proyecto)
         verificar_imagenes(base)
         print(f'OK base: {len(base)} imágenes, {len(columnas)} características y {base.grupo_particion.nunique()} grupos.')
-        print('OK recortes y máscaras: sus huellas coinciden. No hacen falta fotos originales para entrenar.')
+        print('OK imágenes preparadas y máscaras: sus huellas coinciden. No hacen falta fotos originales para entrenar.')
         if args.cnn:
             from src.models.cnn_calidad import CNNTransferencia, ConfigTransferencia
             import torch

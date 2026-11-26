@@ -141,7 +141,7 @@ def diagnosticar_mascara(rgb, mascara):
 
 
 def preparar_cnn(rgb, mascara, lado=224):
-    """Recortar con margen, preservar proporciones y rellenar a un cuadrado RGB."""
+    """Recorte histórico de revisión; la CNN vigente usa entrada_cnn con foto completa."""
     mascara = validar_mascara(rgb, mascara)
     ys, xs = np.where(mascara > 0)
     margen = max(2, round(0.04 * max(xs.max() - xs.min() + 1, ys.max() - ys.min() + 1)))

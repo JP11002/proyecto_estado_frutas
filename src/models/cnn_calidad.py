@@ -560,11 +560,12 @@ def _graficar_curvas_cnn(historial: pd.DataFrame, ruta: Path) -> None:
 # Mejora del mismo flujo: CNN preentrenada fija y clasificador de calidad entrenable.
 MEDIA_IMAGENET = (.485, .456, .406)
 DESV_IMAGENET = (.229, .224, .225)
-VISTAS_TRANSFERENCIA = ['original', 'espejo', 'giro_menos_10', 'giro_mas_10', 'brillo_092']
+VISTAS_TRANSFERENCIA = ['original', 'espejo', 'giro_expandido_menos_10', 'giro_expandido_mas_10', 'brillo_092']
 
 
 @dataclass(frozen=True)
 class ConfigTransferencia:
+    usar_aumentos: bool = True
     cabezal: str = 'lineal'
     potencia_peso: float = 0.
     lr: float = .003
@@ -614,18 +615,18 @@ def crear_cabezal(config):
 
 
 def candidatos_transferencia(max_epocas=120):
-    return [ConfigTransferencia(cabezal=c, potencia_peso=p, max_epocas=max_epocas,
+    return [ConfigTransferencia(cabezal=c, potencia_peso=p, usar_aumentos=a, max_epocas=max_epocas,
                                 min_epocas=min(12, max_epocas))
-            for c in ['lineal', 'mlp'] for p in [0., .5, 1.]]
+            for c in ['lineal', 'mlp'] for p in [0., .5, 1.] for a in [False, True]]
 
 
 def transformacion_transferencia():
-    # Mantener completo el recorte preparado; no cortar bordes con CenterCrop.
+    # La base ya conserva el encuadre completo con proporciones fijas; no aplicar CenterCrop.
     return transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(),
                                transforms.Normalize(MEDIA_IMAGENET, DESV_IMAGENET)])
 
 
-def predecir_transferencia(modelo, rutas, batch_size=32):
+def predecir_transferencia(modelo, rutas, batch_size=8):
     modelo.eval()
     loader = DataLoader(DatasetFrutasCNN(rutas, None, transformacion_transferencia()),
                         batch_size=batch_size, shuffle=False, num_workers=0)
@@ -639,7 +640,7 @@ def extraer_vistas_fijas(modelo, base, estado, salida):
     from torchvision.transforms import functional as F
     firma = {'sha_base': estado['sha_base'], 'pesos': 'MobileNet_V3_Small_Weights.IMAGENET1K_V1',
              'vistas': VISTAS_TRANSFERENCIA, 'normalizacion': [MEDIA_IMAGENET, DESV_IMAGENET],
-             'tamano': 224, 'preparacion': 'imagen_completa_sin_recorte_central',
+             'tamano': 224, 'preparacion': estado.get('entrada_cnn', 'recorte_mascara_historico'),
              'torchvision': __import__('torchvision').__version__}
     ruta = salida / 'cnn_caracteristicas.pt'
     if ruta.is_file():
@@ -651,8 +652,9 @@ def extraer_vistas_fijas(modelo, base, estado, salida):
     vectores = []
     for indice, fila in enumerate(base.itertuples(), 1):
         imagen = _imagen_rgb_en_memoria(fila.ruta_cnn, Path(fila.ruta_cnn).stat().st_mtime_ns).copy()
-        vistas = [imagen, F.hflip(imagen), F.rotate(imagen, -10, fill=128),
-                  F.rotate(imagen, 10, fill=128), F.adjust_brightness(imagen, .92)]
+        from src.data.entrada_cnn import preparar_imagen_completa
+        giros = [Image.fromarray(preparar_imagen_completa(np.asarray(F.rotate(imagen, angulo, expand=True, fill=128)))) for angulo in [-10, 10]]
+        vistas = [imagen, F.hflip(imagen), *giros, F.adjust_brightness(imagen, .92)]
         x = torch.stack([normalizar(v) for v in vistas])
         with torch.inference_mode():
             vectores.append(modelo.extraer(x).clone())
@@ -678,7 +680,7 @@ def entrenar_cabezal(z_train, y_train, config, semilla, z_val=None, y_val=None):
     for epoca in range(1, config.max_epocas + 1):
         cabeza.train()
         # Un aumento por imagen, sin multiplicar su peso ni usar vistas de validación.
-        vistas = torch.randint(z_train.shape[1], (n,))
+        vistas = torch.randint(z_train.shape[1] if config.usar_aumentos else 1, (n,))
         x = z_train[torch.arange(n), vistas]
         optimizador.zero_grad()
         logits = cabeza(x)
@@ -736,7 +738,7 @@ def evaluar_transferencia_anidada(base, particiones, proyecto, salida, checkpoin
                   'candidatos': [asdict(c) for c in candidatos], 'extractor': firma,
                   'criterio': 'F1 macro interno; desempate por menor pérdida interna no ponderada.',
                   'seleccion_epocas': 'Media redondeada de mejores épocas internas, con mínimo de calentamiento.',
-                  'evaluacion': 'Solo vista original; aumentos solo para entrenar el cabezal.'},
+                  'evaluacion': 'Fotografía completa. Aumentos opcionales elegidos por validación interna; siempre sin recorte.'},
                  salida / 'cnn_plan_entrenamiento.json')
     registros, auditoria, configs, historiales = [], [], [], []
 
@@ -795,7 +797,7 @@ def evaluar_transferencia_anidada(base, particiones, proyecto, salida, checkpoin
         etiquetas, prob = predecir_transferencia(red, [Path(p) for p in base.iloc[va].ruta_cnn])
         probabilidades[va] = prob
         oof[va] = etiquetas
-        torch.save({'arquitectura': 'mobilenet_v3_small_congelada', 'state_dict': red.state_dict(),
+        torch.save({'arquitectura': 'mobilenet_v3_small_congelada', 'preparacion_cnn': estado.get('entrada_cnn'), 'state_dict': red.state_dict(),
                     'config': asdict(cfg), 'calidades': CALIDADES, 'sha_base': estado['sha_base'],
                     'ids_train': base.iloc[tr].id_ejemplar.tolist(), 'ids_validacion': base.iloc[va].id_ejemplar.tolist()},
                    checkpoints / f'cnn_pliegue_{exterior}.pt')
@@ -813,7 +815,7 @@ def evaluar_transferencia_anidada(base, particiones, proyecto, salida, checkpoin
     cfg, tabla_global = seleccionar(np.arange(len(base)), 0, semilla)
     cabeza, hist_final, _ = entrenar_cabezal(z, y, cfg, semilla)
     red.cabezal, red.config = cabeza, cfg
-    torch.save({'arquitectura': 'mobilenet_v3_small_congelada', 'state_dict': red.state_dict(), 'config': asdict(cfg),
+    torch.save({'arquitectura': 'mobilenet_v3_small_congelada', 'preparacion_cnn': estado.get('entrada_cnn'), 'state_dict': red.state_dict(), 'config': asdict(cfg),
                 'calidades': CALIDADES, 'frutas': sorted(base.fruta.unique().tolist()), 'sha_base': estado['sha_base'],
                 'media_norm': MEDIA_IMAGENET, 'desv_norm': DESV_IMAGENET,
                 'pesos_iniciales': firma['pesos'], 'alcance': 'CNN de calidad con extractor preentrenado fijo.'},

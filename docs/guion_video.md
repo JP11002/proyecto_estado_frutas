@@ -32,9 +32,9 @@ Mostrar: diagrama CRISP-DM, tabla de clases y base única. No mostrar todo el CS
 
 Juan Pablo Serrano:
 
-“Revisamos etiquetas, contornos y recortes. Conservamos los defectos oscuros dentro de la máscara para no borrar la evidencia que necesita el clasificador. Los modelos tradicionales usan color, textura y forma, mientras que la CNN recibe un recorte RGB de 224 por 224 con proporciones preservadas y relleno gris.
+“Revisamos etiquetas, contornos y recortes. Conservamos los defectos oscuros dentro de la máscara para no borrar la evidencia que necesita el clasificador. Los modelos tradicionales usan color, textura y forma, mientras que la CNN recibe la fotografía completa reescalada a 224 por 224 con proporciones preservadas y relleno gris.
 
-El tamaño se obtiene antes de ese recorte. Si el área segmentada es A, calculamos el diámetro del círculo de área equivalente como dos veces la raíz de A sobre pi. Lo dividimos por el lado menor de la fotografía para obtener una medida normalizada. También mostramos qué fracción de la imagen ocupa el fruto. Es una comparación de píxeles, no una medida en centímetros: la distancia de la cámara y el encuadre afectan el resultado.”
+El tamaño se obtiene en la resolución original, antes del reescalado. Si el área segmentada es A, calculamos el diámetro del círculo de área equivalente como dos veces la raíz de A sobre pi. Lo dividimos por el lado menor de la fotografía para obtener una medida normalizada. También mostramos qué fracción de la imagen ocupa el fruto. Es una comparación de píxeles, no una medida en centímetros: la distancia de la cámara y el encuadre afectan el resultado.”
 
 Mostrar: una máscara y las ecuaciones de tamaño.
 
@@ -42,7 +42,7 @@ Mostrar: una máscara y las ecuaciones de tamaño.
 
 Juan Castaño:
 
-“Entrenamos SVM y Random Forest y ajustamos sus hiperparámetros mediante búsquedas internas. También entrenamos una CNN simple de tres bloques y después una CNN con MobileNetV3 preentrenada. En la segunda mantenemos fijo el extractor y añadimos un clasificador propio. Probamos dos tipos de cabezal y tres formas de ponderar las clases.
+“Entrenamos SVM y Random Forest y ajustamos sus hiperparámetros mediante búsquedas internas. También entrenamos una CNN simple de tres bloques y después una CNN con MobileNetV3 preentrenada. En la segunda mantenemos fijo el extractor y añadimos un clasificador propio. Probamos dos tipos de cabezal y tres formas de ponderar las clases y uso o ausencia de aumentos: doce candidatos.
 
 La evaluación utiliza tres bloques externos. Las fotos de un mismo grupo permanecen juntas para evitar que distintas vistas relacionadas aparezcan a ambos lados de la evaluación. Cada imagen recibe una predicción externa. Los parámetros se seleccionan dentro del entrenamiento externo; la evaluación no elige las épocas ni el umbral. La normalización aprendida se ajusta dentro del pipeline.
 
@@ -54,11 +54,11 @@ Mostrar: tabla de hiperparámetros y explicación de los bloques.
 
 Juan Castaño:
 
-“SVM ajustado obtuvo F1 macro de 0,373 y Random Forest inicial de 0,429. La CNN simple tuvo 0,237; la CNN de transferencia mejoró a 0,472 y 70,4 por ciento de exactitud. No ocultamos que Random Forest ajustado quedó por debajo de su configuración inicial.
+“SVM ajustado obtuvo F1 macro de 0,373 y Random Forest inicial de 0,429. La CNN simple tuvo 0,237; la CNN de transferencia con imagen completa obtuvo 0,458 y 67,4 por ciento de exactitud. No ocultamos que Random Forest ajustado quedó por debajo de su configuración inicial.
 
-El problema más difícil es la clase intermedia. La CNN acierta 6 de 75 intermedias, 192 de 201 buenas y 7 de 15 malas. Cuando se evalúa la campaña que concentra 67 intermedias, el entrenamiento solo dispone de ocho intermedias de otras procedencias. Eso limita la generalización.
+El problema más difícil es la clase intermedia. La CNN acierta 13 de 75 intermedias, 176 de 201 buenas y 7 de 15 malas. Cuando se evalúa la campaña que concentra 67 intermedias, el entrenamiento solo dispone de ocho intermedias de otras procedencias. Eso limita la generalización.
 
-Comparamos además cuatro alternativas. Gradient Boosting sobre las 43 características obtuvo F1 macro de 0,487 y detectó 19 intermedias. Sin embargo, su exactitud bajó a 64,9 por ciento y aumentaron las falsas alarmas. La CNN conserva mejor F1 cuando damos el mismo peso a cada grupo. Por eso no declaramos un ganador universal: la selección depende del coste de confundir cada calidad.
+Comparamos además cuatro alternativas. Gradient Boosting sobre las 43 características obtuvo F1 macro de 0,487 y detectó 19 intermedias. Sin embargo, su exactitud bajó a 64,9 por ciento y aumentaron las falsas alarmas. Con imágenes completas la CNN recuperó más intermedias que con el recorte anterior, de seis a trece, pero bajó su F1 global. Al dar igual peso a cada grupo también cambia la comparación. Por eso no declaramos un ganador universal: la selección depende del coste de confundir cada calidad.
 
 Estas son métricas de desarrollo. Las imágenes ya participaron en revisiones de etiquetas y máscaras. Una prueba final independiente necesita nuevas capturas reservadas antes de ajustar el procesamiento.”
 
@@ -68,9 +68,9 @@ Mostrar: figura comparativa, matriz CNN y análisis del tercer bloque. Evitar le
 
 Felipe Calderon:
 
-“Esta es la interfaz local. Podemos cargar una fotografía o iniciar la cámara y seleccionar CNN, Random Forest o SVM. Aquí se muestra la calidad estimada, el recorte utilizado, el contorno propuesto y el tamaño relativo.
+“Esta es la interfaz local. Podemos cargar una fotografía o iniciar la cámara y seleccionar CNN, Random Forest o SVM. Aquí se muestra la calidad estimada, la fotografía completa utilizada, el contorno propuesto y el tamaño relativo.
 
-Voy a cargar una imagen de un fruto sobre fondo simple. Revisamos el contorno, porque si incluye fondo o corta parte del fruto puede alterar la predicción y el tamaño. El diámetro equivalente aparece en píxeles y normalizado respecto al encuadre. Las puntuaciones del clasificador no se presentan como confianza calibrada.
+Voy a cargar una imagen de un fruto sobre fondo simple. Revisamos el contorno, porque si incluye fondo o corta parte del fruto puede alterar los modelos tradicionales y el tamaño; la CNN vigente utiliza la fotografía completa. El diámetro equivalente aparece en píxeles y normalizado respecto al encuadre. Las puntuaciones del clasificador no se presentan como confianza calibrada.
 
 También hay ejemplos de la propia base para una demostración sin cámara. La aplicación los marca como imágenes de entrenamiento y muestra su etiqueta revisada; no los utilizamos para calcular las métricas de prueba.”
 

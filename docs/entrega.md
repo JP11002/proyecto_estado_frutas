@@ -13,13 +13,13 @@ Sustentación remota: 30 de noviembre de 2026, según la indicación del curso; 
 | EDA, desbalance y calidad de imágenes | Cuaderno 06 y distribución por fruta, clase y grupo |
 | Dos modelos ML y uno DL | SVM, Random Forest y CNN; pesos locales y código de inferencia |
 | Ajuste de hiperparámetros | Cuadernos 07/08; selección interna separada de evaluación externa |
-| Comparación y métricas | 2037 predicciones de la comparación principal; diagnóstico ampliado de 3201 predicciones de 11 modelos |
+| Comparación y métricas | 2328 predicciones de ocho modelos en la comparación principal; diagnóstico ampliado de 3492 predicciones de doce modelos |
 | Análisis de errores y limitaciones | Informe VI y diagnóstico de intermedia; sin afirmar prueba final independiente |
 | Interfaz con foto y cámara | python -m src.main; carga de foto y ejemplos probados visualmente; cámara implementada, requiere dispositivo y permisos locales |
 | Formulación matemática PI3 | Informe II: clasificación, normalización, kernel, pérdida, métricas, tamaño y separación de grupos |
 | Ética PI1 con código profesional | Informe VIII: tabla de decisiones, principios IEEE y medidas concretas |
 | Impactos PI2 iniciales y finales | Informe VIII y docs/analisis_de_impactos.md: social, económico, ambiental y global |
-| Informe IEEE de máximo 7 páginas | docs/informe_final.pdf, cuatro páginas, autores correctos, fuentes y figuras vectoriales |
+| Informe IEEE de máximo 7 páginas | docs/informe_final.pdf, cinco páginas, autores correctos, fuentes y figuras vectoriales |
 | Enlace del repositorio dentro del PDF | Incluido; confirmar que los cambios locales estén publicados antes de enviar |
 | Enlace del video dentro del PDF | PENDIENTE: grabar, publicar y añadir el enlace compartible |
 | Video de máximo 10 minutos | PENDIENTE DEL EQUIPO; guion de aproximadamente nueve minutos en docs/guion_video.md |
@@ -60,7 +60,7 @@ Mientras falte el enlace del video, el PDF está preparado pero NO está listo p
 
 ## Comprobaciones
 
-Pasaron 13 pruebas, incluidas geometría de tamaño, rutas portables, integridad de la base, agrupación y modelos. Se comprobó inferencia con CNN, Random Forest y SVM; también la creación de la interfaz y una predicción visible. El tamaño se deriva de máscaras revisadas; no existe referencia física ni anotación ordinal manual independiente para reportar exactitud de tamaño. La base no cambió su huella al añadir la tabla de medidas.
+Pasaron 18 pruebas, incluidas geometría de tamaño, rutas portables, integridad de la base, agrupación y modelos. Se comprobó inferencia con CNN, Random Forest y SVM; también la creación de la interfaz y una predicción visible. El tamaño se deriva de máscaras revisadas; no existe referencia física ni anotación ordinal manual independiente para reportar exactitud de tamaño. La tabla de medidas declara la huella vigente. La migración a fotografías completas cambió los archivos de entrada CNN y la huella del CSV, manteniendo etiquetas, máscaras, grupos y características tradicionales.
 
 ## Distribución
 

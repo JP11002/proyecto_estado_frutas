@@ -92,6 +92,7 @@ def verificar(proyecto=PROYECTO):
         if 'potencia_peso' in cfg:
             assert cfg.cabezal == mejor.cabezal
             assert cfg.potencia_peso == mejor.potencia_peso
+            assert bool(cfg.usar_aumentos)==bool(mejor.usar_aumentos)
         minimo = int(mejor.get('min_epocas', 1))
         assert cfg.max_epocas == max(minimo, min(int(mejor.max_epocas), int(mejor.epoca_media)))
         assert candidatos.f1_macro_interno_medio.is_monotonic_decreasing
@@ -116,11 +117,12 @@ def verificar(proyecto=PROYECTO):
     final = torch.load(checkpoints / 'cnn_calidad.pt', map_location='cpu', weights_only=True)
     assert final['sha_base'] == estado['sha_base']
     assert final['calidades'] == CALIDADES
+    assert final.get('preparacion_cnn') == estado.get('entrada_cnn')
     if final.get('arquitectura') == 'mobilenet_v3_small_congelada':
         globales = pd.read_csv(salida / 'cnn_busqueda_global.csv')
         assert globales.f1_macro_interno_medio.is_monotonic_decreasing
         mejor = globales.iloc[0]
-        for campo in ['cabezal', 'potencia_peso', 'lr', 'dropout', 'weight_decay']:
+        for campo in ['cabezal', 'potencia_peso', 'lr', 'dropout', 'weight_decay', 'usar_aumentos']:
             assert final['config'][campo] == mejor[campo]
         assert final['config']['max_epocas'] == max(int(mejor.min_epocas), min(int(mejor.max_epocas), int(mejor.epoca_media)))
         global_auditoria = auditoria.loc[auditoria.exterior.eq(0)]

@@ -124,7 +124,11 @@ def exportar(proyecto):
         'identidades_propias_propuestas_en_base':int(base.loc[base.fuente.eq('propia'),'id_fruto_propuesto'].replace('',np.nan).nunique()),
         'grupos_seguros_propios_en_base':int(base.loc[base.fuente.eq('propia'),'grupo_particion'].nunique()),
         'alcance':'Lote de desarrollo; calidad externa y contornos aproximados de un revisor.'}
-    base,features,status=guardar_base(project,base[core],status)
+    if config.get('entrada_cnn')=='fotografia_completa_proporcion_conservada':
+        from .entrada_cnn import guardar_con_fotografias_completas
+        base,features,status=guardar_con_fotografias_completas(project,base[core],status)
+    else:
+        base,features,status=guardar_base(project,base[core],status)
     # Inventario completo: las imágenes sin revisión detallada permanecen pendientes.
     full=inventory.merge(reviews.reset_index().drop(columns=['parametros'],errors='ignore'),
                          on='codigo_revision',how='left',validate='1:1',suffixes=('','_revision'))

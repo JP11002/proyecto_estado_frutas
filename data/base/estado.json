@@ -67,5 +67,9 @@
   "identidades_propias_propuestas_en_base": 12,
   "grupos_seguros_propios_en_base": 10,
   "alcance": "Lote de desarrollo; calidad externa y contornos aproximados de un revisor.",
-  "sha_base": "ce36085062344eed79c95062be33b2410b4320a600dbe517db849c4e71414de1"
+  "sha_base": "47bcd15916e6aa787ecaf1341cac98c31f392fd957499b07ca3e1592572528fc",
+  "entrada_cnn": "fotografia_completa_proporcion_conservada",
+  "lado_cnn": 224,
+  "descripcion_entrada_cnn": "Fotografía RGB completa con fondo original; proporción conservada y relleno gris. Sin recorte.",
+  "firma_etiquetas_grupos": "263bdc322054733a543751fdd3d1823796b4de7f7237a3edcd52d6191d0d9e93"
 }

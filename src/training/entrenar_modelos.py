@@ -95,30 +95,22 @@ def ejecutar_comparacion(
     predicciones_oof, resumen_ml = cargar_resultados_tradicionales(proyecto, base, estado, asignacion)
     print('Referencias tradicionales verificadas: misma base, imágenes, grupos y pliegues.', flush=True)
 
-    # Conservar solo las predicciones del experimento previo, dentro del mismo informe.
-    # No se crea otra base ni otra copia del proyecto.
-    referencia_cnn = salida / 'cnn_referencia_anterior.csv'
-    referencia_meta = salida / 'cnn_referencia_anterior.json'
-    if not referencia_cnn.is_file():
-        anterior = salida / 'predicciones_oof.csv'
-        meta_anterior = salida / 'configuracion_comparacion.json'
-        if anterior.is_file() and meta_anterior.is_file():
-            anterior_meta = json.loads(meta_anterior.read_text(encoding='utf-8'))
-            anteriores = pd.read_csv(anterior)
-            anterior_cnn = anteriores.loc[anteriores.modelo.eq('CNN_simple')]
-            if anterior_meta['sha_base'] == estado['sha_base'] and len(anterior_cnn) == len(base):
-                guardar_tabla(anterior_cnn, referencia_cnn)
-                guardar_json({'sha_base': estado['sha_base'], 'descripcion': 'CNN anterior desde cero, referencia fija.'}, referencia_meta)
-    if referencia_cnn.is_file() and referencia_meta.is_file():
-        ref_meta = json.loads(referencia_meta.read_text(encoding='utf-8'))
-        if ref_meta['sha_base'] == estado['sha_base']:
-            ref = pd.read_csv(referencia_cnn).set_index('id_ejemplar').loc[base.id_ejemplar].reset_index()
+    # Referencias históricas verificadas: mismos originales, etiquetas, máscaras y grupos.
+    historico = salida / 'cnn_referencias_historicas.csv'
+    historico_meta = salida / 'cnn_referencias_historicas.json'
+    if historico.is_file() and historico_meta.is_file():
+        from src.data.entrada_cnn import firma_comparable
+        hm = json.loads(historico_meta.read_text(encoding='utf-8'))
+        if hm['firma_comparable'] != firma_comparable(base):
+            raise ValueError('Las referencias históricas usan otros ejemplares, etiquetas o grupos.')
+        for nombre, sub in pd.read_csv(historico).groupby('modelo', sort=False):
+            sub = sub.set_index('id_ejemplar').loc[base.id_ejemplar]
             for campo in ['grupo_particion', 'calidad_revisada', 'fruta', 'fuente']:
-                if ref[campo].tolist() != base[campo].tolist():
-                    raise ValueError('La referencia de CNN utiliza otros datos.')
-            if ref.pliegue_validacion.tolist() != asignacion.tolist():
-                raise ValueError('La referencia de CNN usa otros bloques.')
-            predicciones_oof['CNN_simple'] = ref.prediccion.to_numpy()
+                if sub[campo].tolist() != base[campo].tolist():
+                    raise ValueError('Cambió la referencia histórica en '+campo)
+            if sub.pliegue_validacion.tolist() != asignacion.tolist():
+                raise ValueError('Cambió el bloque de la referencia histórica.')
+            predicciones_oof[nombre] = sub.prediccion.to_numpy()
 
     info_cnn = None
     if incluir_cnn:

@@ -23,7 +23,7 @@ implementado y evaluado; el cierre documental requiere añadir el video del equi
 
 ## Entrega y demostración
 
-El [informe IEEE](docs/informe_final.pdf) resume el proyecto en cuatro páginas.
+El [informe IEEE](docs/informe_final.pdf) resume el proyecto en cinco páginas.
 El enlace del video debe completarse antes de entregar; los integrantes y enlaces
 se configuran en `config/entrega.json`. Ver la [lista de requisitos](docs/entrega.md)
 y el [guion para grabar el video](docs/guion_video.md).
@@ -88,16 +88,19 @@ El proceso valida los archivos y actualiza `data/base/` directamente.
 
 El experimento inicial obtuvo F1 macro de **0,429 en Random Forest** y **0,299 en
 SVM**. El ajuste obtuvo **0,388 en Random Forest** y **0,373 en SVM**.
-La CNN mejorada con MobileNetV3 Small congelada obtiene **0,472 de
-F1 macro** y **70,4 % de exactitud**, frente a **0,237**
-de la CNN simple anterior. Conserva la misma base y los mismos bloques por grupos.
-La calidad intermedia sigue siendo débil (6/75 aciertos); son resultados
-exploratorios de desarrollo y requieren una prueba final independiente.
+La CNN con MobileNetV3 Small congelada usa **la fotografía completa**, sin
+recorte central ni borrado del fondo. Se conserva la proporción y se añade relleno
+gris hasta 224×224. Obtiene **0,458 de F1 macro**, **67,4 % de exactitud** y
+**13/75 intermedias correctas**. La referencia histórica con recorte obtuvo
+0,472, 70,4 % y 6/75, respectivamente: conservar toda la escena mejora la
+recuperación intermedia, pero reduce las métricas globales. Las etiquetas,
+máscaras, 43 características y bloques por grupos se mantienen.
 
-El diagnóstico de intermedia se integra en el mismo cuaderno 08. Un cribado con
+El diagnóstico del mismo cuaderno 08 compara cuatro alternativas.
 HistGradientBoosting obtuvo **0,487 de F1 macro** y **19/75 intermedias correctas**,
-frente a 6/75 de CNN, con menor exactitud global. Las etiquetas y los modelos CNN
-actuales se conservan; la comparación detallada incluye los costes por clase.
+con 64,9 % de exactitud. Son resultados exploratorios de desarrollo; falta una
+prueba final independiente. Pasaron 18 pruebas y se verificaron las predicciones
+externas y la recarga de pesos con la huella vigente de la base.
 
 Ver [EDA](docs/eda_y_modelos_tradicionales.md),
 [ajuste tradicional](docs/ajuste_modelos_tradicionales.md) y
