@@ -1,4 +1,4 @@
-# Clasificación de calidad de frutas y verduras mediante visión por computadora
+# Clasificación de calidad de frutas mediante visión por computadora
 
 **Proyecto final de Algoritmos y Programación III**
 Universidad Icesi | Cali, Colombia | Semestre 2026-2
@@ -30,7 +30,7 @@ interfaz gráfica con foto y cámara. El informe IEEE está en `docs/informe_fin
 
 | Nombre | GitHub |
 |---|---|
-| Juan Pablo Serrano | @JP11002 |
+| Juan Pablo Serrano |  [@JP11002](https://github.com/JP11002) |
 | Felipe Calderon | @usuario |
 | Juan Andres Castaño | @usuario |
 
