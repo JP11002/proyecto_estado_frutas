@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-26T13:19:28.509551</dc:date>
+    <dc:date>2026-11-26T21:53:34.771162</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 8.352 14.496 8.352 17.184
 L 8.352 74.784 
 Q 8.352 77.472 11.04 77.472 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 126.24 77.472 
@@ -53,7 +53,7 @@ Q 123.552 14.496 123.552 17.184
 L 123.552 74.784 
 Q 123.552 77.472 126.24 77.472 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 126.24 157.344 
@@ -66,7 +66,7 @@ Q 123.552 94.368 123.552 97.056
 L 123.552 154.656 
 Q 123.552 157.344 126.24 157.344 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 126.24 237.216 
@@ -79,7 +79,7 @@ Q 123.552 174.24 123.552 176.928
 L 123.552 234.528 
 Q 123.552 237.216 126.24 237.216 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 11.04 237.216 
@@ -92,7 +92,7 @@ Q 8.352 174.24 8.352 176.928
 L 8.352 234.528 
 Q 8.352 237.216 11.04 237.216 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 11.04 157.344 
@@ -105,7 +105,7 @@ Q 8.352 94.368 8.352 97.056
 L 8.352 154.656 
 Q 8.352 157.344 11.04 157.344 
 z
-" clip-path="url(#pf0ba2b41cd)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
+" clip-path="url(#pdd63de0182)" style="fill: #edf3f6; stroke: #245c82; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="62.88" y="37.152" transform="rotate(-0 62.88 37.152)">Negocio</text>
@@ -118,29 +118,29 @@ z
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="178.08" y="37.152" transform="rotate(-0 178.08 37.152)">Datos</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(152.50375 51.022086)">Kaggle y Drive</text>
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(149.803281 59.424)">51 fotos propias</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(139.462969 50.742086)">Kaggle, Drive, propias</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(150.588047 59.424)">y deduplicación</text>
    </g>
    <g id="text_5">
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="178.08" y="117.024" transform="rotate(-0 178.08 117.024)">Preparación</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(142.300703 130.614086)">291 fotos completas</text>
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(158.0425 139.296)">y máscaras</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(142.634297 130.614086)">332 fotos revisadas,</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(139.770313 139.296)">máscaras y 43 rasgos</text>
    </g>
    <g id="text_7">
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="178.08" y="196.896" transform="rotate(-0 178.08 196.896)">Modelado</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(151.510625 210.766086)">SVM / RF / CNN</text>
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(154.128516 219.168)">y alternativas</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(139.859453 210.766086)">SVM, RF, CNN, fusión;</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(152.217734 219.168)">ajuste anidado</text>
    </g>
    <g id="text_9">
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="62.88" y="196.896" transform="rotate(-0 62.88 196.896)">Evaluación</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(25.695234 210.486086)">3 bloques por grupos</text>
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(27.651406 219.168)">y análisis de errores</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(29.381719 210.766086)">Prueba por grupos;</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'" transform="translate(34.073906 219.168)">errores por fruta</text>
    </g>
    <g id="text_11">
     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="62.88" y="117.024" transform="rotate(-0 62.88 117.024)">Despliegue</text>
@@ -206,7 +206,7 @@ L 64.88 87.454696
   </g>
  </g>
  <defs>
-  <clipPath id="pf0ba2b41cd">
+  <clipPath id="pdd63de0182">
    <rect x="7.2" y="7.2" width="230.4" height="230.4"/>
   </clipPath>
  </defs>

@@ -1,0 +1,15 @@
+{
+  "metodo": "lote_20261126_receta_v1",
+  "receta": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+      0.47,
+      0.53,
+      0.45,
+      0.35
+    ]
+  },
+  "sha_original": "bfd462e086ada4ae52bdbc8664efbe884ee4b879decfc33f517a36f31ced3a81",
+  "sha_mascara": "e5d4eb84540492e14d6b102f2ad8316f91e049ea3108d48b6766e166e6ff3d30",
+  "opencv": "5.1.0"
+}

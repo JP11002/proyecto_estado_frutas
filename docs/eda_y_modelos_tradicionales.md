@@ -109,7 +109,7 @@ prediccion = paquete['modelo'].predict(nuevas_caracteristicas[paquete['caracteri
 ```
 
 El ajuste de hiperparámetros mediante validación interna por grupos ya se realizó
-en el cuaderno 07, conservando esta referencia. Ver [resultados del ajuste](ajuste_modelos_tradicionales.md).
+en el cuaderno 07, conservando esta referencia. Ver [resultados del ajuste](ajuste_y_cnn.md).
 La ampliación debe priorizar manzanas y
 limones intermedios, frutos malos y bananos buenos de diferentes capturas. La
 necesidad de una prueba independiente se reserva para la evaluación final y no

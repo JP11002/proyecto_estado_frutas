@@ -73,7 +73,7 @@ def enlace(parrafo,texto,url):
 
 def figura(nombre):
  p=doc.add_paragraph();p.alignment=WD_ALIGN_PARAGRAPH.CENTER
- ancho=3.25 if nombre=='confusion_cnn' else 3.48
+ ancho={'confusion_cnn':3.25,'v2_informe_confusion':2.6}.get(nombre,3.48)
  shape=p.add_run().add_picture(str(P/'docs/figuras'/f'{nombre}.png'),width=Inches(ancho))
  p.paragraph_format.keep_with_next=True;p.paragraph_format.space_after=Pt(2)
  svg=Part(PackURI(f'/word/media/{nombre}.svg'),'image/svg+xml',(P/'docs/figuras'/f'{nombre}.svg').read_bytes(),doc.part.package)

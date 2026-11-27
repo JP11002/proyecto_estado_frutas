@@ -8,142 +8,142 @@
 
 ## Resumen
 
-Se desarrolló un prototipo local para clasificar la apariencia externa de manzana roja, banano y limón en buena, intermedia y mala, y medir su tamaño relativo al encuadre. La base única contiene 291 imágenes y máscaras revisadas, con 43 características de color, textura y forma. Se combinaron 21 ejemplos compatibles de Kaggle, 245 fotografías públicas compartidas y 25 propias; el equipo recolectó 51 fotos propias antes de las exclusiones. Se aplicó CRISP-DM, comparación contra una referencia mayoritaria y evaluación externa en tres bloques separados por grupos. SVM ajustado alcanzó F1 macro de 0,373; Random Forest inicial, 0,429; la CNN con MobileNetV3 congelada y fotografía completa, 0,458. Un cribado adicional con Gradient Boosting obtuvo 0,487 y recuperó 19 de 75 intermedias, frente a 13 de CNN. La concentración de 67 intermedias en una campaña limita la generalización. La interfaz acepta fotografía o cámara y muestra la calidad estimada y el diámetro equivalente normalizado. Se documentan impactos, decisiones éticas y límites del prototipo.
+Se desarrolló un prototipo que clasifica la apariencia externa de manzana roja, banano y limón en buena, intermedia y mala, y mide su tamaño relativo al encuadre. La base contiene 332 imágenes revisadas de Kaggle, de colecciones compartidas y propias, con máscaras y 43 características de color, textura y forma. Siguiendo CRISP-DM se reservó una prueba independiente por grupos (43 imágenes, 11 grupos) antes de entrenar, y se seleccionaron modelos con validación cruzada agrupada y anidada. Se compararon SVM, Random Forest, regresión logística, Gradient Boosting y clasificadores sobre MobileNetV3 congelada. El diagnóstico reveló un atajo: el modelo aprendía la fruta en lugar del defecto. Ponderar cada combinación fruta-calidad lo corrigió en limón (F1 de 0,59 a 0,83 en desarrollo, con el mismo modelo). El modelo final, que fusiona rasgos manuales y profundos, obtuvo F1 macro 0,572 en desarrollo y 0,395 en la prueba (IC95 % 0,19–0,58), frente a 0,197 de la referencia mayoritaria. Una validación anidada sobre las 332 imágenes con tres semillas dio 0,46 ± 0,07 para ese modelo y 0,58 ± 0,10 para el cabezal sobre la CNN: la selección no es estable y las diferencias entre modelos no son significativas. La interfaz acepta foto o cámara y requiere supervisión humana.
 
-**Palabras clave:** visión por computador, calidad visual, CNN, clasificación agrupada, tamaño relativo.
+**Palabras clave:** visión por computador, calidad visual, validación agrupada, aprendizaje por atajos, transferencia.
 
 ## I Introducción
 
-La apariencia de frutas frescas influye en su selección y comercialización. La inspección manual puede variar con el criterio del evaluador y las condiciones de iluminación. La revisión de Bhargava y Bansal [1] organiza la evaluación visual mediante adquisición, preparación, segmentación, extracción de rasgos y clasificación, y considera color, textura, forma, tamaño y defectos. Este proyecto adapta ese flujo a fotografías RGB y recursos computacionales de un curso universitario.
+La apariencia de frutas frescas influye en su comercialización, y la inspección manual varía con el evaluador y la iluminación. La revisión de Bhargava y Bansal [1] organiza la evaluación visual en adquisición, segmentación, extracción de rasgos y clasificación por color, textura, forma, tamaño y defectos. Este proyecto adapta ese flujo a fotografías RGB y a recursos de CPU.
 
-El objetivo es construir y evaluar un apoyo a la inspección de un fruto individual, completo y sobre fondo simple. Se eligieron manzana roja, banano y limón, sustituyendo la naranja del planteamiento inicial por disponibilidad real del equipo. La salida es una de tres calidades visuales y una medida de tamaño en píxeles normalizados. No se determina inocuidad, firmeza interna, patógenos ni vida útil. La aplicación requiere supervisión humana.
+El objetivo es apoyar la inspección de un fruto individual sobre fondo simple: asignar una de tres calidades visuales y estimar su tamaño en píxeles normalizados. No se determina inocuidad, estado interno ni vida útil. Limón sustituye a la naranja del planteamiento inicial por disponibilidad del equipo.
 
-El problema combina variaciones de iluminación, forma, resolución, perspectiva y deterioro, además de escasez de ejemplares independientes. Una foto adicional del mismo fruto no equivale a una observación independiente. Por ello, el objetivo técnico incluye comparar modelos, conservar los grupos entre particiones y analizar errores por clase, fruta y fuente, en lugar de optimizar solamente la exactitud global.
+Es un problema complejo de ingeniería por cinco razones: pocos ejemplares independientes, con varias fotos del mismo fruto o campaña; desbalance (63 % de buenas); asociación entre fruta y calidad en los datos; cambios de dominio entre fuentes (resolución, fondo, iluminación); y criterios de calidad que dependen de la fruta. Por ello el objetivo técnico no es maximizar la exactitud, sino estimar honestamente la generalización y analizar los errores por clase, fruta y fuente.
 
 ## II Fundamentos y formulación matemática
 
-Sea I una imagen RGB de H por W píxeles y M su máscara binaria. Se busca una función f(I,M) que produzca y en {buena, intermedia, mala}, junto con una medida relativa s(M). Para los modelos tradicionales se calcula un vector de 43 características phi(I,M); para CNN se utiliza toda la fotografía RGB, reescalada a 224 por 224 preservando proporciones y rellenando con gris neutro. La clasificación CNN no depende de M; los modelos tradicionales y el tamaño sí la utilizan.
+**Datos y objetivo.** Sea D = {(I_i, M_i, y_i, f_i, g_i)}, con imagen RGB I, máscara M, calidad y ∈ {buena, intermedia, mala}, fruta f y grupo g (fruto, sesión o campaña). Se busca h tal que ŷ = h(I, M) generalice a grupos no vistos. La partición cumple G_dev ∩ G_test = ∅: fotos de un mismo grupo nunca quedan a ambos lados, porque comparten fruto, fondo e iluminación y su separación aleatoria filtra información [7], [9].
 
-La normalización de variables tradicionales se realiza dentro del pipeline de SVM: z_j = (x_j - mu_j) / sigma_j. La media y desviación se estiman únicamente en el entrenamiento de cada división. La SVM separa pares de clases maximizando margen con penalización C; se comparan kernel lineal y RBF, K(x,z) = exp(-gamma ||x-z||²). Random Forest agrega la votación de árboles entrenados con aleatoriedad de muestras y características. Estos métodos permiten contrastar fronteras de margen con ensambles no lineales [3].
+**Representaciones.** φ(I,M) ∈ R^43 contiene medias, desviaciones e histogramas RGB/HSV dentro de la máscara (el tono se representa con seno y coseno por ser angular), textura de coocurrencia y circularidad, solidez y aspecto. ψ(I) ∈ R^576 es la salida de la última capa convolucional de MobileNetV3 Small preentrenada en ImageNet y congelada [5], sobre la fotografía completa a 224×224 con proporción conservada. La fusión es z = [φ; ψ]. Toda normalización z_j = (x_j − μ_j)/σ_j estima μ y σ solo con el entrenamiento de cada división.
 
-La CNN de transferencia mantiene fijo el extractor convolucional MobileNetV3 Small preentrenado en ImageNet y añade un clasificador propio [4]. Su salida softmax es p_k = exp(a_k) / sum_j exp(a_j). El cabezal minimiza entropía cruzada ponderada, L = -(sum_i w_yi log p_yi) / sum_i w_yi. Los pesos se calculan solo en entrenamiento: w_c = (N / (3 N_c)) elevado a p, con p en {0, 0,5, 1}. Las puntuaciones softmax no están calibradas como confianza.
+**Clasificador final.** Regresión logística multinomial, p_k(z) = exp(w_kᵀz) / Σ_j exp(w_jᵀz), que minimiza
 
-El tamaño se mide en la resolución original, antes del reescalado para CNN. Si A = sum M es el área de la máscara, el diámetro del círculo equivalente es d_eq = 2 sqrt(A/pi). Se reportan s = d_eq / min(H,W) y ocupación q = A/(H W). s es adimensional y puede superar uno para formas alargadas. Cambiar la resolución sin cambiar el encuadre conserva s; cambiar distancia o encuadre altera la medida. No se expresa en centímetros ni se infiere un tamaño físico comercial.
+L(W) = Σ_i ω_i [−log p_{y_i}(z_i)] + (1/2C)‖W‖².
 
-Las métricas se definen por clase: precisión P = TP/(TP+FP), recall R = TP/(TP+FN) y F1 = 2PR/(P+R). F1 macro es el promedio de los tres F1 y da el mismo peso a cada calidad. También se calcula recall macro y exactitud. Para estudiar el predominio de campañas grandes, se recalculan métricas con peso de cada imagen igual a 1/n_g, donde n_g es el número de fotos de su grupo.
+Es equivalente a un cabezal softmax lineal sobre la red congelada. Con ω_i = N/(3 N_{y_i}) se equilibran las clases. Con ω_i = N/(K·n_{f_i,y_i}), donde n_{f,y} es el tamaño de la celda fruta-calidad y K el número de celdas, cada combinación pesa igual: si una fruta casi siempre tiene la misma calidad, predecir la fruta deja de reducir la pérdida.
 
-## III Metodología aplicada y datos
+**Regla de decisión con costes.** ŷ = argmax_k a_k p_k(z), con a = (1, a_2, a_3) y a_2, a_3 ∈ [0,25; 8] elegidos sobre predicciones internas para maximizar F1 macro. Es la decisión de Bayes con costes por clase [10].
 
-La Fig. 1 representa CRISP-DM adaptado: se estableció un problema de inspección visual, se auditó la cobertura de las fuentes, se revisaron etiquetas y máscaras, se modeló, se analizaron errores y se implementó el despliegue local. Los errores alimentan una nueva revisión de cobertura o criterios; no autorizan a cambiar etiquetas para favorecer un algoritmo.
+**Métricas.** P_k = TP_k/(TP_k+FP_k), R_k = TP_k/(TP_k+FN_k), F1_k = 2P_kR_k/(P_k+R_k). F1 macro = (1/3) Σ_k F1_k da el mismo peso a cada calidad; F1 ponderado pesa por soporte. Los IC95 % se obtienen remuestreando grupos completos 2000 veces [11].
+
+**Tamaño.** Con A = Σ M, el diámetro equivalente es d = 2√(A/π) y s = d/min(H,W). Es adimensional y depende de la distancia y del encuadre; no expresa centímetros.
+
+## III Metodología y datos
+
+La Fig. 1 resume CRISP-DM aplicado. El diagnóstico de errores realimenta la revisión de datos y criterios; nunca autoriza cambiar etiquetas para favorecer un modelo.
 
 ![crisp_dm](docs/figuras/crisp_dm.png)
 
 **Figura 1.** Flujo personalizado de CRISP-DM y retroalimentación del proyecto. Fuente: elaboración propia.
 
-La base de referencia proviene de Fruit Quality Classification [2]. La ampliación utiliza las dos colecciones de Drive compartidas por el equipo [6]. El inventario incluye 318 fotos nuevas: 267 públicas y 51 propias. Se aceptaron 245 públicas y 25 propias; se excluyeron 26 fotos múltiples y 22 con problemas de segmentación. La base de desarrollo integra esas 270 fotos con 21 ejemplos previos compatibles. Los 22 grupos conservadores incluyen identidades propias confirmadas y campañas cuya independencia física no se conoce.
+**Fuentes.** Fruit Quality Classification [2] es una copia de FruitNet [3]. Se suman colecciones compartidas de la clase [6] y fotos propias. El equipo recolectó 51 fotos; entraron 25. El 26/11 aparecieron 2 101 archivos nuevos en las carpetas propias, etiquetados como intermedios. El análisis por píxeles encontró 541 duplicados exactos, 1 381 variantes aumentadas de un mismo original (rotaciones, rellenos, cambios de color), 18 fotos de stock y 62 vistas de una sola manzana. Incorporar variantes habría repartido copias de una foto entre entrenamiento y evaluación. Se revisaron los 99 originales: 48 tenían menos de 64 px de lado y 10 eran incompletos, ambiguos o fuera de alcance; se incluyeron 41, y la revisión cambió la etiqueta declarada en 22.
 
 | Fruta | Buena | Interm. | Mala | Total |
 |---|---:|---:|---:|---:|
-| Manzana roja | 121 | 3 | 7 | 131 |
-| Banano | 8 | 70 | 5 | 83 |
-| Limón | 72 | 2 | 3 | 77 |
-| Total | 201 | 75 | 15 | 291 |
+| Manzana roja | 123 | 6 | 7 | 136 |
+| Banano | 10 | 77 | 14 | 101 |
+| Limón | 76 | 11 | 8 | 95 |
+| Total | 209 | 94 | 29 | 332 |
 
-La clase buena representa 69,1 % de la base. De las 75 intermedias, 70 son bananos y 67 pertenecen a una sola campaña. Por eso, la presencia de las nueve combinaciones fruta/calidad no implica cobertura suficiente para generalizar. Los grupos son unidades de separación conservadora, no un censo de 22 frutos independientes.
+Las etiquetas describen apariencia: buena (superficie conservada), intermedia (defectos localizados, menos de un tercio) y mala (deterioro marcado o extendido). Las asignó un revisor asistido por IA, sin medir acuerdo entre anotadores. Tres campañas reúnen 245 fotos, y 67 de las 94 intermedias son una misma campaña de banano.
 
-Las etiquetas describen apariencia: buena corresponde a superficie mayormente conservada; intermedia, a defectos localizados con superficie conservada; mala, a deterioro externo marcado o extendido. La distinción depende de la fruta y requiere revisión. La anotación actual es operativa, realizada con asistencia de IA y revisión visual, sin medición de acuerdo entre anotadores. Las fotografías se leyeron respetando orientación, se segmentó el fruto y se inspeccionaron máscaras y recortes. Se conservaron los defectos oscuros dentro del contorno para evitar eliminarlos como fondo.
+**Protocolo.** (1) Prueba: entre StratifiedGroupKFold de 4, 5 y 6 bloques (semilla 42), el bloque con las tres calidades, sin campañas mayores al 10 % de la base y con más grupos. Resultado: 43 imágenes de 11 grupos (18, 16 y 9 por clase), congeladas antes de entrenar. (2) Desarrollo (289 imágenes, 20 grupos): validación externa agrupada de 5 bloques con búsqueda interna agrupada (anidada [8]). (3) El modelo final se eligió por F1 macro de desarrollo antes de predecir la prueba. (4) Cada modelo se entrenó con y sin el lote nuevo, evaluando las mismas filas, para aislar el efecto de los datos. (5) Como complemento, validación anidada y agrupada de 5 bloques sobre las 332 imágenes, repetida con las semillas 42, 7 y 2026; no se usó para elegir el modelo.
 
-Para EDA y modelos tradicionales se calculan histogramas y estadísticas RGB/HSV, textura de coocurrencia y medidas de circularidad, solidez y aspecto. Las rutas y huellas enlazan imagen, máscara y anotación. Todos los entrenamientos leen data/base/datos.csv; las máscaras y las fotografías completas preparadas pertenecen a esa misma base. Se conservan las etiquetas, las 43 características y los grupos al cambiar el encuadre CNN. Algunas fotografías originales heredadas contienen varios frutos: la etiqueta corresponde al ejemplar revisado, una ambigüedad que permanece al conservar toda la escena. El tamaño es una medida derivada de la máscara revisada, no una etiqueta ordinal manual de referencia ni un objetivo de regresión con error físico conocido.
+**Modelos.** SVM (lineal/RBF) y Random Forest con las rejillas del proyecto; regresión logística; HistGradientBoosting sin parada temprana aleatoria (mezclaría grupos); cabezal propio lineal o MLP sobre MobileNetV3, entrenado con AdamW y aumentos solo en entrenamiento; logística sobre ψ y sobre la fusión. Todos usan pesos de clase y tienen variantes con pesos fruta-calidad y con la regla de costes. No se usa sobremuestreo: duplicar fotos de pocas campañas no añade variabilidad independiente. La justificación de cada decisión (D1–D15) está en docs/ajuste_y_cnn.md.
 
-## IV Modelado y protocolo de evaluación
+## IV Resultados
 
-Se fijaron tres bloques externos con StratifiedGroupKFold y semilla 42. Los grupos de entrenamiento y evaluación son disjuntos, G_train intersección G_eval = conjunto vacío. Cada imagen recibe una predicción externa por modelo. Dentro del entrenamiento externo se seleccionan hiperparámetros mediante validación agrupada. Las transformaciones aprendidas se ajustan dentro de cada división [3].
-
-El ajuste tradicional comparó 18 configuraciones de SVM y 12 de Random Forest. SVM exploró C de 0,1, 1 y 10, kernel lineal/RBF, pesos normales/balanceados y gamma scale o 0,01 para RBF. Random Forest usó 300 árboles y exploró profundidad sin límite u 8, mínimo de 1, 2 o 4 imágenes por hoja y fracción de características sqrt o 0,7. Se conservaron las referencias iniciales y ajustadas, aun cuando el ajuste empeoró el resultado externo.
-
-Se entrenó una CNN simple desde cero de tres bloques de 16, 32 y 64 canales, pooling y cabezal denso. Su bajo F1 motivó el experimento de transferencia. La CNN actual usa normalización ImageNet, extractor congelado, LayerNorm sin parámetros y cabezal lineal o MLP de 64 unidades. Se probaron doce combinaciones de cabezal, peso de clase y uso o ausencia de aumentos con AdamW, tasa 0,003, regularización 0,01 y dropout 0,2. El máximo fue 120 épocas; selección desde 12 y paciencia 15. Las divisiones internas se adaptaron a los grupos disponibles: 3, 2 y 3 en los bloques externos y 3 en selección global, para 132 ajustes internos.
-
-Los aumentos de entrenamiento son espejo horizontal, giros de diez grados con expansión para conservar las esquinas y brillo moderado. No se aplica recorte central ni se borra el fondo con la máscara. La evaluación utiliza la vista original. El cache visual aplica un extractor fijo sin aprender estadísticas de la base. El prototipo CNN final seleccionó cabezal lineal, peso de clase con exponente 0,5, aumentos activados y 20 épocas sobre toda la base; sus predicciones de entrenamiento no se utilizan como métrica externa.
-
-El diagnóstico adicional comparó regresión logística y SVM sobre 576 rasgos CNN, y Extra Trees e HistGradientBoosting sobre los 43 rasgos manuales. Los 22 candidatos se fijaron antes de consultar resultados, con 176 ajustes internos y doce externos. La parada temprana automática de Boosting se desactivó para no introducir una división aleatoria de fotos relacionadas. Estas alternativas constituyen un cribado exploratorio; no reemplazan automáticamente el prototipo CNN.
-
-## V Resultados
-
-| Modelo | Exactitud | F1 macro | Recall macro |
-|---|---:|---:|---:|
-| Mayoritaria | 0,691 | 0,272 | 0,333 |
-| SVM inicial | 0,395 | 0,299 | 0,365 |
-| RF inicial | 0,546 | 0,429 | 0,479 |
-| SVM ajustado | 0,447 | 0,373 | 0,414 |
-| RF ajustado | 0,443 | 0,388 | 0,430 |
-| CNN simple (histórica) | 0,271 | 0,237 | 0,393 |
-| CNN recortada (histórica) | 0,704 | 0,472 | 0,501 |
-| CNN foto completa | 0,674 | 0,458 | 0,505 |
-| Logística CNN | 0,646 | 0,400 | 0,467 |
-| SVM CNN | 0,674 | 0,430 | 0,462 |
-| Extra Trees | 0,423 | 0,357 | 0,396 |
-| Gradient Boosting | 0,649 | 0,487 | 0,510 |
-
-La CNN con fotografía completa obtiene 67,4 % de exactitud y F1 macro de 0,458, frente a 70,4 % y 0,472 de la referencia recortada. La recuperación intermedia aumenta de 6 a 13 aciertos, pero el rendimiento global disminuye. Se mantiene la fotografía completa como entrada solicitada y se informa esta compensación. Las referencias CNN simple y recortada son históricas: conservan las mismas identidades, etiquetas, máscaras, grupos y bloques, con otra representación visual. La referencia mayoritaria tiene exactitud alta por el desbalance y F1 macro bajo.
-
-![resultados_modelos](docs/figuras/resultados_modelos.png)
-
-**Figura 2.** F1 macro y recuperación de la calidad intermedia en predicciones externas agrupadas. Fuente: elaboración propia.
-
-| Calidad | Soporte | Aciertos CNN | Aciertos RF inicial | Aciertos Boosting |
+| Modelo | F1 dev | F1 prueba (IC95 %) | R int. | R mala |
 |---|---:|---:|---:|---:|
-| Buena | 201 | 176 | 139 | 163 |
-| Intermedia | 75 | 13 | 11 | 19 |
-| Mala | 15 | 7 | 9 | 7 |
+| Mayoritaria | 0,265 | 0,197 | 0,00 | 0,00 |
+| RF inicial | 0,291 | 0,417 (0,25–0,52) | 0,31 | 0,56 |
+| SVM ajustado | 0,420 | 0,324 (0,18–0,45) | 0,31 | 0,33 |
+| CNN cabezal MLP | 0,480 | 0,397 (0,18–0,54) | 0,50 | 0,22 |
+| Logística CNN | 0,483 | 0,385 (0,20–0,57) | 0,63 | 0,22 |
+| Log. CNN pesos fruta + costes | 0,542 | 0,428 (0,25–0,59) | 0,56 | 0,22 |
+| **Final: fusión pesos fruta + costes** | **0,572** | **0,395 (0,19–0,58)** | 0,50 | 0,22 |
 
-La CNN tiene recall intermedio de 17,3 % y precisión de 61,9 %. Boosting alcanza recall de 25,3 % y precisión de 41,3 %. Boosting predice 46 intermedias con 27 falsas alarmas; CNN predice 21 con ocho falsas alarmas. Con igual peso por grupo, F1 macro es 0,376 para CNN completa, 0,531 para la referencia CNN recortada y 0,484 para Boosting. Este cambio también muestra sensibilidad a las campañas.
+R: recall en prueba. El modelo final obtuvo en prueba 41,9 % de exactitud y F1 ponderado 0,434. En desarrollo alcanzó 73,4 % de exactitud, recall de mala 0,75 y de intermedia 0,12.
 
-## VI Análisis e interpretación
+![v2_informe_prueba](docs/figuras/v2_informe_prueba.png)
 
-La CNN confunde 57 intermedias con buenas y cinco con malas. En el tercer bloque entrena con solo ocho intermedias de otras procedencias y evalúa las 67 de una campaña diferente. Los F1 macro externos son 0,495, 0,462 y 0,207. La diferencia revela inestabilidad ante campañas reservadas. La escasez de variedad independiente y la asociación fruta/calidad son limitaciones comprobadas; el recorte no explica por sí solo el error. Al conservar la escena completa el fruto puede ocupar menos píxeles y el fondo puede influir, especialmente en capturas lejanas.
+**Figura 2.** Prueba independiente: F1 macro con IC95 % por grupos y recall de intermedia y mala. Fuente: elaboración propia.
 
-La representación congelada de ImageNet puede capturar identidad o apariencia global del fruto con mayor facilidad que lesiones locales; esta es una hipótesis que requiere comparar representaciones. Las curvas de entrenamiento muestran buen ajuste interno, mientras que el tercer bloque permanece débil. El patrón es compatible con problemas de generalización y cambio de distribución, y no se resuelve mostrando la exactitud sobre las imágenes usadas para entrenar el prototipo final.
+**Efecto de los datos nuevos (desarrollo, mismas filas).** Mejoraron los modelos con rasgos CNN: logística CNN de 0,421 a 0,483 y fusión de 0,432 a 0,558. Empeoraron los de rasgos manuales: RF inicial de 0,518 a 0,291 y HistGB de 0,440 a 0,326. En la prueba, las variaciones (por ejemplo, fusión con pesos fruta de 0,466 a 0,436) quedan dentro de la incertidumbre.
 
-![confusion_cnn](docs/figuras/confusion_cnn.png)
+**Validación anidada sobre las 332 imágenes** (media ± desviación entre 3 semillas):
 
-**Figura 3.** Matriz de confusión de CNN actual sobre 291 predicciones externas. Filas: etiquetas revisadas. Fuente: elaboración propia.
+| Modelo | F1 macro | R int. | R mala |
+|---|---:|---:|---:|
+| Mayoritaria | 0,258 | 0,00 | 0,00 |
+| RF inicial | 0,396 ± 0,034 | 0,20 | 0,51 |
+| SVM ajustado | 0,330 ± 0,053 | 0,23 | 0,25 |
+| CNN cabezal + costes | 0,575 ± 0,097 | 0,38 | 0,59 |
+| Logística CNN + costes | 0,508 ± 0,018 | 0,20 | 0,51 |
+| Log. CNN pesos fruta | 0,450 ± 0,013 | 0,21 | 0,61 |
+| Final: fusión pesos fruta + costes | 0,460 ± 0,065 | 0,19 | 0,54 |
 
-La revisión [1] describe múltiples condiciones de captura, rasgos y métodos. Este trabajo comparte el uso de apariencia externa y segmentación, pero sus cifras no se comparan directamente con las de otros estudios: no utiliza sus mismas frutas, etiquetas y particiones. La comparación válida en esta entrega es la de los modelos sobre los mismos bloques de la base propia.
+![v2_informe_fruta](docs/figuras/v2_informe_fruta.png)
 
-Las imágenes ya participaron en la revisión de etiquetas y máscaras, y el diseño evolucionó tras analizar errores previos. Por tanto, las cifras son de desarrollo, incluso con separación agrupada. Se necesita una prueba final de nuevas capturas reservadas antes de ajustar el procesamiento. Las máscaras no tienen referencia independiente píxel a píxel; no se reporta IoU inventado. Tampoco hay medidas físicas de referencia para calcular MAE de tamaño. La estimación en píxeles se verifica geométricamente, no como diámetro real.
+**Figura 3.** Recall por fruta en desarrollo de la logística sobre la CNN: pesos por clase frente a pesos por combinación fruta-calidad. Fuente: elaboración propia.
 
-## VII Despliegue y reproducibilidad
+![v2_informe_confusion](docs/figuras/v2_informe_confusion.png)
 
-La aplicación local se inicia con python -m src.main. Permite cargar una foto o recibir fotogramas de cámara, elegir CNN, Random Forest o SVM y mostrar la calidad, la fotografía completa utilizada por CNN, el contorno propuesto y el tamaño relativo. La cámara solicita análisis periódicos; un trabajador ejecuta la inferencia para mantener la interfaz disponible. GrabCut propone una máscara para un fruto sobre fondo simple y se muestran alertas geométricas. La propuesta debe revisarse visualmente. Si falla la segmentación, CNN puede clasificar la fotografía completa, pero se informa que el tamaño no es estimable; los modelos tradicionales requieren una máscara válida.
+**Figura 4.** Matriz de confusión del modelo final en la prueba independiente. Filas: etiqueta revisada. Fuente: elaboración propia.
 
-La aplicación reutiliza los pesos guardados y verifica su huella contra la base. Los ejemplos incluidos se identifican como imágenes de entrenamiento y no se presentan como prueba independiente. La captura de cámara no se conserva automáticamente. Se puede exportar el resultado numérico en JSON. El repositorio incluye comandos de instalación, cuadernos ejecutados, pruebas y un verificador de predicciones; los modelos generados se pueden distribuir con el paquete local o regenerar mediante los cuadernos.
+## V Análisis e interpretación
 
-## VIII Responsabilidades éticas e impactos
+**Atajo por fruta.** Con el protocolo anterior de 3 bloques, la CNN alcanzó F1 macro 0,660 y 80,7 % de exactitud. Pero clasificó como intermedios 9 de 10 bananos buenos y no acertó ninguno de los 11 limones intermedios: había aprendido "banano = intermedia" y "limón = buena", porque 77 de 101 bananos son intermedios. Es aprendizaje por atajos [12]: una métrica global alta con una regla inútil. Los pesos fruta-calidad lo corrigen donde hay ejemplos: con la misma logística sobre la CNN, en limón el recall de intermedia pasa de 0,11 a 0,89 y el F1 de 0,59 a 0,83 (Fig. 3). En banano no hay mejora posible en desarrollo: cuando la campaña de 67 intermedias se valida, el entrenamiento no tiene suficientes bananos intermedios.
 
-La Tabla siguiente relaciona decisiones con principios del código IEEE [5]. El apoyo de herramientas de IA para código y anotación se reconoce; no se considera evidencia independiente de calidad física. La trazabilidad distingue fuentes públicas y propias y conserva las decisiones de revisión.
+**Generalización y sobreajuste.** En los modelos con rasgos CNN, el F1 de la validación interna (0,46–0,58) es parecido al del desarrollo externo (0,48–0,57): la selección anidada no sobreajustó los hiperparámetros [8]. La caída aparece en la prueba (0,39–0,44), cuyas fuentes (recortes del lote, Kaggle y fotos propias) difieren del desarrollo, dominado por campañas públicas. Es un problema de generalización entre dominios más que de memorización. Los IC95 % de la prueba (±0,2) se solapan: con 11 grupos no puede afirmarse que un modelo supere a otro. Todos los modelos útiles superan a la referencia mayoritaria.
 
-| Decisión y riesgo | Principio IEEE | Medida aplicada |
+**Estabilidad de la selección.** En la validación anidada el cabezal sobre la CNN obtiene la media más alta (0,575), pero también la mayor variación: entre 0,51 y 0,69 según dónde caigan las campañas grandes. El modelo final elegido en desarrollo queda en 0,460. El orden entre modelos depende de la partición, de modo que la elección del modelo es un resultado incierto. No se cambió el modelo final, porque esa validación incluye las imágenes de prueba; con más grupos independientes, la elección entre cabezal CNN y fusión debe repetirse. Los pesos fruta-calidad muestran un compromiso: con la logística sobre la CNN reducen el atajo (recall de bananos buenos de 0,07 a 0,43; de limones intermedios, de 0,18 a 0,52), pero bajan el F1 macro global de 0,472 a 0,450, porque las campañas grandes dejan de favorecer la predicción por fruta.
+
+**Regla de costes.** Los pesos elegidos para el modelo final, a = (1; 0,25; 0,5), favorecen "buena" porque el desarrollo está dominado por campañas buenas. Subieron el F1 de desarrollo de 0,512 a 0,572, pero en la prueba (42 % de buenas) bajaron el recall de mala de 0,33 a 0,22. Es un cambio de distribución a priori. No se cambió la selección después de ver la prueba, para no invalidarla.
+
+**Fuentes y dominio.** Los rasgos manuales calculados sobre recortes pequeños y borrosos difieren de los de fotos completas. Al añadir el lote, RF predijo "mala" en casi todas las buenas de las campañas públicas (exactitud 0,04 en esa fuente). Los rasgos de la CNN son más robustos a ese cambio. En la prueba, el modelo final acierta las buenas de las fotos propias (5/5) pero ninguna de sus 6 defectuosas, y 5 de las 9 malas de la prueba se predicen buenas. Por eso no debe descartar ni aprobar fruta de forma autónoma.
+
+**Comparación con la literatura.** Morshed et al. [4] reportan 99,67 % de exactitud en FruitNet con DenseNet201, usando una división aleatoria 60:20:20 sin agrupar fotos del mismo fruto. FruitNet contiene secuencias del mismo fruto, de modo que esa división mide sobre todo memorización de capturas. Nuestras cifras miden la generalización a grupos no vistos, en tres frutas con una clase intermedia y fuentes heterogéneas, y no son comparables con esa cifra.
+
+## VI Despliegue
+
+La aplicación (python -m src.main) carga una foto o recibe fotogramas de cámara y ofrece CNN, Random Forest, SVM y el modelo final. Muestra la calidad, las puntuaciones, la variante de decisión y el tamaño relativo. GrabCut propone la máscara y se emiten alertas geométricas; si la segmentación falla, solo pueden usarse los modelos sin rasgos manuales. Los modelos se entrenaron solo con desarrollo, así que las métricas de prueba corresponden a los pesos desplegados. El motor reproduce las 43 predicciones de prueba de cada modelo. En CPU, clasificar tarda unos 0,03 s y el análisis completo de una foto de 12 MP (segmentación, rasgos y red), unos 3,3 s. La cámara no guarda capturas.
+
+## VII Responsabilidades éticas e impactos
+
+La tabla relaciona decisiones con el Código de Ética del IEEE [13] y la Ley 842 de 2003 [14]. El análisis completo está en docs/etica.md.
+
+| Decisión y riesgo | Principio | Medida aplicada |
 |---|---|---|
-| Confundir apariencia con seguridad alimentaria | Bienestar público | Salida de apoyo visual y supervisión humana |
-| Fotografiar personas o guardar capturas sin necesidad | Privacidad | Procesamiento local y cámara sin guardado automático |
-| Exagerar rendimiento o presentar entrenamiento como prueba | Honestidad | Predicciones agrupadas, referencias y límites explícitos |
-| Fallar más en una fruta o calidad | Responsabilidad técnica | Métricas por clase, fruta, fuente y grupo |
-| Reutilizar datos y código ajenos | Reconocer contribuciones | Fuentes y asistencia de IA documentadas |
+| Confundir apariencia con inocuidad | Bienestar público | Salida de apoyo; supervisión humana |
+| Capturar personas o guardar fotos | Privacidad | Proceso local; cámara sin guardado |
+| Fotos aportadas por otros a la colección del curso | Consentimiento y reconocimiento | Uso académico acordado en el curso; solo frutos; procedencia citada |
+| Fotos de terceros (stock con marca de agua) | Propiedad intelectual | Excluidas; inventario con motivo |
+| Etiquetas de un revisor asistido por IA | Honestidad | Criterios e historial publicados; limitación declarada |
+| Atajo por fruta: falla en frutas con defectos | Equidad técnica | Métricas por fruta; pesos fruta-calidad |
+| Presentar entrenamiento como prueba | Honestidad | Prueba por grupos congelada; IC95 % |
 
-En la etapa inicial se identificaron beneficios potenciales y riesgos. Tras la evaluación, el impacto se revisa con evidencia: la clase intermedia sigue siendo débil y no se justifica automatizar decisiones de descarte. No se midieron ahorros económicos, reducción de residuos ni consumo energético, por lo que no se afirman mejoras realizadas en esas magnitudes.
-
-| Dimensión | Beneficio potencial y riesgo | Mitigación y conclusión final |
+| Dimensión | Riesgo identificado | Mitigación |
 |---|---|---|
-| Social | Apoyo a inspección; errores y confianza excesiva | Revisión humana y comunicación de limitaciones |
-| Económica | Estandarización; costes de errores y mantenimiento | Piloto antes de uso comercial y registro de errores |
-| Ambiental | Aprovechamiento de alimentos; energía y descarte equivocado | CPU disponible, ejecución bajo demanda y sin descarte automático |
-| Global | Adaptación a otros mercados; cambios de variedades e iluminación | Evaluación local por fruta y protocolo de captura |
+| Social | 5 de 9 malas pasan como buenas en la prueba | Revisión humana obligatoria |
+| Social | Cámara en puntos de venta: percepción de vigilancia | Encuadre solo de la fruta; proceso local, sin red ni guardado |
+| Económica | 10 de 18 buenas marcadas defectuosas: posible desperdicio | Piloto con registro de costes antes de uso comercial |
+| Ambiental | Inferencia en CPU (0,03 s por clasificación) | Sin GPU; ejecución bajo demanda |
+| Global | Variedades, fondos y luz cambian el desempeño | Validación local por fruta y protocolo de captura |
 
-## IX Conclusiones y trabajo futuro
+## VIII Conclusiones y trabajo futuro
 
-Se implementó un flujo completo de adquisición, revisión, preparación, modelado, evaluación e inferencia local con una sola base. La CNN con fotografía completa supera a la CNN simple y recupera más intermedias que la referencia recortada, aunque reduce el F1 global y la exactitud respecto a esta. Boosting obtiene el mayor F1 macro de esta comparación y recupera más intermedias, con menor precisión intermedia que CNN. La elección depende del coste de errores y no de un único promedio. Los resultados conectan el modelo matemático, la separación por grupos y las restricciones reales de los datos.
-
-Con la base actual, las prioridades son revisar criterios fronterizos por fruta, probar fusión de rasgos manuales y CNN, seleccionar costes y umbrales dentro de la validación interna y estudiar ajuste parcial del último bloque convolucional. Aumentos o sobremuestreo no crean campañas independientes. Una siguiente validación debe incluir nuevas capturas reservadas y referencia manual de tamaño si se pretende evaluar medidas físicas.
+Se construyó un flujo completo y reproducible de adquisición, revisión, modelado, evaluación y despliegue, con una prueba independiente por grupos. La formulación con grupos disjuntos, pesos por celda fruta-calidad y regla de costes permitió detectar y corregir parcialmente un atajo que inflaba las métricas. El modelo final generaliza por encima de la referencia (F1 macro 0,395 frente a 0,197 en la prueba; 0,46 ± 0,07 en validación anidada), pero lejos de un uso autónomo. Las diferencias con otros modelos no son significativas y su orden cambia con la partición: el cabezal sobre la CNN obtuvo la mejor media anidada (0,58 ± 0,10). La conclusión técnica es que el límite actual son los datos, no el algoritmo: faltan limones y manzanas intermedios y malos, bananos buenos y grupos independientes. El trabajo futuro, en orden de impacto, es: (1) capturar esas combinaciones en sesiones distintas con un protocolo de fondo e iluminación; (2) medir el acuerdo entre anotadores (κ de Cohen) en una muestra; (3) ajustar la regla de costes con la distribución esperada de uso; (4) evaluar el ajuste fino del último bloque convolucional cuando haya más datos; y (5) añadir una referencia física para medir el tamaño en centímetros.
 
 ## Referencias
 
@@ -151,12 +151,28 @@ Con la base actual, las prioridades son revisar criterios fronterizos por fruta,
 
 [2] ryandpark, “Fruit Quality Classification,” Kaggle, conjunto de datos. Disponible: https://www.kaggle.com/datasets/ryandpark/fruit-quality-classification. Consulta: 26 de noviembre de 2026.
 
-[3] scikit-learn developers, “User Guide” y “Cross-validation: evaluating estimator performance,” documentación 1.9. Disponible: https://scikit-learn.org/stable/modules/cross_validation.html. Consulta: 26 de noviembre de 2026.
+[3] V. Meshram y K. Patil, “FruitNet: Indian fruits image dataset with quality for machine learning applications,” Data in Brief, vol. 40, art. 107686, 2022, doi: 10.1016/j.dib.2021.107686.
 
-[4] PyTorch contributors, “Transfer Learning for Computer Vision Tutorial” y “MobileNetV3 Small,” documentación oficial. Disponible: https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial. Consulta: 26 de noviembre de 2026.
+[4] M. S. Morshed, S. Ahmed, T. Ahmed, M. U. Islam y A. B. M. A. Rahman, “Fruit quality assessment with densely connected convolutional neural network,” en Proc. 12th Int. Conf. Electrical and Computer Engineering (ICECE), 2022; arXiv:2212.04255.
 
-[5] IEEE, “IEEE Code of Ethics,” IEEE Circuits and Systems Society. Disponible: https://ieee-cas.org/about/ieee-code-ethics. Consulta: 26 de noviembre de 2026.
+[5] A. Howard et al., “Searching for MobileNetV3,” en Proc. IEEE/CVF Int. Conf. Computer Vision (ICCV), 2019, pp. 1314-1324, doi: 10.1109/ICCV.2019.00140.
 
-[6] Equipo del proyecto, “Colecciones compartidas pública y propia de imágenes de frutas,” Google Drive, noviembre de 2026. Identificadores: 12Wcfr_mRLxJ98EpHR9WwbMd7jp49kZxK y 1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx. Inventario y trazabilidad en data/annotations/drive_20261124/.
+[6] Equipo del proyecto, “Colecciones compartidas pública y propia de imágenes de frutas,” Google Drive, noviembre de 2026. Identificadores: 12Wcfr_mRLxJ98EpHR9WwbMd7jp49kZxK y 1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx. Trazabilidad en data/annotations/.
 
-[7] T. Kassis, V. Agarwal, Y. He, D. Patel y A. M. Brueckner, “Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents,” 2026, doi: 10.48550/arXiv.2609.00065. Apoyo metodológico para el análisis con scikit-learn.
+[7] D. R. Roberts et al., “Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure,” Ecography, vol. 40, no. 8, pp. 913-929, 2017, doi: 10.1111/ecog.02881.
+
+[8] S. Varma y R. Simon, “Bias in error estimation when using cross-validation for model selection,” BMC Bioinformatics, vol. 7, art. 91, 2006, doi: 10.1186/1471-2105-7-91.
+
+[9] S. Kaufman, S. Rosset, C. Perlich y O. Stitelman, “Leakage in data mining: Formulation, detection, and avoidance,” ACM Trans. Knowledge Discovery from Data, vol. 6, no. 4, art. 15, 2012, doi: 10.1145/2382577.2382579.
+
+[10] C. Elkan, “The foundations of cost-sensitive learning,” en Proc. 17th Int. Joint Conf. Artificial Intelligence (IJCAI), 2001, pp. 973-978.
+
+[11] B. Efron y R. J. Tibshirani, An Introduction to the Bootstrap. Nueva York: Chapman & Hall, 1993.
+
+[12] R. Geirhos et al., “Shortcut learning in deep neural networks,” Nature Machine Intelligence, vol. 2, pp. 665-673, 2020, doi: 10.1038/s42256-020-00257-z.
+
+[13] IEEE, “IEEE Code of Ethics,” IEEE Policies, sec. 7.8. Disponible: https://www.ieee.org/about/corporate/governance/p7-8. Consulta: 26 de noviembre de 2026.
+
+[14] Congreso de Colombia, “Ley 842 de 2003, por la cual se adopta el Código de Ética Profesional de la ingeniería,” Diario Oficial No. 45.340, 14 de octubre de 2003.
+
+[15] F. Pedregosa et al., “Scikit-learn: Machine learning in Python,” Journal of Machine Learning Research, vol. 12, pp. 2825-2830, 2011.

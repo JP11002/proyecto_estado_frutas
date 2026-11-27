@@ -1,0 +1,9 @@
+{
+  "metodo": "lote_20261126_receta_v1",
+  "receta": {
+    "tipo": "color_hsv"
+  },
+  "sha_original": "f28651e4dd33cbdf9a6d249ecb3fbaccadb250c19d148a8e6f0d197e0c6f0e4e",
+  "sha_mascara": "495c17f0e4f5ba7464a2cb5110af9fe6f0304580ea5221290c189869f9cd5871",
+  "opencv": "5.1.0"
+}

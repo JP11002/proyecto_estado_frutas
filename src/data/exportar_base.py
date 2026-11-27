@@ -129,6 +129,11 @@ def exportar(proyecto):
         base,features,status=guardar_con_fotografias_completas(project,base[core],status)
     else:
         base,features,status=guardar_base(project,base[core],status)
+    # Lotes revisados posteriores (p. ej. drive_20261126): volver a añadirlos para que
+    # reconstruir la base desde el flujo del 24/11 no los elimine sin aviso.
+    if (project/'data/annotations/drive_20261126/revision_visual.json').is_file():
+        from .incorporar_lote import incorporar
+        base,_,status=incorporar(project)
     # Inventario completo: las imágenes sin revisión detallada permanecen pendientes.
     full=inventory.merge(reviews.reset_index().drop(columns=['parametros'],errors='ignore'),
                          on='codigo_revision',how='left',validate='1:1',suffixes=('','_revision'))

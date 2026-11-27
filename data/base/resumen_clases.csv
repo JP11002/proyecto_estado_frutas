@@ -5,6 +5,14 @@ propia,limon,intermedia,2,1
 propia,limon,mala,3,1
 propia,manzana,buena,13,6
 propia,manzana,mala,3,2
+propia_lote_20261126,banano,buena,2,1
+propia_lote_20261126,banano,intermedia,7,1
+propia_lote_20261126,banano,mala,9,3
+propia_lote_20261126,limon,buena,4,3
+propia_lote_20261126,limon,intermedia,9,4
+propia_lote_20261126,limon,mala,5,2
+propia_lote_20261126,manzana,buena,2,1
+propia_lote_20261126,manzana,intermedia,3,1
 publica,banano,buena,5,1
 publica,banano,intermedia,67,1
 publica,limon,buena,70,1

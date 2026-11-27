@@ -126,3 +126,16 @@ Asimismo, la diversidad de variedades agrícolas y condiciones de captura demues
 En conclusión, el desarrollo responsable de esta solución exige considerar el rendimiento técnico como uno de varios criterios de evaluación. La eficiencia computacional, la supervisión humana, la representatividad de los datos, la transparencia de los resultados y la evaluación de los impactos reales son elementos necesarios para procurar que la tecnología genere beneficios sostenibles.
 
 De esta manera, el proyecto busca demostrar que la aplicación de inteligencia artificial en el sector agrícola no debe orientarse únicamente a automatizar tareas, sino también a desarrollar herramientas que contribuyan al aprovechamiento de los recursos, al bienestar de las personas y a la mejora responsable de los procesos productivos.
+
+## 7. Análisis final con evidencia (26/11/2026)
+
+Tras la evaluación con prueba independiente (cuaderno 09, `docs/ajuste_y_cnn.md`), los
+impactos se revisan con cifras medidas, no supuestas:
+
+| Dimensión | Evidencia | Conclusión y mitigación |
+|---|---|---|
+| Social | En la prueba, 5 de 9 frutas malas se predijeron buenas; en las fotos propias no se acertó ninguna de las 6 defectuosas. | El riesgo de aprobar fruta deteriorada es real: el sistema solo puede usarse como apoyo con revisión humana. |
+| Social (privacidad) | Una cámara en un punto de venta puede percibirse como vigilancia de clientes o trabajadores. | La interfaz encuadra solo la fruta, procesa localmente sin red y no guarda fotogramas; se recomienda señalizar su uso y orientarla a la banda o mesa de inspección. |
+| Económica | 10 de 18 frutas buenas se marcaron intermedias o malas. | Descartar automáticamente produciría pérdidas; un piloto debe registrar el coste de cada tipo de error antes de cualquier uso comercial. |
+| Ambiental | Clasificar tarda unos 0,03 s en CPU y el análisis completo de una foto de 12 MP unos 3,3 s; el experimento completo tardó unos 9 minutos en CPU. | No se requiere GPU; el consumo energético es bajo. No se midió reducción de desperdicio, por lo que no se afirma. |
+| Global | El desempeño cambia entre fuentes (fondo, resolución, variedad) y entre frutas. | Antes de usarlo en otro mercado se necesita validación local por fruta y un protocolo de captura. |

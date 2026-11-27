@@ -7,7 +7,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     entrada=parser.add_mutually_exclusive_group()
     entrada.add_argument('--imagen');entrada.add_argument('--ejemplar')
-    parser.add_argument('--modelo',choices=['CNN','Random Forest','SVM'],default='CNN')
+    parser.add_argument('--modelo',default='CNN',help='Uno de MotorInferencia.disponibles(): CNN, Random Forest, SVM o el modelo final v2.')
     parser.add_argument('--salida',type=Path)
     args=parser.parse_args()
     if not args.imagen and not args.ejemplar:
