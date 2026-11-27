@@ -206,3 +206,4 @@ las aplicaciones de escritorio accedan a la cámara*. La aplicación no guarda f
 - [Ajuste de modelos y CNN](docs/ajuste_y_cnn.md)
 - [Ética](docs/etica.md) y [análisis de impactos](docs/analisis_de_impactos.md)
 - [Diagrama CRISP-DM](docs/DiagramaCrispDm.drawio.svg)
+- [Video](https://youtu.be/_D2e4uOu5cg)
