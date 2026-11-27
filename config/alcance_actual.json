@@ -1,9 +1,16 @@
 {
-  "version_base": "base_revisada_v2",
   "fecha_acuerdo": "2026-11-24",
-  "frutas": ["manzana", "banano", "limon"],
+  "frutas": [
+    "manzana",
+    "banano",
+    "limon"
+  ],
   "manzana_solo_roja": true,
-  "calidades": ["buena", "intermedia", "mala"],
+  "calidades": [
+    "buena",
+    "intermedia",
+    "mala"
+  ],
   "protocolo": "calidad_visual_v1",
   "sustituye": "Naranja sustituida por limón por instrucción del equipo. La base v1 es histórica.",
   "fuentes_nuevas": {
@@ -11,5 +18,7 @@
     "propia": "https://drive.google.com/drive/folders/1AyydHBltsfnj9YC4-F9xi9AeogtiK6Fx"
   },
   "etiquetas_de_carpetas": "Declaradas por el equipo; requieren revisión visual. No confirmar automáticamente.",
-  "tamano": "Solo relativo a los píxeles de la fotografía, sin escala física calibrada."
+  "tamano": "Solo relativo a los píxeles de la fotografía, sin escala física calibrada.",
+  "base_datos": "data/base/datos.csv",
+  "entrada_cnn": "fotografia_completa_proporcion_conservada"
 }

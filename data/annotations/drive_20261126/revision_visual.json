@@ -1,0 +1,1968 @@
+{
+ "lote": "drive_20261126",
+ "protocolo": "calidad_visual_v1",
+ "revisor": "Asistente - revision visual",
+ "fecha": "2026-11-26",
+ "fuente_base": "propia_lote_20261126",
+ "criterios": {
+  "buena": "Superficie mayormente conservada, sin defecto visible relevante.",
+  "intermedia": "Defectos localizados (aprox. menos de un tercio de la superficie visible).",
+  "mala": "Deterioro marcado o extendido (aprox. un tercio o más, o daño estructural).",
+  "resolucion_minima_px": 64,
+  "exclusiones": "Fruto incompleto o solapado, calidad ambigua, manzana no roja, resolución insuficiente. Variantes aumentadas, duplicados exactos y fotos de stock se descartan en inventario_nuevas.csv."
+ },
+ "agrupacion": "Conservadora por sesión o escena de captura; la identidad física de cada fruto no está verificada.",
+ "limitaciones": [
+  "Etiquetas de un solo revisor asistido por IA; sin acuerdo entre anotadores.",
+  "Recortes y capturas de baja resolución; dominio visual distinto de la base previa.",
+  "Variedad de limón no confirmada (varios ejemplares amarillos o anaranjados).",
+  "Contornos aproximados: polígono o elipse manual refinado con GrabCut."
+ ],
+ "revisiones": [
+  {
+   "codigo_revision": "l26_banano_001",
+   "drive_id": "1lGEKUOQmD8J4a3INptjfzjQy3-0GCCVa",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.34 PM (1).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Manchas oscuras localizadas; superficie mayormente conservada."
+  },
+  {
+   "codigo_revision": "l26_banano_002",
+   "drive_id": "1iJdlaJy-_lxTDU91ps4yxo_Ol9y1L2Mo",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.34 PM (2).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Mancha oscura dorsal localizada y rayas; resto conservado."
+  },
+  {
+   "codigo_revision": "l26_banano_003",
+   "drive_id": "18TNOpkrWnwXCBOatTdYuXOwoeui6c-5U",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.34 PM.jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Manchas y rayas oscuras localizadas."
+  },
+  {
+   "codigo_revision": "l26_banano_004",
+   "drive_id": "1Y_jV9bgZsdun3jExh_WUyHoqw_wU0utK",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (1).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Rayas oscuras localizadas."
+  },
+  {
+   "codigo_revision": "l26_banano_005",
+   "drive_id": "14w9qzpy4QcrrH0Jv9tQTmvpU9E62AIxH",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (2).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Rayas oscuras localizadas."
+  },
+  {
+   "codigo_revision": "l26_banano_006",
+   "drive_id": "1U0kPgkLIM49rFBsIdpm-KdzuZwVJExrA",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (3).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Ennegrecimiento extendido en gran parte de la cáscara."
+  },
+  {
+   "codigo_revision": "l26_banano_007",
+   "drive_id": "15ojEspIVvY0C5VW_akRVGz0vUZ2xpM4_",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (4).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Ennegrecimiento extendido y extremo dañado."
+  },
+  {
+   "codigo_revision": "l26_banano_008",
+   "drive_id": "1RYLYCYdqXTL4GlvlJeAtlgs--6y6gvSH",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (5).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Manchas oscuras distribuidas en toda la superficie."
+  },
+  {
+   "codigo_revision": "l26_banano_009",
+   "drive_id": "1F0FL-gzZbIna0RK9HZQJHmACYvdBTiKS",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM (6).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "color_hsv"
+   },
+   "observaciones": "Superficie conservada; marcas mínimas en el extremo."
+  },
+  {
+   "codigo_revision": "l26_banano_010",
+   "drive_id": "15FvQLdC0WiPdKFzZOayPSU5tN2SRyHND",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.35 PM.jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Manchas marrones localizadas."
+  },
+  {
+   "codigo_revision": "l26_banano_011",
+   "drive_id": "1hTmvaO0dK3npsOq7DtHYYsLvjfBgIGLf",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.36 PM (1).jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Superficie conservada."
+  },
+  {
+   "codigo_revision": "l26_banano_012",
+   "drive_id": "1lsxEuKUOGe-s9u5IifaO9TedVEcRhv98",
+   "nombre_original": "Copia de WhatsApp Image 2026-06-02 at 9.23.36 PM.jpeg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_banano_whatsapp_20260602",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+     0.04,
+     0.04,
+     0.96,
+     0.96
+    ]
+   },
+   "observaciones": "Marcas oscuras localizadas."
+  },
+  {
+   "codigo_revision": "l26_banano_013",
+   "drive_id": "1fgZR17Jm_79JkCMswW6cdXqjcyCd0Fqv",
+   "nombre_original": "Copia de banana_016.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0,
+      0.45
+     ],
+     [
+      0.03,
+      0.28
+     ],
+     [
+      0.15,
+      0.35
+     ],
+     [
+      0.3,
+      0.55
+     ],
+     [
+      0.5,
+      0.62
+     ],
+     [
+      0.7,
+      0.5
+     ],
+     [
+      0.85,
+      0.33
+     ],
+     [
+      0.95,
+      0.15
+     ],
+     [
+      1,
+      0.2
+     ],
+     [
+      0.97,
+      0.45
+     ],
+     [
+      0.9,
+      0.62
+     ],
+     [
+      0.75,
+      0.85
+     ],
+     [
+      0.6,
+      0.95
+     ],
+     [
+      0.45,
+      0.97
+     ],
+     [
+      0.3,
+      0.93
+     ],
+     [
+      0.15,
+      0.8
+     ],
+     [
+      0.05,
+      0.62
+     ]
+    ]
+   },
+   "observaciones": "Pardeamiento y manchas extendidas."
+  },
+  {
+   "codigo_revision": "l26_banano_014",
+   "drive_id": "1kJv-Xfpii1cYeu_u7Nhg9NePvpiu_Evx",
+   "nombre_original": "Copia de banana_017.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto cortado en el borde y solapado con otro banano."
+  },
+  {
+   "codigo_revision": "l26_banano_015",
+   "drive_id": "1pXsDUZ-7sAkUDF1N9p72v6Dg31-mrVAy",
+   "nombre_original": "Copia de banana_019.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0.07,
+      0.35
+     ],
+     [
+      0.15,
+      0.2
+     ],
+     [
+      0.4,
+      0.08
+     ],
+     [
+      0.7,
+      0.05
+     ],
+     [
+      0.95,
+      0.1
+     ],
+     [
+      1,
+      0.25
+     ],
+     [
+      0.9,
+      0.3
+     ],
+     [
+      0.6,
+      0.25
+     ],
+     [
+      0.4,
+      0.3
+     ],
+     [
+      0.3,
+      0.45
+     ],
+     [
+      0.27,
+      0.6
+     ],
+     [
+      0.28,
+      0.75
+     ],
+     [
+      0.2,
+      0.8
+     ],
+     [
+      0.1,
+      0.75
+     ],
+     [
+      0.05,
+      0.55
+     ]
+    ]
+   },
+   "observaciones": "Manchas oscuras extendidas."
+  },
+  {
+   "codigo_revision": "l26_banano_016",
+   "drive_id": "1-QA3cw4ILkOO2f4lCII6qa8ckSNdJHir",
+   "nombre_original": "Copia de banana_020.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0.08,
+      0.9
+     ],
+     [
+      0.05,
+      0.75
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.3
+     ],
+     [
+      0.35,
+      0.12
+     ],
+     [
+      0.5,
+      0.03
+     ],
+     [
+      0.65,
+      0.05
+     ],
+     [
+      0.72,
+      0.2
+     ],
+     [
+      0.78,
+      0.4
+     ],
+     [
+      0.75,
+      0.53
+     ],
+     [
+      0.6,
+      0.4
+     ],
+     [
+      0.45,
+      0.38
+     ],
+     [
+      0.33,
+      0.5
+     ],
+     [
+      0.25,
+      0.7
+     ],
+     [
+      0.15,
+      0.88
+     ]
+    ]
+   },
+   "observaciones": "Ennegrecimiento extendido en el borde interno."
+  },
+  {
+   "codigo_revision": "l26_banano_017",
+   "drive_id": "18XQS2b1NTbK_P5HQkJNFeS7FZlTAqxOs",
+   "nombre_original": "Copia de banana_021.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto cortado en el borde superior y solapado."
+  },
+  {
+   "codigo_revision": "l26_banano_018",
+   "drive_id": "1IhP9qwLmx0_QlfArlkgLUtBj4JGWblsv",
+   "nombre_original": "Copia de banana_022.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0,
+      0.15
+     ],
+     [
+      0.3,
+      0.03
+     ],
+     [
+      0.55,
+      0.08
+     ],
+     [
+      0.75,
+      0.25
+     ],
+     [
+      0.88,
+      0.45
+     ],
+     [
+      0.92,
+      0.7
+     ],
+     [
+      0.9,
+      0.95
+     ],
+     [
+      0.75,
+      0.97
+     ],
+     [
+      0.6,
+      0.8
+     ],
+     [
+      0.55,
+      0.55
+     ],
+     [
+      0.45,
+      0.38
+     ],
+     [
+      0.3,
+      0.3
+     ],
+     [
+      0.15,
+      0.3
+     ],
+     [
+      0,
+      0.35
+     ]
+    ]
+   },
+   "observaciones": "Manchas marrones distribuidas en gran parte de la superficie."
+  },
+  {
+   "codigo_revision": "l26_banano_019",
+   "drive_id": "1PWjKW9YoDW7X-dCbQhBE_UeZn3hOynai",
+   "nombre_original": "Copia de banana_036.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_cesped",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0.25,
+      0.02
+     ],
+     [
+      0.52,
+      0.05
+     ],
+     [
+      0.55,
+      0.3
+     ],
+     [
+      0.6,
+      0.55
+     ],
+     [
+      0.72,
+      0.75
+     ],
+     [
+      0.95,
+      0.85
+     ],
+     [
+      1,
+      0.95
+     ],
+     [
+      0.9,
+      1
+     ],
+     [
+      0.5,
+      0.98
+     ],
+     [
+      0.25,
+      0.9
+     ],
+     [
+      0.08,
+      0.7
+     ],
+     [
+      0.02,
+      0.4
+     ],
+     [
+      0.08,
+      0.12
+     ]
+    ]
+   },
+   "observaciones": "Rayas y manchas marrones extendidas."
+  },
+  {
+   "codigo_revision": "l26_banano_020",
+   "drive_id": "1F3Td47CXu9M5teMIp628faqWAUS6WM2A",
+   "nombre_original": "Copia de banana_040.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_banano_fondo_cesped",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "poligono_grabcut",
+    "puntos": [
+     [
+      0.15,
+      0.03
+     ],
+     [
+      0.25,
+      0.12
+     ],
+     [
+      0.45,
+      0.25
+     ],
+     [
+      0.6,
+      0.45
+     ],
+     [
+      0.62,
+      0.62
+     ],
+     [
+      0.55,
+      0.78
+     ],
+     [
+      0.4,
+      0.88
+     ],
+     [
+      0.2,
+      0.93
+     ],
+     [
+      0.03,
+      0.92
+     ],
+     [
+      0,
+      0.8
+     ],
+     [
+      0.05,
+      0.7
+     ],
+     [
+      0.15,
+      0.62
+     ],
+     [
+      0.25,
+      0.5
+     ],
+     [
+      0.25,
+      0.35
+     ],
+     [
+      0.15,
+      0.2
+     ],
+     [
+      0.1,
+      0.08
+     ]
+    ]
+   },
+   "observaciones": "Pardeamiento extendido."
+  },
+  {
+   "codigo_revision": "l26_limon_001",
+   "drive_id": "1_Ks2K1oAGNgjhNGzsxH96XFgK8phA-Fq",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105303.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_cesped",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.5,
+     0.57,
+     0.38,
+     0.43
+    ]
+   },
+   "observaciones": "Lesión localizada en el extremo inferior."
+  },
+  {
+   "codigo_revision": "l26_limon_002",
+   "drive_id": "12W3xaOqtx96T1KGURaHCzfBM2E6RLAr6",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105343.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_claro",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto ocupa todo el encuadre y está cortado en tres bordes."
+  },
+  {
+   "codigo_revision": "l26_limon_003",
+   "drive_id": "1PyYYpenLQrJsKYrtse3QsnzRTJzASFCX",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105413.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_claro",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.5,
+     0.34,
+     0.42
+    ]
+   },
+   "observaciones": "Mancha parda en aproximadamente un tercio de la superficie."
+  },
+  {
+   "codigo_revision": "l26_limon_004",
+   "drive_id": "1Wr0fhzTBMDKpuf0WpHtgRFaH0OvPlrXY",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105434.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_claro",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto cortado en el borde izquierdo y solapado."
+  },
+  {
+   "codigo_revision": "l26_limon_005",
+   "drive_id": "19mokV3bktkxZY8mWLp-eh0eh6LfRl9lE",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105504.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.48,
+     0.55,
+     0.45,
+     0.32
+    ]
+   },
+   "observaciones": "Zona parda localizada."
+  },
+  {
+   "codigo_revision": "l26_limon_006",
+   "drive_id": "1sUjPnt89SQfZM9g3En8_tVA_MOf7v368",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105505.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.5,
+     0.55,
+     0.35,
+     0.33
+    ]
+   },
+   "observaciones": "Pardeamiento extendido en más de un tercio."
+  },
+  {
+   "codigo_revision": "l26_limon_007",
+   "drive_id": "1cxp4SZaUHodBIa0LxB30cB4zhR16s5qk",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105701.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.55,
+     0.4,
+     0.35
+    ]
+   },
+   "observaciones": "Zona parda localizada en el lateral."
+  },
+  {
+   "codigo_revision": "l26_limon_008",
+   "drive_id": "1hFiA6125jUvO-MOqQbo1Vr-Zs8WRgiLx",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105737.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto cortado y solapado con otros frutos."
+  },
+  {
+   "codigo_revision": "l26_limon_009",
+   "drive_id": "1DHihflqqmn4Otq5hce7LWZZ9unjpSo8n",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105740.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.55,
+     0.37,
+     0.4
+    ]
+   },
+   "observaciones": "Pardeamiento extendido."
+  },
+  {
+   "codigo_revision": "l26_limon_010",
+   "drive_id": "1kJtD7hML0G4o4YjR3pzVNYASt-ALlKLf",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105756.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.4,
+     0.55,
+     0.36,
+     0.42
+    ]
+   },
+   "observaciones": "Zona parda localizada en la parte superior."
+  },
+  {
+   "codigo_revision": "l26_limon_011",
+   "drive_id": "129twmTauGbFUekWFF9t4xYeo5mRwSa4A",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105811.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Parte superior cortada por la barra de la captura."
+  },
+  {
+   "codigo_revision": "l26_limon_012",
+   "drive_id": "1wmB7W5X3qcyBTgS48HPMnoh37oWu1lCh",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105814.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_ambigua",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Coloración rojiza no distinguible de variación natural; sin defecto claro."
+  },
+  {
+   "codigo_revision": "l26_limon_013",
+   "drive_id": "1Cue7dxgBMOsbTCI-QZuSvSI11kRg0C_r",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105816.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.52,
+     0.42,
+     0.43
+    ]
+   },
+   "observaciones": "Superficie uniforme sin defectos visibles."
+  },
+  {
+   "codigo_revision": "l26_limon_014",
+   "drive_id": "1L-LfOPYDJLT77YC3GKcV3kOg6MB9MkcQ",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105818.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.52,
+     0.35,
+     0.42
+    ]
+   },
+   "observaciones": "Pocas manchas oscuras puntuales."
+  },
+  {
+   "codigo_revision": "l26_limon_015",
+   "drive_id": "1RKgRgFrQdLWiedCPwyT1pRuB0lCTbtfM",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105829.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.5,
+     0.53,
+     0.42,
+     0.4
+    ]
+   },
+   "observaciones": "Pardeamiento difuso extendido."
+  },
+  {
+   "codigo_revision": "l26_limon_016",
+   "drive_id": "1st4Xx_MsPr9Cgdf4To7aq0E1qzpIuATn",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 105834.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_turquesa",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.53,
+     0.45,
+     0.35
+    ]
+   },
+   "observaciones": "Mancha oscura localizada en el lado inferior."
+  },
+  {
+   "codigo_revision": "l26_limon_017",
+   "drive_id": "1plTF2sTGlvSlBn5979A8feV3EPw-j4Ij",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110005.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.53,
+     0.32,
+     0.38
+    ]
+   },
+   "observaciones": "Lesiones pardo-violáceas extendidas."
+  },
+  {
+   "codigo_revision": "l26_limon_018",
+   "drive_id": "1CEh5kdQA2_XaRqiL40BE4HFlor3mIRW9",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110007.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.53,
+     0.5,
+     0.38,
+     0.37
+    ]
+   },
+   "observaciones": "Manchas oscuras puntuales localizadas."
+  },
+  {
+   "codigo_revision": "l26_limon_019",
+   "drive_id": "1Lcy8VTxcDo2grzxdnK9I7vjVKgXbLiyc",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110013.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.53,
+     0.42,
+     0.4
+    ]
+   },
+   "observaciones": "Superficie uniforme; brillo especular, sin defecto claro."
+  },
+  {
+   "codigo_revision": "l26_limon_020",
+   "drive_id": "1qhB-bAAYvwmQNgg6HtkUo-3pAW3ASfrW",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110017.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "mala",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.55,
+     0.3,
+     0.38
+    ]
+   },
+   "observaciones": "Lesión pardo-violácea extendida."
+  },
+  {
+   "codigo_revision": "l26_limon_021",
+   "drive_id": "1BvO6huWDL9f9584Rk7KuVvQedr6DEqnS",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110030.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_limon_fondo_gris",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.55,
+     0.33,
+     0.35
+    ]
+   },
+   "observaciones": "Superficie uniforme sin defectos visibles."
+  },
+  {
+   "codigo_revision": "l26_limon_022",
+   "drive_id": "1yNvRxC65JtuwMun4xSIFFEYk68uV5i2e",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110033.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_ambigua",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_gris",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Tono pardo uniforme por iluminación; calidad no determinable."
+  },
+  {
+   "codigo_revision": "l26_limon_023",
+   "drive_id": "1vzdWpavXOq5QEGZgFOHOQAfYaOSV14ik",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110036.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_limon_fondo_gris",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.47,
+     0.53,
+     0.36,
+     0.42
+    ]
+   },
+   "observaciones": "Superficie uniforme sin defectos visibles."
+  },
+  {
+   "codigo_revision": "l26_limon_024",
+   "drive_id": "1TGkRv2Q3jd7fVfT-B6F3sPhAuoaLHUwz",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110121.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.42,
+     0.35,
+     0.38
+    ]
+   },
+   "observaciones": "Zona parda localizada en la parte superior."
+  },
+  {
+   "codigo_revision": "l26_limon_025",
+   "drive_id": "1mHCC6SZhsfGSzLwaTI7t4gEDURjV4Ekj",
+   "nombre_original": "Copia de Captura de pantalla 2026-06-03 110125.png",
+   "fruta": "limon",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_incompleta",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_limon_fondo_lavanda",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Fruto cortado, muy desenfocado y solapado."
+  },
+  {
+   "codigo_revision": "l26_manzana_001",
+   "drive_id": "1X1CbYxuOxZiG3W3qSQAcqR6HTYg07Ghq",
+   "nombre_original": "Copia de manzana_025.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "si",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.44,
+     0.52,
+     0.42,
+     0.46
+    ]
+   },
+   "observaciones": "Zonas pardas y opacas localizadas."
+  },
+  {
+   "codigo_revision": "l26_manzana_002",
+   "drive_id": "1GxVAjgfh2NlJG9d0vKOWDkcQF8FqKvGU",
+   "nombre_original": "Copia de manzana_026.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "si",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.48,
+     0.52,
+     0.45,
+     0.45
+    ]
+   },
+   "observaciones": "Coloración parda y superficie irregular localizada."
+  },
+  {
+   "codigo_revision": "l26_manzana_003",
+   "drive_id": "1ocUi6za4uFQxicpu4EVqjJvnf_-7S9o_",
+   "nombre_original": "Copia de manzana_029.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "si",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.55,
+     0.55,
+     0.43,
+     0.4
+    ]
+   },
+   "observaciones": "Superficie conservada."
+  },
+  {
+   "codigo_revision": "l26_manzana_004",
+   "drive_id": "1muj2a1Vm172BkxiujKvcJaBzwN9oRGZs",
+   "nombre_original": "Copia de manzana_030.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_alcance",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "no_confirmada",
+   "receta_mascara": null,
+   "observaciones": "Coloración anaranjada; no se confirma manzana roja."
+  },
+  {
+   "codigo_revision": "l26_manzana_005",
+   "drive_id": "1j_FxuI67FK4jD4j1x66fSUUk7GF8k3GH",
+   "nombre_original": "Copia de manzana_031.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "intermedia",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "si",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.45,
+     0.5,
+     0.42,
+     0.48
+    ]
+   },
+   "observaciones": "Zonas pardas localizadas."
+  },
+  {
+   "codigo_revision": "l26_manzana_006",
+   "drive_id": "1KkaZEMS9REu99JfKaT6dahxbvH9begnV",
+   "nombre_original": "Copia de manzana_038.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "incluir",
+   "calidad_revisada": "buena",
+   "grupo_ejemplar": "propia20261126_manzana_cesped",
+   "manzana_roja": "si",
+   "receta_mascara": {
+    "tipo": "elipse_grabcut",
+    "elipse": [
+     0.48,
+     0.55,
+     0.38,
+     0.45
+    ]
+   },
+   "observaciones": "Superficie conservada."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1RR3T-AOrQ1Dgai28kV1HZoHk-ZDJwSpy",
+   "nombre_original": "Copia de banana_013.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 30 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1-lwK6ycIUSkjfbontXCywDyNB3Dk2owL",
+   "nombre_original": "Copia de banana_014.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 47 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1p4ww28U_oMqAtWtyXdUsus6IIyRnmPSn",
+   "nombre_original": "Copia de banana_015.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 45 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1HvvUeSiNLNJOuuqO9YjPHNqHq_kP1OJZ",
+   "nombre_original": "Copia de banana_018.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 53 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1OfDm3XBWsM3HPA36tiqh5i3FZiwJgZHc",
+   "nombre_original": "Copia de banana_023.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 35 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1-6CJKXf_dMCFkDal7B3IcoB0g-plfiRX",
+   "nombre_original": "Copia de banana_024.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 58 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "165wJuiG1Siomyjp1xjCI-dJa-fw1oC_S",
+   "nombre_original": "Copia de banana_025.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 47 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1yVzjxRSRfpchqXU3ChJbi24xtiE9n3zJ",
+   "nombre_original": "Copia de banana_026.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 53 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "182XYo9aoAHxdPP252xt12RWvyzUxMeQd",
+   "nombre_original": "Copia de banana_027.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 46 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1d5RvY7rZcbFch92nxf_whyyxKPW3nlJJ",
+   "nombre_original": "Copia de banana_028.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 42 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1RoHbxddVnj18ZyrTMmmqqs7D6vtdpmmR",
+   "nombre_original": "Copia de banana_029.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 29 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1A6Xoh7FFLyMw-5XSwYmChKYYf-E3867S",
+   "nombre_original": "Copia de banana_030.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 31 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1ld9-C5YCsArEIEgIb9oxGG9YAGnk0oCD",
+   "nombre_original": "Copia de banana_031.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 31 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1UifH-IYOf3qLEewxiqZ85O-GV1UZ7Q6p",
+   "nombre_original": "Copia de banana_032.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 26 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "19kBakHBfgt5pPyvVPDQr36jbSs_rMciQ",
+   "nombre_original": "Copia de banana_033.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 28 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1nWQ5GGN9JsaYFouSkLxOfp4_FjMBvYED",
+   "nombre_original": "Copia de banana_034.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 25 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1SGv0-fUDTeZ0fOo-3FLMe428YKLeaxyI",
+   "nombre_original": "Copia de banana_035.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 35 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1IilsYGFIxwUFf3taUP3FRoZXW7tpCNYy",
+   "nombre_original": "Copia de banana_037.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 52 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1MasKVaTTcCsrXQw85Q3WzBZLxEiIJF9f",
+   "nombre_original": "Copia de banana_038.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 32 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1JkfXs8xrAM6rgKnXUwEjZEhywPIdwPgx",
+   "nombre_original": "Copia de banana_039.jpg",
+   "fruta": "banano",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 50 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1JusZPLf6-6FUsXQuW5UnBFGKPN5y049N",
+   "nombre_original": "Copia de manzana_007.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 41 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1d7StU4xlvPe3IwE3TIhwLMHrEva7tFUb",
+   "nombre_original": "Copia de manzana_008.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 43 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1UHTgUyizddUJZzxKpv2PpzZx-pwP7a6Q",
+   "nombre_original": "Copia de manzana_009.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 63 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1r5mE70hRGewnxqH_ctNmT2p3z5wYlaul",
+   "nombre_original": "Copia de manzana_010.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 58 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "11edc1YWCxQYYxhsub2QqadDdBVOXK4ws",
+   "nombre_original": "Copia de manzana_011.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 61 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1Ix7hReh4SwhnVSBVOMrzeV-DF7ez7lyC",
+   "nombre_original": "Copia de manzana_012.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 55 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "14IcQq4Dn0YJ8h7WpRj8zB-fK5MFtcWa7",
+   "nombre_original": "Copia de manzana_013.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 40 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1JoPAGthi5gnQeW8G1Fni5bNt06kkpz-3",
+   "nombre_original": "Copia de manzana_014.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 41 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1STdtJTeMdNUnQmfQgjxDrZfq41fwnXWH",
+   "nombre_original": "Copia de manzana_015.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 39 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1EBCfistXv0P5phwkeZwSt6Ch5NXGPfZR",
+   "nombre_original": "Copia de manzana_016.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 50 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1Ndo55G7LeES43jKGR27R3cNGrSVmnCrm",
+   "nombre_original": "Copia de manzana_017.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 43 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1AerJK6N4-okpPym6uzxA-44V4nUiE-EW",
+   "nombre_original": "Copia de manzana_018.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 52 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1HE3F5zE_JTcD8Tmf29rUO53F8eWpbIdn",
+   "nombre_original": "Copia de manzana_019.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 59 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1sYr1tKT1Mu4Cv_ekQImIP_vWv95DnDbQ",
+   "nombre_original": "Copia de manzana_020.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 54 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1ST_nxuKHomoIrwm5o51xan488Eb4wyd5",
+   "nombre_original": "Copia de manzana_021.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 52 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1SbonCveJO5PB26md2JZpizWfEzSbiwgD",
+   "nombre_original": "Copia de manzana_022.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 43 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "17m7HC87OWBA5qL6niGBUE1BnPkcBqjxh",
+   "nombre_original": "Copia de manzana_023.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 45 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1NlUGlgpdACqsR0HQDCOo0LTaPWKr-njC",
+   "nombre_original": "Copia de manzana_024.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 46 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "11IWHYAmYefKwPX_3UrN0KSrZuBOasjf4",
+   "nombre_original": "Copia de manzana_027.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 55 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1dVMKIwlu6kQOcNQAYL6FFxFBM6WBsNvd",
+   "nombre_original": "Copia de manzana_028.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 33 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1nBCagjycMPxYNVFu8CoPaCkpM7fsmJKu",
+   "nombre_original": "Copia de manzana_032.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 31 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1v_j30T8Ss2u5_k1G9kzkEvDtWD7pihEf",
+   "nombre_original": "Copia de manzana_033.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 56 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1J1Id-dZDyW83ZrRwDT92F4qQ4PiyzAYh",
+   "nombre_original": "Copia de manzana_034.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 53 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1ZmBFgxFXL_OXUr4EF3SoUHpCvH-FOCTj",
+   "nombre_original": "Copia de manzana_035.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 35 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1HUnSEuwh4xLJHL6HqIkQxMmcROSA6-uS",
+   "nombre_original": "Copia de manzana_036.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 34 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1AWcxpZjd3nwxu1d3iP1O-Mtgxf9LOkcm",
+   "nombre_original": "Copia de manzana_037.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 40 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1iFK3FNG4wCVSUrL90cK5ycs3G6KlXc9O",
+   "nombre_original": "Copia de manzana_039.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 41 px < 64 px: defectos y textura no son evaluables."
+  },
+  {
+   "codigo_revision": "",
+   "drive_id": "1W9fAGPTSvk2JwjMbutCCxZ9CWRkwnWzy",
+   "nombre_original": "Copia de manzana_040.jpg",
+   "fruta": "manzana",
+   "calidad_declarada": "intermedia",
+   "decision_imagen": "excluir_resolucion",
+   "calidad_revisada": "",
+   "grupo_ejemplar": "",
+   "manzana_roja": "no_aplica",
+   "receta_mascara": null,
+   "observaciones": "Lado menor 40 px < 64 px: defectos y textura no son evaluables."
+  }
+ ]
+}

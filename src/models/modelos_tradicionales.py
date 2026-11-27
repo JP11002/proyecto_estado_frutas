@@ -28,6 +28,7 @@ from sklearn.svm import SVC
 
 from src.models.evaluacion import crear_cv_interno
 from src.utils.archivos import guardar_bytes_si_cambio, guardar_tabla
+from src.data.base import cargar_base
 
 CALIDADES = ['buena', 'intermedia', 'mala']
 FRUTAS = ['manzana', 'banano', 'limon']
@@ -35,25 +36,6 @@ COLORES = ['#36856c', '#dea33c', '#ba5260']
 SEMILLA = 42
 
 
-def cargar_base(proyecto):
-    proyecto = Path(proyecto).resolve()
-    ruta = proyecto / 'data/processed/base_revisada_v2/base_svm_rf.csv'
-    estado = json.loads(ruta.with_name('estado_base.json').read_text(encoding='utf-8'))
-    base = pd.read_csv(ruta)
-    columnas = estado['caracteristicas']
-    if hashlib.sha256(ruta.read_bytes()).hexdigest() != estado['sha_base']:
-        raise ValueError('La base cambió: actualizar primero la exportación del cuaderno 04.')
-    if len(columnas) != 43 or not all(c.startswith(('color_', 'textura_', 'forma_')) for c in columnas):
-        raise ValueError('Se esperan las 43 características de imagen; no incluir identificadores.')
-    if not np.isfinite(base[columnas].to_numpy(dtype=float)).all():
-        raise ValueError('Hay características faltantes o no finitas.')
-    if base[['id_ejemplar', 'grupo_particion', 'calidad_revisada', 'fruta']].isna().any().any():
-        raise ValueError('Hay etiquetas o grupos faltantes.')
-    if base.id_ejemplar.duplicated().any() or set(base.calidad_revisada) != set(CALIDADES):
-        raise ValueError('Revisar identificadores únicos y las tres calidades.')
-    if set(base.fruta) != set(FRUTAS):
-        raise ValueError('Revisar el alcance de frutas.')
-    return base, columnas, estado
 
 
 def guardar_json(objeto, ruta):

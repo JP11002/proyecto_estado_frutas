@@ -13,6 +13,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, recall_s
 from sklearn.model_selection import StratifiedGroupKFold
 
 from src.utils.archivos import guardar_bytes_si_cambio, guardar_tabla
+from src.data.base import cargar_base
 
 if TYPE_CHECKING:
     import matplotlib.pyplot as plt
@@ -23,30 +24,6 @@ COLORES = ['#36856c', '#dea33c', '#ba5260']
 SEMILLA = 42
 
 
-def cargar_base_v2(proyecto: str | Path) -> tuple[pd.DataFrame, list[str], dict]:
-    """Cargar y validar integridad de base_revisada_v2/base_svm_rf.csv."""
-    proyecto = Path(proyecto).resolve()
-    ruta = proyecto / 'data/processed/base_revisada_v2/base_svm_rf.csv'
-    if not ruta.is_file():
-        raise FileNotFoundError(
-            f'No se encontró {ruta}. Ejecuta primero el flujo de datos hasta el cuaderno 04/05.'
-        )
-    estado = json.loads(ruta.with_name('estado_base.json').read_text(encoding='utf-8'))
-    base = pd.read_csv(ruta)
-    columnas = estado['caracteristicas']
-    if hashlib.sha256(ruta.read_bytes()).hexdigest() != estado['sha_base']:
-        raise ValueError('La base cambió: actualizar primero la exportación del cuaderno 04.')
-    if len(columnas) != 43 or not all(c.startswith(('color_', 'textura_', 'forma_')) for c in columnas):
-        raise ValueError('Se esperan las 43 características de imagen; no incluir identificadores.')
-    if not np.isfinite(base[columnas].to_numpy(dtype=float)).all():
-        raise ValueError('Hay características faltantes o no finitas.')
-    if base[['id_ejemplar', 'grupo_particion', 'calidad_revisada', 'fruta']].isna().any().any():
-        raise ValueError('Hay etiquetas o grupos faltantes.')
-    if base.id_ejemplar.duplicated().any() or set(base.calidad_revisada) != set(CALIDADES):
-        raise ValueError('Revisar identificadores únicos y las tres calidades.')
-    if set(base.fruta) != set(FRUTAS):
-        raise ValueError('Revisar el alcance de frutas.')
-    return base, columnas, estado
 
 
 def guardar_json(objeto: dict, ruta: str | Path) -> None:
@@ -213,9 +190,10 @@ def _graficar_matrices(matrices: dict[str, np.ndarray], ruta: Path) -> None:
     import matplotlib.pyplot as plt
 
     n = len(matrices)
-    fig, axes = plt.subplots(1, n, figsize=(4.3 * n, 4.0), layout='constrained')
-    if n == 1:
-        axes = [axes]
+    columnas = min(3, n)
+    filas = int(np.ceil(n / columnas))
+    fig, axes = plt.subplots(filas, columnas, figsize=(4.3 * columnas, 4.0 * filas), layout='constrained')
+    axes = np.asarray(axes).reshape(-1)
     for ax, (nombre, matriz) in zip(axes, matrices.items()):
         filas_sum = np.maximum(matriz.sum(axis=1, keepdims=True), 1)
         ax.imshow(matriz / filas_sum, vmin=0, vmax=1, cmap='Blues')
@@ -239,6 +217,8 @@ def _graficar_matrices(matrices: dict[str, np.ndarray], ruta: Path) -> None:
                     va='center',
                     color='white' if proporcion > 0.55 else '#222222',
                 )
+    for ax in axes[n:]:
+        ax.axis('off')
     fig.suptitle('Predicciones fuera del entrenamiento (OOF) · Validación agrupada')
     guardar_grafica(fig, ruta)
     plt.close(fig)
@@ -248,8 +228,9 @@ def _graficar_comparacion(metricas_globales: pd.DataFrame, ruta: Path) -> None:
     import matplotlib.pyplot as plt
 
     df = metricas_globales.set_index('modelo')[['exactitud', 'f1_macro', 'recall_macro']]
-    fig, ax = plt.subplots(figsize=(9, 4.5), layout='constrained')
-    df.plot.bar(ax=ax, color=['#4c72b0', '#36856c', '#dea33c'], rot=15)
+    df.index = [s.replace('Random_Forest', 'Random Forest').replace('_', '\n') for s in df.index]
+    fig, ax = plt.subplots(figsize=(11, 5), layout='constrained')
+    df.plot.bar(ax=ax, color=['#4c72b0', '#36856c', '#dea33c'], rot=0)
     ax.set(ylim=(0, 1.0), ylabel='Puntuación', xlabel='', title='Comparación OOF de modelos')
     ax.legend(['Exactitud', 'F1 macro', 'Recall macro'], frameon=False)
     for cont in ax.containers:

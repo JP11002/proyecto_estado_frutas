@@ -1,0 +1,16 @@
+# Mantener estables las huellas de tablas y máscaras entre sistemas operativos.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+# Los CSV participan en huellas SHA-256: conservar sus bytes al clonar.
+*.csv -text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.heic binary
+*.pdf binary
+*.docx binary
+*.xlsx binary

@@ -1,4 +1,4 @@
-"""Validar la base revisada y exportar las entradas de SVM y Random Forest."""
+"""Validar las revisiones históricas usadas como insumo de la base única."""
 from __future__ import annotations
 
 import argparse
@@ -61,31 +61,25 @@ def exportar_base_modelado(proyecto):
     base['grupo_particion']=construir_grupos(base)
     registros=base[['id_ejemplar','id_origen','fruta','calidad_revisada','grupo_particion',
                     'grupo_ejemplar','sha_original','firma_preparacion',*columnas]].copy()
-    destino=proyecto/'data/processed/base_revisada_v1'
-    guardar_tabla(registros,destino/'base_svm_rf.csv')
     resumen=(base.groupby(['fruta','calidad_revisada']).agg(ejemplares=('id_ejemplar','size'),
               fotografias=('id_origen','nunique'),grupos_conservadores=('grupo_particion','nunique')).reset_index())
-    guardar_tabla(resumen,destino/'resumen_clases.csv')
     history=annotations/'historial_exploracion.csv'
     explored=set(pd.read_csv(history).id_origen) if history.is_file() else set()
     try:
         split=particionar_por_grupos(base,explored)
     except ValueError as error:
         ready_evaluation=False;reason=str(error)
-        (destino/'particiones.csv').unlink(missing_ok=True)
     else:
         ready_evaluation=True;reason='Particiones agrupadas con cobertura completa.'
-        guardar_tabla(split,destino/'particiones.csv')
     status={'protocolo':'calidad_visual_v1','revisor':'Asistente - revision visual',
             'alcance':'Base inicial revisada; anotaciones de un revisor, sin acuerdo interanotador medido.',
             'ejemplares':len(base),'fotografias':int(base.id_origen.nunique()),
             'grupos_conservadores':int(base.grupo_particion.nunique()),'caracteristicas':columnas,
             'lista_para_ajuste_inicial':True,'lista_para_evaluacion_independiente':ready_evaluation,
-            'motivo_evaluacion':reason,'sha_base_svm_rf':hashlib.sha256((destino/'base_svm_rf.csv').read_bytes()).hexdigest(),
+            'motivo_evaluacion':reason,
             'limitacion_grupos':'Se agrupan campañas de captura conservadoramente; el número de fotografías no equivale a frutos independientes.',
             'limitacion_mascaras':'Contornos aproximados revisados visualmente; no son máscaras de referencia pixel a pixel.',
             'limitacion_tamano':'Ocupación visible en la fotografía; no tamaño físico ni centímetros.'}
-    guardar_bytes_si_cambio(destino/'estado_base.json',json.dumps(status,ensure_ascii=False,indent=2).encode('utf-8'))
     return registros,resumen,status
 
 

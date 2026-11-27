@@ -1,0 +1,15 @@
+{
+  "metodo": "lote_20261126_receta_v1",
+  "receta": {
+    "tipo": "grabcut_rectangulo",
+    "rectangulo": [
+      0.04,
+      0.04,
+      0.96,
+      0.96
+    ]
+  },
+  "sha_original": "df26b736f68ee23521252a0b3316d05daf9011ea3ab4fabc19daf46258af4b30",
+  "sha_mascara": "61edb59ffd228373aac7525571445415c9c89bf0a43665b2dcec98f70cf7c923",
+  "opencv": "5.1.0"
+}

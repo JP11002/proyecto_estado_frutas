@@ -1,16 +1,18 @@
-numpy
-pandas
-matplotlib
-seaborn
-opencv-python
-pillow
-pillow-heif
-scikit-learn
-joblib
-scipy
-torch
-torchvision
-streamlit
-kagglehub
-ipywidgets
-ipykernel
+# EDA, imágenes, SVM, Random Forest y Jupyter; Python >=3.11.
+numpy>=1.26,<3
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+# El flujo unificado aún usa SVC(probability=True), disponible antes de 1.11.
+scikit-learn>=1.6,<1.11
+scipy>=1.13,<2
+joblib>=1.4,<2
+pillow>=10.4,<14
+opencv-python-headless>=4.10,<6
+pillow-heif>=0.18,<2
+ipywidgets>=8.1,<9
+ipykernel>=6.29,<8
+nbformat>=5.10,<6
+nbclient>=0.10,<0.12
+jupyterlab>=4.2,<5
+# Solo para volver a descargar el conjunto histórico de Kaggle.
+kagglehub>=0.3,<2

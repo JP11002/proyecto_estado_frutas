@@ -1,123 +1,208 @@
-# Clasificación de calidad de frutas y verduras mediante visión por computadora
+# Clasificación de calidad de frutas mediante visión por computadora
 
-**Proyecto final de Algoritmos y Programación III**  
+**Proyecto final de Algoritmos y Programación III**
 Universidad Icesi | Cali, Colombia | Semestre 2026-2
 
 ## Descripción del proyecto
 
-Este proyecto busca desarrollar un sistema de clasificación automática de la calidad de frutas y verduras mediante técnicas de visión por computadora y aprendizaje automático.
+Este proyecto desarrolla un sistema de clasificación automática de la calidad de frutas y
+verduras mediante técnicas de visión por computadora y aprendizaje automático.
 
-A partir de imágenes, el sistema busca identificar el estado de un producto en tres categorías:
+A partir de una imagen, el sistema identifica el estado de un producto en tres categorías:
 
 - **Buena:** producto en buen estado, sin señales evidentes de deterioro.
-- **Intermedia:** producto que presenta algunas señales de deterioro.
-- **Mala:** producto que presenta deterioro evidente.
+- **Intermedia:** producto con defectos localizados (menos de un tercio de la superficie).
+- **Mala:** producto con deterioro marcado o extendido.
 
-Adicionalmente, se contempla la extracción de características visuales para estimar el tamaño de los productos.
+Además, estima el tamaño relativo del producto a partir de su máscara (diámetro equivalente
+normalizado por el encuadre; no expresa centímetros).
 
 ## Estado del proyecto
 
-**En desarrollo.**
+**Prototipo completo y evaluado.**
 
-Se han implementado procesos de preparación y análisis de datos, extracción de características y modelos iniciales de clasificación. Se continúa trabajando en la optimización, evaluación e integración de los componentes de la solución.
+Se implementaron la preparación y revisión de datos, la extracción de características, los
+modelos de clasificación, la evaluación con una prueba independiente por grupos y una
+interfaz gráfica con foto y cámara. El informe IEEE está en `docs/informe_final.pdf` (fuente:
+`report.md`).
 
 ## Integrantes
 
 | Nombre | GitHub |
 |---|---|
-| Juan Pablo Serrano | [@JP11002](https://github.com/JP11002) |
-| Felipe Calderon | [@usuario](https://github.com/usuario) |
-| Juan Andres Castaño | [@usuario](https://github.com/usuario) |
+| Juan Pablo Serrano |  [@JP11002](https://github.com/JP11002) |
+| Felipe Calderon | @usuario |
+| Juan Andres Castaño | @usuario |
 
 ## Objetivo del proyecto
 
-Desarrollar una herramienta que permita evaluar automáticamente la calidad visual de frutas y verduras a partir de fotografías, utilizando técnicas de procesamiento de imágenes y modelos de aprendizaje automático.
+Desarrollar una herramienta que evalúe automáticamente la calidad visual de frutas a partir
+de fotografías, utilizando procesamiento de imágenes y modelos de aprendizaje automático.
 
-La solución busca facilitar la identificación de productos según su estado de conservación y explorar el uso de tecnologías de inteligencia artificial en procesos de selección y evaluación de alimentos. De esta manera, se busca aportar herramientas que puedan apoyar la toma de decisiones y reducir la evaluación subjetiva de la calidad de los productos.
+La solución busca apoyar la identificación de productos según su estado de conservación y
+reducir la evaluación subjetiva de la calidad. Es una herramienta de **apoyo**: evalúa la
+apariencia externa, no la seguridad alimentaria, y requiere revisión humana.
 
 ## Métodos utilizados
 
 - Procesamiento y análisis exploratorio de imágenes.
-- Extracción de características visuales.
-- Aprendizaje automático (*Machine Learning*).
-- Aprendizaje profundo (*Deep Learning*).
-- Clasificación supervisada.
-- Validación cruzada y evaluación de modelos.
-- Optimización de hiperparámetros.
-- Visualización e interpretación de resultados.
+- Segmentación del fruto (GrabCut) y extracción de 43 características de color, textura y forma.
+- Aprendizaje automático: SVM, Random Forest, regresión logística y Gradient Boosting.
+- Aprendizaje profundo: MobileNetV3 preentrenada y congelada con capas de clasificación propias.
+- Clasificación supervisada con pesos por clase y por combinación fruta-calidad.
+- Validación cruzada agrupada y anidada, y prueba independiente por grupos.
+- Optimización de hiperparámetros con búsqueda en rejilla.
+- Visualización e interpretación de resultados (métricas por clase, fruta y fuente).
 
 ## Tecnologías utilizadas
 
 - **Python:** lenguaje principal de desarrollo.
 - **Jupyter Notebook:** experimentación y análisis.
 - **Pandas y NumPy:** manipulación de datos.
-- **OpenCV:** procesamiento de imágenes.
-- **Scikit-learn:** implementación y evaluación de modelos tradicionales.
-- **TensorFlow / Keras:** desarrollo de redes neuronales.
-- **Matplotlib y Seaborn:** visualización de datos y resultados.
-- **Streamlit:** desarrollo de la interfaz gráfica.
+- **OpenCV y Pillow:** procesamiento de imágenes y cámara.
+- **Scikit-learn:** modelos tradicionales y evaluación.
+- **PyTorch / torchvision:** red neuronal convolucional (funciona en CPU).
+- **Matplotlib:** visualización de datos y resultados.
+- **Tkinter:** interfaz gráfica.
 
-## Descripción del proyecto
+## Descripción del sistema
 
-El sistema utiliza imágenes de frutas y verduras para identificar características visuales relacionadas con su estado de conservación y clasificarlas en tres categorías de calidad: buena, intermedia y mala.
+El sistema utiliza imágenes de frutas para identificar características visuales relacionadas
+con su estado de conservación y clasificarlas en tres categorías de calidad.
 
-El conjunto de datos se construye a partir de diferentes fuentes:
+El conjunto de datos (332 imágenes revisadas, 31 grupos) se construyó a partir de:
 
-- Dataset público de clasificación de calidad de frutas disponible en Kaggle.
+- El dataset público *Fruit Quality Classification* de Kaggle (copia de FruitNet).
 - Fotografías tomadas por los integrantes del equipo.
-- Imágenes públicas complementarias.
+- Colecciones compartidas del curso en Google Drive.
 
-Actualmente, el proyecto contempla tres tipos de productos:
+El proyecto contempla tres productos:
 
 - Manzana roja.
 - Banano.
 - Limón.
 
-Para abordar el problema se consideran tres enfoques de modelado:
+Se comparan tres familias de modelos:
 
-1. **Support Vector Machine (SVM):** modelo tradicional de clasificación.
-2. **Random Forest:** modelo basado en conjuntos de árboles de decisión.
-3. **Red neuronal convolucional (CNN):** modelo de aprendizaje profundo para el análisis directo de imágenes.
+- **Support Vector Machine (SVM):** modelo tradicional de clasificación.
+- **Random Forest:** modelo basado en conjuntos de árboles de decisión.
+- **Red neuronal convolucional (CNN):** MobileNetV3 congelada con un clasificador propio.
 
-Los resultados se analizan mediante métricas como precisión, recall, F1-score y matrices de confusión, con el propósito de comparar el comportamiento de los modelos e identificar sus fortalezas y limitaciones.
+El modelo final combina las características manuales con las de la CNN. Los resultados se
+analizan con precisión, recall, F1 por clase, F1 macro y ponderado, y matrices de confusión.
 
-Uno de los principales retos del proyecto es el desbalance entre las categorías de calidad, así como la variabilidad de las imágenes según la iluminación, el fondo, la perspectiva y las condiciones en las que fueron tomadas.
+Uno de los principales retos es el desbalance entre categorías (63 % de frutas buenas) y la
+asociación entre fruta y calidad en los datos: con pesos solo por clase, el modelo aprendía a
+reconocer la fruta en lugar del defecto. También influye la variabilidad de iluminación, fondo,
+perspectiva y resolución entre fuentes.
+
+## Resultados
+
+Evaluación en una prueba independiente (43 imágenes de 11 grupos que no participaron en
+ninguna decisión) y validación anidada sobre las 332 imágenes:
+
+| Modelo | F1 macro prueba (IC95 %) | F1 macro anidada (3 semillas) |
+|---|---:|---:|
+| Referencia mayoritaria | 0,197 | 0,258 |
+| Random Forest | 0,417 (0,25–0,52) | 0,396 ± 0,034 |
+| SVM ajustado | 0,324 (0,18–0,45) | 0,330 ± 0,053 |
+| CNN (MobileNetV3 + cabezal propio, con costes) | 0,397 (0,18–0,54) | 0,575 ± 0,097 |
+| **Modelo final (fusión + pesos fruta-calidad + costes)** | **0,395 (0,19–0,58)** | **0,460 ± 0,065** |
+
+Con pocos grupos independientes, las diferencias entre modelos no son significativas; todos
+superan a la referencia. El análisis completo está en `docs/ajuste_y_cnn.md` y en el informe.
 
 ## Estructura del repositorio
 
-```text
+```
 proyecto_estado_frutas/
 │
-├── config/
-|
+├── config/                  # Alcance del proyecto y datos de entrega
+│
 ├── data/
-│   ├── raw/
-│   ├── external/
-│   └── processed/
-|   └── annotations/
+│   ├── raw/                 # Originales descargados (no se versionan)
+│   ├── external/            # Kaggle y pesos de la CNN (no se versionan)
+│   ├── processed/           # Preparaciones intermedias (no se versionan)
+│   ├── annotations/         # Etiquetas, decisiones y máscaras revisadas
+│   └── base/                # Base única: datos.csv, imágenes, máscaras y partición
 │
 ├── docs/
 │   ├── etica.md
-|   ├── ajuste_y_cnn.md
-|   ├── eda_y_modelos_tradicionales.md
-|   ├── revision_base_v1.md
+│   ├── ajuste_y_cnn.md
+│   ├── eda_y_modelos_tradicionales.md
+│   ├── revision_base_v1.md
 │   ├── analisis_de_impactos.md
-│   └── DiagramaCrispDm.drawio.svg
+│   ├── DiagramaCrispDm.drawio.svg
+│   ├── figuras/             # Figuras vectoriales del informe
+│   └── informe_final.pdf
 │
 ├── experiments/
-│   ├── checkpoints/
-│   └── results/
+│   ├── checkpoints/         # Modelos entrenados (se regeneran con los cuadernos)
+│   └── results/             # Métricas, predicciones y gráficas
 │
-├── notebooks/
-|
-├── sources/
-|
+├── notebooks/               # 01–09: datos, EDA, modelos y evaluación
+│
+├── scripts/                 # Ejecución de cuadernos, figuras e informe
+│
+├── sources/                 # Material de referencia del curso
 │
 ├── src/
-│   ├── models/
-│   ├── training/
-|   ├── utils/
-│   └── main.py
+│   ├── data/                # Carga, preparación e integración de la base
+│   ├── inference/           # Motor de predicción y medida de tamaño
+│   ├── models/              # Modelos y experimentos
+│   ├── training/            # Entrenamiento y comparación
+│   ├── utils/               # Funciones auxiliares
+│   ├── interfaz.py          # Interfaz gráfica (foto y cámara)
+│   └── main.py              # Punto de entrada
 │
+├── tests/                   # Pruebas unitarias
+├── report.md                # Fuente del informe IEEE
 ├── requirements.txt
 └── README.md
+```
+
+## Instalación
+
+Python 3.11 o posterior. En Windows, desde la raíz del proyecto:
+
+```text
+py -3.11 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt -r requirements-dl.txt
+.venv\Scripts\python.exe scripts\comprobar_proyecto.py
+```
+
+En Linux o macOS se usa `.venv/bin/python` en lugar de `.venv\Scripts\python.exe`. La primera
+ejecución de la CNN descarga unos 10 MB de pesos de ImageNet en `data/external/torch/`.
+
+## Ejecución
+
+**Interfaz gráfica (foto o cámara):**
+
+```text
+.venv\Scripts\python.exe -m src.main
+```
+
+1. Elegir el modelo en la lista **Modelo**.
+2. **Cargar foto** y luego **Analizar**, o **Iniciar cámara**: la cámara analiza un fotograma
+   cada 1,5 segundos y **Detener cámara** la apaga. **Guardar resultado** exporta un JSON.
+3. Los botones **Ejemplo buena / intermedia / mala** muestran imágenes de la base (son de
+   entrenamiento, no una prueba).
+
+Para la cámara se recomienda el modelo **CNN**, que no depende de segmentar el fruto en cada
+fotograma, y una fruta sola frente a un fondo liso. Se usa la cámara predeterminada del
+equipo; en Windows debe estar activado *Configuración → Privacidad → Cámara → Permitir que
+las aplicaciones de escritorio accedan a la cámara*. La aplicación no guarda fotogramas.
+
+**Una imagen desde la terminal:**
+
+```text
+.venv\Scripts\python.exe -m src.main --imagen ruta\a\foto.jpg --modelo CNN
+```
+
+## Documentación
+
+- [Revisión e integración de la base](docs/revision_base_v1.md)
+- [EDA y modelos tradicionales](docs/eda_y_modelos_tradicionales.md)
+- [Ajuste de modelos y CNN](docs/ajuste_y_cnn.md)
+- [Ética](docs/etica.md) y [análisis de impactos](docs/analisis_de_impactos.md)
+- [Diagrama CRISP-DM](docs/DiagramaCrispDm.drawio.svg)

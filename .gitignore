@@ -1,6 +1,7 @@
 # Datos y salidas reproducibles.
 # Las etiquetas, identidades, recetas y máscaras revisadas de data/annotations/
 # SÍ se versionan: no ignorar toda la carpeta data/ ni todos los CSV o PNG.
+# data/base/ es la única base del proyecto y se incluye completa en Git.
 /data/raw/
 /data/external/
 /data/processed/
